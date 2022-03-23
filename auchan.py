@@ -114,7 +114,3 @@ for i in range (len(list_epicerie_sucree)):
           # Ecriture dans le fichier CSV
           csvWriter.writerow(("Epicerie sucree",list_epicerie_sucree[i][0], txt[0], poids, prix_par_kilo, txt[-1].replace('€', ''), promo))
 
-
-
-
-
