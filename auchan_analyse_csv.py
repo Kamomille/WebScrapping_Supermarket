@@ -1,35 +1,55 @@
-
 import pandas as pd
 
-def moyenne_prix(csv, type):
-    df = pd.read_csv(csv, sep=';')
+def moyenne_prix(df, type):
     if (type != None) :df = df[df['type'] == type]
     df.prix = df.prix.str.replace(',', '.')
     df.prix = df.prix.astype(float)
     return df.prix.mean()
-def nombre_produit(csv, type):
-    df = pd.read_csv(csv, sep=';')
+def nombre_produit(df, type):
     if (type != None) :df = df[df['type'] == type]
     return len(df)
 
-#Thiers 63300
-#Billom 63160
-print(moyenne_prix("auchan_csv/auchan_produits.csv", None))
-print(moyenne_prix("auchan_csv/auchan_produits_lyon.csv", None))
-print(moyenne_prix("auchan_csv/auchan_produits_billom 63160.csv", None))
-print(nombre_produit("auchan_csv/auchan_produits.csv", None))
-print(nombre_produit("auchan_csv/auchan_produits_lyon.csv", None))
-print(nombre_produit("auchan_csv/auchan_produits_billom 63160.csv", None))
+
+list_name_csv = ['Guilherand-Granges (Valence)',
+                 'Auchan Piéton Lille Liberté',
+                 'billom 63160',
+                 'Auchan Piéton Périgueux Taillefer']
+list_df=[]
+for i in range (len(list_name_csv)):
+    df = pd.read_csv("auchan_csv/auchan_produits_" + list_name_csv[i] + ".csv", sep=';')
+    list_df.append(df)
+    print("Moy prix " + list_name_csv[i] + " : ", moyenne_prix(df, None))
+    print("Nb produit " + list_name_csv[i] + " : ", nombre_produit(df, None))
 
 
-df1 = pd.read_csv("auchan_csv/auchan_produits.csv", sep=';')
-df2 = pd.read_csv("auchan_csv/auchan_produits_lyon.csv", sep=';')
-df3 = pd.read_csv("auchan_csv/auchan_produits_billom 63160.csv", sep=';')
+def create_csv_merge(list_df, list_name_csv):
+    list_concat_df =[]
+    for i in range (len(list_df)):
+        list_df[i] = list_df[i].drop_duplicates(subset= ["nom", "poids"])
+        list_concat_df.append(list_df[i].set_index(["categorie","type","nom", "poids"]))
+    df = pd.concat(list_concat_df,sort=False, axis=1, keys=list_name_csv)
+    df.to_csv("auchan_csv/produits_merge.csv")
+    return df
 
-liste_produit = list(df1.nom)
+df = create_csv_merge(list_df, list_name_csv)
 
 
+# Obtenir le prix de chaque lieu
+print(df.loc[:, (list_name_csv, ['prix'])])
 
+# Obtenir une liste des lignes avec des données manquantes
+print(df.index[df.isnull().any(axis=1)])
+
+# Obtenir les 3 lignes avec le plus grand nombre de données manquantes
+print(df.isnull().sum(axis=1).nlargest(3))
+
+# -- Commandes utiles --
+#print(df.loc[:, (['Paris', 'Lyon'], ['prix'])])
+#print(df.loc[:, pd.IndexSlice[:, ['prix', 'promo']]])
+#print(df.Paris.prix[8])
+#print(df.loc[:, ('Paris','prix')])
+#print(df[('Paris','prix')])
+#print(df.index.get_level_values('type'))
 
 
 

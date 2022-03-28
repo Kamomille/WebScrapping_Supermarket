@@ -4,7 +4,8 @@ from selenium import webdriver
 import time
 from selenium.webdriver.common.keys import Keys
 
-localisation = "billom 63160"
+localisation = "Auchan Piéton Périgueux Taillefer"
+type_pickup = "Click & Collect"
 #driver = webdriver.Firefox()
 #driver = webdriver.Chrome('C:\Program Files\chromedriver_win32\chromedriver.exe')
 
@@ -19,9 +20,8 @@ time.sleep(3)
 driver.find_element_by_id("onetrust-reject-all-handler").click()
 time.sleep(2)
 
-
 # -- Création du CSV --
-csvFile = open("auchan_produits_"+localisation+".csv", "w", newline='', encoding="utf-8")
+csvFile = open("auchan_csv/auchan_produits_"+localisation+".csv", "w", newline='', encoding="utf-8")
 csvWriter = csv.writer(csvFile, delimiter=';', quotechar='"')
 
 # -- Création du nom des colonnes --
@@ -56,7 +56,6 @@ for j in range (len(list_grandes_categorie)):
         # -- Selectionne la grande catégorie --
         for k in range (1, 12):
             nom = driver.find_element_by_xpath('/html/body/div[2]/aside/div[1]/main/nav/div[2]/div/div['+str(k)+']/a/span[2]').text
-            print(nom)
             if(nom == list_grandes_categorie[j][0]):
                 num = k
                 break
@@ -64,7 +63,6 @@ for j in range (len(list_grandes_categorie)):
         time.sleep(1)
 
         # -- Selectionne une sous catégorie --
-        #l = list_grandes_categorie[j][1]
         driver.find_element_by_xpath(xpath(i+1, num)).click()
         time.sleep(1)
 
@@ -80,27 +78,25 @@ for j in range (len(list_grandes_categorie)):
             time.sleep(2)
             element.send_keys(Keys.DOWN + Keys.ENTER)
             time.sleep(3)
-            # -- Choisit la localisation numéro 1 --
-            driver.find_element_by_xpath("/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div/div[2]/div/div/div[2]/form/button").click()
-            time.sleep(10)
+            # -- Choisit la localisation parmi les choix de la liste --
+            searchresults_text = driver.find_element_by_xpath("/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div").find_elements_by_class_name("place-pos__main-infos")
+            list_type = []
+            for element in searchresults_text:
+                element = element.text.split("\n")
+                list_type.append(element)
+                print(element)
+            for k in range (len(list_type)):
+                if(list_type[k][0] == type_pickup and list_type[k][1] == localisation):
+                    print("OK")
+                    driver.find_element_by_xpath("/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div/div["+ str(2+k) +"]/div/div/div[2]/form/button").click()
+                    break
+                else : print("nope")
+
+            time.sleep(5)
 
         # ========================= Scroll pour charger tous les éléments ======================================================
 
         # -- Scroll down --
-        """
-        SCROLL_PAUSE_TIME = 15
-        # Get scroll height
-        last_height = driver.execute_script("return document.body.scrollHeight-1000")
-        while True:
-            # Scroll down jusqu'en bas
-            driver.execute_script("window.scrollTo(0, document.body.scrollHeight-1000);")
-            # Attend (chargement page)
-            time.sleep(SCROLL_PAUSE_TIME)
-            # Calculer la nouvelle hauteur de défilement et comparer avec la dernière hauteur de défilement
-            new_height = driver.execute_script("return document.body.scrollHeight-1000")
-            if new_height == last_height: break
-            last_height = new_height
-        """
         y = 1000
         for timer in range(0, 50):
             driver.execute_script("window.scrollTo(0, " + str(y) + ")")
@@ -134,3 +130,25 @@ for j in range (len(list_grandes_categorie)):
               l = list_grandes_categorie[j][1]
               # Ecriture dans le fichier CSV
               csvWriter.writerow((list_grandes_categorie[j][0],l[i][0], txt[0], poids, prix_par_kilo, txt[-1].replace('€', ''), promo))
+
+
+# ========================= BROUILLON ==================================================================================
+    """
+    lst1 = ["Hirson","Supermarché Massieux","St-Quentin","Viry Noureuil"]
+    lst2 = ["Drive","Click & Collect","Drive","Drive"]
+    df_localisation = pd.DataFrame(list(zip(lst1,lst2)), columns = ['nom_ville','type'])
+
+
+    SCROLL_PAUSE_TIME = 15
+    # Get scroll height
+    last_height = driver.execute_script("return document.body.scrollHeight-1000")
+    while True:
+        # Scroll down jusqu'en bas
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight-1000);")
+        # Attend (chargement page)
+        time.sleep(SCROLL_PAUSE_TIME)
+        # Calculer la nouvelle hauteur de défilement et comparer avec la dernière hauteur de défilement
+        new_height = driver.execute_script("return document.body.scrollHeight-1000")
+        if new_height == last_height: break
+        last_height = new_height
+    """
