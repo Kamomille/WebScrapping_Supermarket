@@ -3,8 +3,8 @@ import re
 #Convertir les elements scraper en liste
 def Mettre_en_liste(element):
     Liste = []
-    for a in range(len(element)):
-        Liste.append(element[a].text.replace('\n', ', '))
+    for a in element:
+        Liste.append(a.text.replace('\n', ', '))
     return Liste
 
 
@@ -24,7 +24,7 @@ def Format_Postal_Commune(Donnees, a):
             resultat = regex.search(Postal)
             resultat = resultat.group(a).replace("Cedex", "")
             if resultat is None:
-                print (None)
+                pass
             else:
                 Code_Postal.append(resultat)
         len(Code_Postal)
@@ -33,7 +33,7 @@ def Format_Postal_Commune(Donnees, a):
         regex = re.compile("([0-9]{5}) ((.*)$)")
         resultat = regex.search(str(Donnees))
         if resultat is None:
-            print(None)
+            pass
         else:
             resultat = resultat.group(a)
             return resultat
