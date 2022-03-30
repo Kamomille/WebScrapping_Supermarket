@@ -34,24 +34,23 @@ def create_csv_merge():
     df.to_csv("auchan_csv/produits_merge.csv", sep=';')
     return df
 
-df = create_csv_merge()
+def commandes_utiles():
+    df = create_csv_merge()
+    list_df, list_name_csv = create_list_df(False)
 
+    # Obtenir le prix de chaque lieu
+    print(df.loc[:, (list_name_csv, ['prix'])])
 
-list_df, list_name_csv = create_list_df(False)
+    # Obtenir une liste des lignes avec des données manquantes
+    print(df.index[df.isnull().any(axis=1)])
 
-# Obtenir le prix de chaque lieu
-print(df.loc[:, (list_name_csv, ['prix'])])
+    # Obtenir les 3 lignes avec le plus grand nombre de données manquantes
+    print(df.isnull().sum(axis=1).nlargest(3))
 
-# Obtenir une liste des lignes avec des données manquantes
-print(df.index[df.isnull().any(axis=1)])
-
-# Obtenir les 3 lignes avec le plus grand nombre de données manquantes
-print(df.isnull().sum(axis=1).nlargest(3))
-
-# Obtenir le nom des produits présent dans tous les magasins (quels sont les produit de base?)
-nb = len(df) - len(df.index[df.isnull().any(axis=1)])
-print(nb)
-print(df.isnull().sum(axis=1).nsmallest(nb))
+    # Obtenir le nom des produits présent dans tous les magasins (quels sont les produit de base?)
+    nb = len(df) - len(df.index[df.isnull().any(axis=1)])
+    print(nb)
+    print(df.isnull().sum(axis=1).nsmallest(nb))
 
 # -- Commandes utiles --
 #print(df.loc[:, (['Paris', 'Lyon'], ['prix'])])
