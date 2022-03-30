@@ -1,25 +1,17 @@
-from nltk.tokenize import word_tokenize
-import re
-import string
 import pandas as pd
+from nltk.tokenize import word_tokenize
+import string
+import unidecode
 import auchan_analyse_csv
 
-df = auchan_analyse_csv.create_csv_merge()
-
-liste_produits = list(df.index.get_level_values('nom'))
-
-
 def tokenization_all_products():
-    new_liste = []
-    for i in range (len(liste_produits)):
-        new_word = tokenization_one_product(liste_produits[i])
-        new_liste.append(new_word)
-    return new_liste
+    df['nom_tokenizer'] = df.index.get_level_values('nom')
+    df['nom_tokenizer'] = df['nom_tokenizer'].apply(lambda x: tokenization_one_product(x))
+    return df
 
 def tokenization_one_product(x):
-    stop_words = ['à' ,'avec' ,'au' ,'aux' ,'d' ,'pour' ,'on' ,'pas' ,'dans' ,'de' ,'des',
-                  'un' ,'une' ,'du' ,'et' ,'en' ,'est' ,'le' ,'la' ,'les' ,'n' ,'s' ,'a',
-                  'q' ,'qu' ,'j' ,'t' ,'peu' ,'sans']
+    stop_words = ['à','avec' ,'au' ,'aux' ,'d' ,'pour' ,'on' ,'pas' ,'dans' ,'de' ,'des','un' ,'une' ,'du' ,'et' ,'en' ,
+                  'est' ,'le' ,'la' ,'les','l','n','s' ,'a', 'q' ,'qu' ,'j' ,'t', 's','peu' ,'sans']
     new_word =""
     # -- on enlève la ponstuation --
     punct = string.punctuation
@@ -29,26 +21,40 @@ def tokenization_one_product(x):
     for word in words:
         if word not in stop_words and not word.isdigit():
             if (word[-1] == "s" or word[-1] == "x"): word = word[:-1]  # met au singulier
+            word = unidecode.unidecode(word) # enlève les accents
             new_word += word.lower() + " "
-    new_word = new_word[:-1]  # enlève espace de fin
+    new_word = new_word[:-1]  # enlève l'espace final
     return new_word
 
 
-def Filter(datalist, word_search):
-    return [val for val in datalist
-            if re.search(r'^' + str(word_search), val)]
-
-
-def filter_n(datalist, list_word_search):
+def filter(df, list_word_search):
     for i in range(len(list_word_search)):
-        datalist = list(filter(lambda k: list_word_search[i] in k, datalist))
-    print(datalist)
+        df = df[df['nom_tokenizer'].notnull()].copy()
+        df['nom_tokenizer_contain'] = df['nom_tokenizer'].str.contains(list_word_search[i])
+        df = df[df['nom_tokenizer_contain'] == True]
+    return df.loc[:, pd.IndexSlice[:, ['prix']]]
 
 
+df = auchan_analyse_csv.create_csv_merge()
 
-liste_produits = tokenization_all_products()
+liste_produits = list(df.index.get_level_values('nom'))
 
-word_search = tokenization_one_product('pomme de terre')
+df_produits = tokenization_all_products()
 
-filter_n (liste_produits,word_search.split(' '))
+word_search = tokenization_one_product('Cookies noisette')
+
+print("TABLEAU DES PRODUITS CORRESPONDANT A VOTRE RECHERCHE")
+df_filter = filter(df_produits,word_search.split(' '))
+print(df_filter)
+
+"""
+name_multiindex_columns = df.columns.get_level_values(0).unique()
+name_multiindex_columns = name_multiindex_columns[:-1]
+print(name_multiindex_columns)
+for index, row in df_filter.iterrows():
+    print("----- ",index[2], " -----")
+    for i in range (len(name_multiindex_columns)):
+        print(name_multiindex_columns[i], row[i])
+
+"""
 
