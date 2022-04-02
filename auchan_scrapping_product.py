@@ -6,8 +6,6 @@ from selenium import webdriver
 import time
 from selenium.webdriver.common.keys import Keys
 
-localisation = "Auchan Piéton Périgueux Taillefer"
-type_pickup = "Click & Collect"
 #driver = webdriver.Firefox()
 #driver = webdriver.Chrome('C:\Program Files\chromedriver_win32\chromedriver.exe')
 
@@ -28,9 +26,10 @@ def xpath(num, num_grandes_categorie):
     return '/html/body/div[2]/aside/div[1]/main/nav/div[2]/div/div['+str(num_grandes_categorie)+']/div/div[2]/div/div['+str(num)+']/div/a[1]'
 
 
+indicateur_a_t_on_deja_cliquer_sur_prix = False
+
 for index_row in df_adresse.index:
-    a = str(df_adresse["Adresse_auchan"][index_row])
-    localisation = a[6:]
+    localisation = str(df_adresse["Adresse_auchan"][index_row]) #a[6:]
     type_pickup = "Drive"
 
     # -- Création du CSV --
@@ -62,26 +61,29 @@ for index_row in df_adresse.index:
 
             # -- Ouvre le menu de navigation --
             driver.find_element_by_id("navigation").click()
-            time.sleep(1)
+            time.sleep(2)
 
             # -- Selectionne la grande catégorie --
-            for k in range (1, 12):
-                nom = driver.find_element_by_xpath('/html/body/div[2]/aside/div[1]/main/nav/div[2]/div/div['+str(k)+']/a/span[2]').text
+            for num in range (1, 12):
+                nom = driver.find_element_by_xpath('/html/body/div[2]/aside/div[1]/main/nav/div[2]/div/div['+str(num)+']/a/span[2]').text
                 if(nom == list_grandes_categorie[j][0]):
-                    num = k
+                    driver.find_element_by_xpath('/html/body/div[2]/aside/div[1]/main/nav/div[2]/div/div['+str(num)+']/a/span[2]').click()
+                    time.sleep(1)
                     break
-            driver.find_element_by_xpath('//*[@id="navigation_layer_desc"]/nav/div[2]/div/div['+ str(num) +']').click()
-            time.sleep(1)
-
+            time.sleep(2)
             # -- Selectionne une sous catégorie --
             driver.find_element_by_xpath(xpath(i+1, num)).click()
-            time.sleep(1)
+            time.sleep(2)
 
             # ========================= Prix selon la localisation =============================================================
 
             if (i == 0 and j == 0):
-                # -- Click sur "afficher le prix" --
-                driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/div[4]/article[1]/div[2]/footer/button').click()
+                if (indicateur_a_t_on_deja_cliquer_sur_prix == False):
+                    # -- Click sur "afficher le prix" --
+                    driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/div[4]/article[1]/div[2]/footer/button').click()
+                    indicateur_a_t_on_deja_cliquer_sur_prix = True
+                else:
+                    driver.find_element_by_xpath('/html/body/div[2]/header/div[1]/div[1]/div/button').click()
                 time.sleep(2)
                 # -- Cherche ville de paris + selectionne Paris 1er --
                 element = driver.find_element_by_xpath('/html/body/div[11]/div[1]/main/div[1]/div[1]/div/div[1]/input')
@@ -97,12 +99,11 @@ for index_row in df_adresse.index:
                     list_type.append(element)
                     print(element)
                 for k in range (len(list_type)):
-                    if(list_type[k][0] == type_pickup and list_type[k][1] == localisation):
+                    if(list_type[k][0] == type_pickup): # and list_type[k][1] == localisation
                         print("OK")
                         driver.find_element_by_xpath("/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div/div["+ str(2+k) +"]/div/div/div[2]/form/button").click()
                         break
                     else : print("nope")
-
                 time.sleep(5)
 
             # ========================= Scroll pour charger tous les éléments ======================================================
@@ -134,7 +135,7 @@ for index_row in df_adresse.index:
                   promo = "non"
                   prix_par_kilo =""
                   for el in txt:
-                     if (el[-1] == 'g' and el[-2].isdigit() == True): poids = el
+                     if (el[-1] == 'g' and el[-2].isdigit() == True and len(el) < 8): poids = el[:-1]
                      if (el[-6:] == '€ / kg' or el[-7:] == '€ / pce'): prix_par_kilo = el #[:-6]
                      if (el == 'Voir l\'offre'): promo = txt[compt]
                      compt += 1
@@ -149,7 +150,6 @@ for index_row in df_adresse.index:
     lst1 = ["Hirson","Supermarché Massieux","St-Quentin","Viry Noureuil"]
     lst2 = ["Drive","Click & Collect","Drive","Drive"]
     df_localisation = pd.DataFrame(list(zip(lst1,lst2)), columns = ['nom_ville','type'])
-
 
     SCROLL_PAUSE_TIME = 15
     # Get scroll height
