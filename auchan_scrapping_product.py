@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import csv
-
 import pandas as pd
 from selenium import webdriver
 import time
@@ -25,6 +24,11 @@ df_adresse = pd.read_csv("Adresse.csv")
 def xpath(num, num_grandes_categorie):
     return '/html/body/div[2]/aside/div[1]/main/nav/div[2]/div/div['+str(num_grandes_categorie)+']/div/div[2]/div/div['+str(num)+']/div/a[1]'
 
+list_epicerie_sucree = ['Cafe','Petit dej, boissons chaudes','Biscuits, gateaux','Chocolat, confiseries','Dessert, sucre, farine']
+list_fruit_legume = ['Bio','Fruit','Légumes','Prêt à consommer']
+
+list_grandes_categorie = [['Fruits, légumes', list_fruit_legume],
+                          ['Epicerie sucrée', list_epicerie_sucree]]
 
 indicateur_a_t_on_deja_cliquer_sur_prix = False
 
@@ -38,21 +42,6 @@ for index_row in df_adresse.index:
 
     # -- Création du nom des colonnes --
     csvWriter.writerow(['categorie', 'type', 'nom', 'poids', 'prix_par_kg', 'prix', 'promo'])
-
-
-    list_epicerie_sucree = [['Cafe',xpath(1,11)],
-                            ['Petit dej, boissons chaudes',xpath(2,11)],
-                            ['Biscuits, gateaux',xpath(3,11)],
-                            ['Chocolat, confiseries',xpath(3,11)],
-                            ['Dessert, sucre, farine',xpath(4,11)]]
-
-    list_fruit_legume = [['Bio',xpath(1,9)],
-                        ['Fruit',xpath(2,9)],
-                        ['Légumes',xpath(3,9)],
-                        ['Prêt à consommer',xpath(3,9)]]
-
-    list_grandes_categorie = [['Fruits, légumes', list_fruit_legume],
-                              ['Epicerie sucrée', list_epicerie_sucree]]
 
     # ========================= catégorie =============================================================
 
@@ -142,25 +131,26 @@ for index_row in df_adresse.index:
 
                   l = list_grandes_categorie[j][1]
                   # Ecriture dans le fichier CSV
-                  csvWriter.writerow((list_grandes_categorie[j][0],l[i][0], txt[0], poids, prix_par_kilo, txt[-1].replace('€', ''), promo))
+                  csvWriter.writerow((list_grandes_categorie[j][0],l[i], txt[0], poids, prix_par_kilo, txt[-1].replace('€', ''), promo))
 
 
 # ========================= BROUILLON ==================================================================================
-    """
-    lst1 = ["Hirson","Supermarché Massieux","St-Quentin","Viry Noureuil"]
-    lst2 = ["Drive","Click & Collect","Drive","Drive"]
-    df_localisation = pd.DataFrame(list(zip(lst1,lst2)), columns = ['nom_ville','type'])
 
-    SCROLL_PAUSE_TIME = 15
-    # Get scroll height
-    last_height = driver.execute_script("return document.body.scrollHeight-1000")
-    while True:
-        # Scroll down jusqu'en bas
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight-1000);")
-        # Attend (chargement page)
-        time.sleep(SCROLL_PAUSE_TIME)
-        # Calculer la nouvelle hauteur de défilement et comparer avec la dernière hauteur de défilement
-        new_height = driver.execute_script("return document.body.scrollHeight-1000")
-        if new_height == last_height: break
-        last_height = new_height
-    """
+"""
+lst1 = ["Hirson","Supermarché Massieux","St-Quentin","Viry Noureuil"]
+lst2 = ["Drive","Click & Collect","Drive","Drive"]
+df_localisation = pd.DataFrame(list(zip(lst1,lst2)), columns = ['nom_ville','type'])
+
+SCROLL_PAUSE_TIME = 15
+# Get scroll height
+last_height = driver.execute_script("return document.body.scrollHeight-1000")
+while True:
+    # Scroll down jusqu'en bas
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight-1000);")
+    # Attend (chargement page)
+    time.sleep(SCROLL_PAUSE_TIME)
+    # Calculer la nouvelle hauteur de défilement et comparer avec la dernière hauteur de défilement
+    new_height = driver.execute_script("return document.body.scrollHeight-1000")
+    if new_height == last_height: break
+    last_height = new_height
+"""
