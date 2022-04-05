@@ -76,7 +76,7 @@ for n in range(2,10):
         for i in range(1, len(list_nbr_produits)+1):
             print(i)
             csv_fill=[]
-            #/html/body/div[2]/div[3]/div/div/article/div[1]/div/div/span
+
             get_cat_name = driver.find_element_by_xpath("/html/body/div[2]/div[3]/div/div/article/div[1]/div/div/span").text
             csv_fill.append(get_cat_name)
             csv_fill.append("null")
