@@ -2,9 +2,7 @@ import re
 
 #Convertir les elements scraper en liste
 def Mettre_en_liste(element):
-    Liste = []
-    for a in element:
-        Liste.append(a.text.replace('\n', ', '))
+    Liste = [a.text.lower().replace('\n', ', ') for a in element]
     return Liste
 
 
@@ -15,6 +13,7 @@ a = 0 -> Tout le pattern
 a = 1 -> Seulement de code postal
 a = 2 -> Seulement la commune
 """
+
 
 def Format_Postal_Commune(Donnees, a):
     if a == 0:

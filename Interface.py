@@ -1,12 +1,15 @@
 """
+https://medium.com/analytics-vidhya/brick-by-brick-build-a-multi-page-dashboard-dash-filters-dbec58d429d2
 https://www.google.com/search?q=filter+folium+dash+python&rlz=1C1PRFI_enFR838FR838&oq=filter+folium+dash&aqs=chrome.1.69i57j33i160.11628j0j7&sourceid=chrome&ie=UTF-8
 https://medium.com/generating-folium-maps-based-on-user-input-for-a/generating-folium-maps-based-on-user-input-for-a-dash-layout-16363da6ecd3
+https://dash.plotly.com/dash-core-components/dropdown
 """
 
 
 from dash import Dash, html, dcc, Input, Output, State
 import dash_bootstrap_components as dbc
 import pandas as pd
+import auchan_search
 
 Adresse_Auchan = pd.read_csv('Adresses_auchan.csv')
 Auchan = Adresse_Auchan['Adresse']
@@ -18,9 +21,10 @@ app = Dash(__name__)  # initialisation du dash app
 #On ajoute un layout sur la page
 app.layout = html.Div([
         html.Div(children = [
-            html.H1('Where can I find the cheaper product ?'),
+            html.H1('Where can I find the cheaper products ?'),
             html.P('Enter the details to generate infographics')
             ],
+
         style={
             'color': 'black',
             'width': '100%',
@@ -30,17 +34,6 @@ app.layout = html.Div([
 
         html.Div([
             dcc.Dropdown(Auchan, id='dropdown', clearable=False),
-            html.Div(id='dd-output-container')
-        ],
-            style={
-                'width': '20%',
-                'height': '200px',
-                'text-align': "center"
-            }),
-
-        html.Div([
-            dcc.Dropdown(['NYC', 'MTL', 'SF'], 'SF', id='dropdown2'),
-            html.Div(id='dd-output-container2')
         ],
             style={
                 'width': '20%',
@@ -50,15 +43,23 @@ app.layout = html.Div([
 
         html.Div([
             dcc.Input(
-                id="input_{}".format(type),
-                placeholder="input type {}".format(type),
+                id="Search_Bar",
+                #placeholder="",
                 type='search'
-            )],
+            ),
+            html.Div(id='Display-output')
+
+        ],
             style={
                 'width': '20%',
                 'height': '200px',
                 'text-align': "center"
-            })
+            }),
+
+    html.Div([
+        html.Iframe(id='map', srcDoc=open('carte.html', 'r').read(), width='80%', height='600vh')
+
+    ], style={'padding': 50})
 
 ],
 """ 
@@ -72,22 +73,31 @@ app.layout = html.Div([
         }
 """
 )
-
+"""  
 @app.callback(
-    Output('dd-output-container', 'children'),
+    Output('dropdown', 'loc'),
     Input('dropdown', 'value')
 )
-def update_output(value):
-    print(value)
-    return f'You have selected {value}'
+def Localisation(selected_location):
+    return f'You have selected {selected_location}'
+
+@app.callback(
+    Output('Search_Bar', 'Bar'),
+    Input('Search_Bar', 'value')
+)
+def Result_Search(choix):
+    return f'You have selected {Result}'
+"""
+@app.callback(
+    Output('Display-output', 'children'),
+    Input('Search_Bar', 'value')
+)
+def Result_Search(value):
+    Result = auchan_search.Bar_De_Recherche(value)
+    return f'You choose {Result}'
 
 
 # Run the app
 if __name__ == '__main__':
     app.run_server(debug=True)
 
-""" 
-app.layout = html.Div(children=[
-    html.Iframe(id='map', srcDoc=open('carte.html', 'r').read(), width = '80%', height = '600vh')
-
-], style = {'padding' : 50})"""
