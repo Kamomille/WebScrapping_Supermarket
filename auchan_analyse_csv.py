@@ -1,7 +1,9 @@
 import pandas as pd
 import os
-from dash import Dash, html, dcc, Input, Output, State
+from dash import Dash, html, dcc, Input, Output
 import plotly.express as px
+import warnings
+warnings.filterwarnings('ignore')
 
 def get_list_csv_file():
     list = []
@@ -58,42 +60,98 @@ def cleaning_data (df):
 
     return df, list_name_csv_new
 
+def mettre_en_poucentage_en_fonction_prix_max ():
+    df["maximum"] = df.max(axis=1)
+    for i in range (len(list_name_csv_clean)):
+        name = list_name_csv_clean[i]
+        df[name] = 100 * df[name] / df["maximum"]
+    return df
 
+def en_fonction_des_departement ():
+    df_departement = pd.DataFrame()
+    df_departement['nom'] = df['nom']
+    list_dep = []
+    for j in range(0, 10):
+        for i in range(1, 10):
+            list_name_auchan = df.columns[3:]
+            l = list(filter(lambda k: str(j)+str(i) in k[:2], list_name_auchan))
+            if (len(l) > 0):
+                DF = df.copy()
+                df_departement[str(j)+str(i)] = DF[l].min(axis=1)
+                list_dep.append(str(j)+str(i))
+    return df_departement, list_dep
+
+def nombre_de_produit_pas_cher_par_ville (df, choix):
+    DF = df.copy()
+    list_nb = []
+    if(choix == 'minimum'): DF["m"] = DF.min(axis=1, skipna=True)
+    if (choix == 'maximum'): DF["m"] = DF.max(axis=1, skipna=True)
+    for i in range (len(list_name_csv_clean)):
+        name = list_name_csv_clean[i]
+        DF[name] = DF.apply(lambda row: 1 if row["m"] == row[name] else 0, axis=1)
+        list_nb.append(DF[list_name_csv_clean[i]].sum())
+    intermediate_dictionary = {'localisation': list_name_csv_clean, 'nb_prix': list_nb}
+    DF = pd.DataFrame(intermediate_dictionary)
+    return DF
+
+def variance_calcul (df):
+    DF = df.copy()
+    DF["variance"] = df.var(axis=1)
+    DF = DF.sort_values(by=['variance'])
+    return DF
+
+# Application des fonctions
 df = create_csv_merge(True)
 df, list_name_csv_clean = cleaning_data(df)
-
-df["maximum"] = df.max(axis=1)
-
-for i in range (len(list_name_csv_clean)):
-    name = list_name_csv_clean[i]
-    df[name] = 100 * df[name] / df["maximum"]
-
 df = df.reset_index()
 
-
-#scatter.show()
+variance_calcul (df)
 
 # Enregister
 df.to_csv("auchan_csv/produits_cleaning.csv", sep=';')
 
 
 
+# --------------------------------- Interface dash ---------------------------------------------------------------------
 app = Dash(__name__)
 server=app.server
 
 app.layout=html.Div(children =[
     html.H1(children="Analyse statistique", style={'textAlign': 'center'}),
     html.Hr(),
+    html.P(children='Nombre de magasins Auchan scappé :'+ str(len(get_list_csv_file())), style={'textAlign': 'center'}),
+    html.P(children='Nombre de magasins Auchan inclue dans l\'analyse :'+ str(len(list_name_csv_clean)), style={'textAlign': 'center'}),
     dcc.RadioItems(
         id='radio_button',
         options=[{'label': 'Tout', 'value': 'choix_1'},
-                 {'label': 'Par marque', 'value': 'choix_2'},
-                 {'label': 'Par catégorie', 'value': 'choix_3'},
-                 {'label': 'Par département', 'value': 'choix_4'}],
+                 {'label': 'Marque Auchan', 'value': 'choix_2'},
+                 {'label': 'Marque Auchan BIO', 'value': 'choix_3'},
+                 {'label': 'Toutes les marques sauf Auchan', 'value': 'choix_4'},
+                 {'label': 'Toutes les légumes bio', 'value': 'choix_5'},
+                 {'label': 'Tous le BIO', 'value': 'choix_6'},
+                 {'label': 'Par département', 'value': 'choix_7'}],
         value='choix_1',
     ),
     dcc.Graph(id='scatter',
               style={'height': '800px'}),
+
+    dcc.Graph(figure= px.pie(nombre_de_produit_pas_cher_par_ville(df, 'minimum'),
+                             values='nb_prix',
+                             names='localisation',
+                             title='Nombre de produits le moins cher présent dans le magasin'),
+              style={'textAlign': 'center', 'width': '45%','display': 'inline-block'},),
+
+    dcc.Graph(figure=px.pie(nombre_de_produit_pas_cher_par_ville(df, 'maximum'),
+                            values='nb_prix',
+                            names='localisation',
+                            title='Nombre de produits le plus cher présent dans le magasin'),
+              style={'textAlign': 'center', 'width': '45%','display': 'inline-block'},),
+
+    dcc.Graph(figure=px.bar(variance_calcul(df),
+                            y='variance',
+                            x='nom',
+                            title='Nombre de produits le plus cher présent dans le magasin')),
+
 ])
 
 
@@ -102,14 +160,29 @@ app.layout=html.Div(children =[
 )
 
 def update_bar (radio_button):
-    if (radio_button == 'choix_1'):
-        x, y, z = [], [], []
-        for i in range(len(list_name_csv_clean)):
-            name = list_name_csv_clean[i]
-            x += list(df['nom'])
-            y += list(df[name])
-            z += [name] * len(list(df[name]))
-        scatter = px.scatter(y=y, x=x, color=z)
+    DF = mettre_en_poucentage_en_fonction_prix_max()
+    list_name = list_name_csv_clean
+    if (radio_button == 'choix_1'): DF = DF.copy()
+    if (radio_button == 'choix_2'): DF = DF[DF['nom'].str[:6] == 'AUCHAN']
+    if (radio_button == 'choix_3'): DF = DF[DF['nom'].str[:10] == 'AUCHAN BIO']
+    if (radio_button == 'choix_4'): DF = DF[DF['nom'].str[:6] != 'AUCHAN']
+    if (radio_button == 'choix_5'): DF = DF[DF['type'] == 'Bio']
+    if (radio_button == 'choix_6'): DF = DF[DF['nom'].str.contains('Bio') | DF['nom'].str.contains('bio') | DF['nom'].str.contains('BIO')]
+    if (radio_button == 'choix_7'): DF, list_name = en_fonction_des_departement()
+
+    x, y, z = [], [], []
+    for i in range(len(list_name)):
+        name = list_name[i]
+        x += list(DF['nom'])
+        y += list(DF[name])
+        z += [name] * len(list(DF[name]))
+    scatter = px.scatter(y=y, x=x, color=z,
+                         labels={
+                             "y": "Pourcentage",
+                             "x": "Nom du produit",
+                             "z": "Nom de la ville"
+                         },
+                         title="Répartition des prix d'Auchan en pourcentage par rapport au produit le plus cher" )
 
     scatter.update_xaxes(showticklabels= False)
     return scatter
