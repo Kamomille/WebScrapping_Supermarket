@@ -53,7 +53,7 @@ for n in range(2,10):
                 (By.XPATH, "/html/body/div[2]/header/nav/div/ul/li[4]/div"))).click()
         l_sous_rayons = driver.find_elements_by_xpath("//div[@class='list-container']")
         print(len(l_sous_rayons))
-        for sr in range(1,len(l_sous_rayons)):
+        for sr in range(1,len(l_sous_rayons)) :
             sous_rayon = WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable(
                     (By.XPATH, "/html/body/div[2]/header/nav/div/ul/li[4]/ul/div/li[" + str(

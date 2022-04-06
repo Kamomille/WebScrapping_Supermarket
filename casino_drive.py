@@ -13,7 +13,6 @@ driver.get(site)
 driver.maximize_window()
 button = WebDriverWait(driver, 100).until(EC.element_to_be_clickable((By.ID, "onetrust-reject-all-handler"))).click()
 time.sleep(2)
-
 list_dep1=driver.find_elements_by_xpath("//*[@class='accordion__header accordion__header--no-shadow']")
 y=50
 #                                       SELECTIONS DRIVE

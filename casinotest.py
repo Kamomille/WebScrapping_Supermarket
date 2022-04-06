@@ -46,7 +46,7 @@ def scrolltoBottom():
     y = 1000
     for timer in range(0, 40):
         driver.execute_script("window.scrollTo(0, " + str(y) + ")")
-        y += 1000
+        y +=1000
         time.sleep(1)
 def getNbrSousRayons(l):
     burger_menu = WebDriverWait(driver, 100).until(
@@ -54,7 +54,7 @@ def getNbrSousRayons(l):
     rayon=WebDriverWait(driver, 100).until(
         EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/header/nav/div/ul/li["+str(l)+"]/div"))).click()
     l_sous_rayons=driver.find_elements_by_xpath("//div[@class='list-container']")
-    for sr in range(len(l_sous_rayons)):
+    for sr in range(1,len(l_sous_rayons)):
         sous_rayon = WebDriverWait(driver, 100).until(
             EC.element_to_be_clickable(
                 (By.XPATH, "/html/body/div[2]/header/nav/div/ul/li["+str(l)+"]/ul/div/li["+str(sr)+")]/div"))).click()
