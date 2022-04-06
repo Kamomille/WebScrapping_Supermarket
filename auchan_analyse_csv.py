@@ -9,7 +9,7 @@ def get_list_csv_file():
     list = []
     for path, subdirs, files in os.walk('auchan_csv'):
         for name in files:
-            if (name != 'produits_merge.csv' and name != 'all_auchan_adresse.csv' and name != 'produits_cleaning.csv'):
+            if (name != 'produits_merge.csv' and name != 'all_auchan_adresse.csv' and name != 'produits_cleaning.csv' and name != 'adresse_auchan_population.csv'):
                 name = name.replace('auchan_produits_', '')
                 name = name.replace('.csv', '')
                 list.append(name) #os.path.join(path, name)
@@ -100,6 +100,7 @@ def variance_calcul (df):
     DF = DF.sort_values(by=['variance'])
     return DF
 
+print(get_list_csv_file())
 # Application des fonctions
 df = create_csv_merge(True)
 df, list_name_csv_clean = cleaning_data(df)
