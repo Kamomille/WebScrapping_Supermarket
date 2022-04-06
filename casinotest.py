@@ -1,8 +1,8 @@
 import csv
 import re
 import time
-import Carte
 import pandas as pd
+
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.by import By
@@ -18,7 +18,6 @@ button = WebDriverWait(driver, 100).until(
     EC.element_to_be_clickable((By.ID, "onetrust-reject-all-handler"))).click()
 time.sleep(2)
 y = 50
-
 def Openheader():
     button = driver.find_elements("xpath", "//button[@class='accordion__header accordion__header--no-shadow']")
     for j in button:
@@ -33,35 +32,42 @@ def CloseTab():
     driver.close()
     main_window = driver.window_handles[0]
     driver.switch_to.window(main_window)
-def AdressesCasino(url):
-    driver.get(url)
-
-    time.sleep(1)
-    driver.find_element(by="id", value="onetrust-reject-all-handler").click()
-
-    time.sleep(1)
-    Openheader()
-
+def GetLinkShop():
     LineAction = driver.find_elements(by="xpath", value="//div[@class='store-line__actions']")
-    liens_adresses = [a.find_element(by='css selector', value="a") for a in LineAction]
+    liens_adresses = [i.find_element(by='css selector', value="a.base-btn.base-btn--primary") for i in LineAction]
 
-    Liste_Adresses=[]
-    for lien in liens_adresses[2:]:
+    for lien in liens_adresses[3:]:
+
         OpenLinkInTab(lien)
-
-        Adresse = driver.find_element(by="xpath", value="//div[@class='store-body__location-detail']")
-        Liste_Adresses.append(Adresse.text)
-
-        CloseTab()
-
-    return Liste_Adresses
-Adresses_Casino = {'Nom' : 'Casino', 'Adresse' : site}
-df_Adresse_casino = pd.DataFrame(Adresses_Casino)
-df_Adresse_casino.to_csv('Adresse.csv', mode='a', index=False, header=False)
+def getNomMag():
+     nom_mag = driver.find_element_by_xpath("/html/body/div[1]/div[1]/div[4]/div/div[2]/div/div[1]/div/div/div[1]/div/div[1]").text
+     return nom_mag
+def scrolltoBottom():
+    y = 1000
+    for timer in range(0, 40):
+        driver.execute_script("window.scrollTo(0, " + str(y) + ")")
+        y += 1000
+        time.sleep(1)
+def getNbrSousRayons(l):
+    burger_menu = WebDriverWait(driver, 100).until(
+        EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/header/div[2]/div[3]"))).click()
+    rayon=WebDriverWait(driver, 100).until(
+        EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/header/nav/div/ul/li["+str(l)+"]/div"))).click()
+    l_sous_rayons=driver.find_elements_by_xpath("//div[@class='list-container']")
+    for sr in range(len(l_sous_rayons)):
+        sous_rayon = WebDriverWait(driver, 100).until(
+            EC.element_to_be_clickable(
+                (By.XPATH, "/html/body/div[2]/header/nav/div/ul/li["+str(l)+"]/ul/div/li["+str(sr)+")]/div"))).click()
+        click_rayon = WebDriverWait(driver, 100).until(
+            EC.element_to_be_clickable(
+                (By.XPATH, "/html/body/div[2]/header/nav/div/ul/li["+str(l)+"]/ul/div/li["+str(sr)+")]/ul/div/div/div[3]/a"))).click()
 
 #                                       SELECTIONS DRIVE
 Openheader()
+GetLinkShop()
+
 #                                       BURGER + RAYONS
+
 # xpath des elements dans le burger menu for i:  /html/body/div[2]/header/nav/div/ul/li[i]/div/div
 popup_close=WebDriverWait(driver,100).until(EC.element_to_be_clickable((By.XPATH,'/html/body/div[3]/div/div[2]/div/div/div[1]/a'))).click()
 
@@ -74,11 +80,6 @@ sous_rayon = WebDriverWait(driver, 100).until(
 click_rayon = WebDriverWait(driver, 100).until(EC.element_to_be_clickable(
     (By.XPATH, "/html/body/div[2]/header/nav/div/ul/li[4]/ul/div/li[1]/ul/div/div/div[3]/a"))).click()
 
-y = 1000
-for timer in range(0, 40):
-    driver.execute_script("window.scrollTo(0, " + str(y) + ")")
-    y += 1000
-    time.sleep(1)
 
 #FILLING DU CSV
 # -- Création du CSV --
@@ -90,6 +91,7 @@ csvWriter.writerow(['categorie', 'type', 'nom', 'poids', 'prix_par_kg', 'prix', 
 list_nbr_produits = driver.find_elements_by_class_name("product-item__bottom")
 print(len(list_nbr_produits))
 #list_it_name=driver.find_elements_by_class_name("product-item__description POP_open")
+
 y=0
 driver.execute_script("window.scrollTo(0, " + str(y) + ")")
 for i in range(1, len(list_nbr_produits)):

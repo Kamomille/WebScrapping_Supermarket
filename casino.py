@@ -33,7 +33,7 @@ for n in range(2,10):
 #                                       BURGER + RAYONS
         # xpath des elements dans le burger menu for i:  /html/body/div[2]/header/nav/div/ul/li[i]/div/div
         popup_close=WebDriverWait(driver,100).until(EC.element_to_be_clickable((By.XPATH,'/html/body/div[3]/div/div[2]/div/div/div[1]/a'))).click()
-
+        '''
         burger_menu = WebDriverWait(driver, 100).until(
             EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/header/div[2]/div[3]"))).click()
         rayon = WebDriverWait(driver, 100).until(
@@ -42,6 +42,27 @@ for n in range(2,10):
             EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/header/nav/div/ul/li[4]/ul/div/li[1]/div"))).click()
         click_rayon = WebDriverWait(driver, 100).until(EC.element_to_be_clickable(
             (By.XPATH, "/html/body/div[2]/header/nav/div/ul/li[4]/ul/div/li[1]/ul/div/div/div[3]/a"))).click()
+        '''
+
+
+
+        burger_menu = WebDriverWait(driver, 100).until(
+            EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/header/div[2]/div[3]"))).click()
+        rayon = WebDriverWait(driver, 100).until(
+            EC.element_to_be_clickable(
+                (By.XPATH, "/html/body/div[2]/header/nav/div/ul/li[4]/div"))).click()
+        l_sous_rayons = driver.find_elements_by_xpath("//div[@class='list-container']")
+        print(len(l_sous_rayons))
+        for sr in range(1,len(l_sous_rayons)):
+            sous_rayon = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable(
+                    (By.XPATH, "/html/body/div[2]/header/nav/div/ul/li[4]/ul/div/li[" + str(
+                        sr) + ")]/div"))).click()
+            click_rayon = WebDriverWait(driver, 100).until(
+                EC.element_to_be_clickable(
+                    (By.XPATH, "/html/body/div[2]/header/nav/div/ul/li[4]/ul/div/li[" + str(
+                        sr) + ")]/ul/div/div/div[3]/a"))).click()
+
 
         y = 1000
         for timer in range(0, 40):
