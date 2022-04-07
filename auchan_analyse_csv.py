@@ -15,27 +15,25 @@ def get_list_csv_file():
                 list.append(name) #os.path.join(path, name)
     return list
 
-def create_list_df(display):
+def create_list_df():
     list_name_csv = get_list_csv_file()
     list_df=[]
     for i in range (len(list_name_csv)):
         df = pd.read_csv("auchan_csv/auchan_produits_" + list_name_csv[i] + ".csv", sep=';')
-        df = df.drop(['promo', 'prix_par_kg','poids'], axis=1)
+        df = df.drop(['promo', 'prix_par_kg'], axis=1)
         df['prix'] = df['prix'].str.replace(',','.')
         df['prix'] = df['prix'].astype(float)
-        #df["poids"] = df.apply(lambda row: row["poids"][:-1] if row["poids"][-1] == 'g' else row["poids"], axis=1)
+        df['poids'] = df['poids'].astype(str)
+        df['poids'] = df.apply(lambda row: row["poids"][:-1] if row["poids"][-1] == 'g' else row["poids"], axis=1)
         list_df.append(df)
-        if (display == True):
-            print("Moy prix " + list_name_csv[i] + " : ", df.prix.mean())
-            print("Nb produit " + list_name_csv[i] + " : ", len(df))
     return list_df, list_name_csv
 
 def create_csv_merge(multiindex):
-    list_df, list_name_csv = create_list_df(False)
+    list_df, list_name_csv = create_list_df()
     list_concat_df =[]
     for i in range (len(list_df)):
-        list_df[i] = list_df[i].drop_duplicates(subset= ["categorie","type","nom"]) #subset= ["nom", "poids"]
-        list_concat_df.append(list_df[i].set_index(["categorie","type","nom"])) #"poids"
+        list_df[i] = list_df[i].drop_duplicates(subset= ["categorie","type","nom","poids"])
+        list_concat_df.append(list_df[i].set_index(["categorie","type","nom","poids"]))
     df = pd.concat(list_concat_df,sort=False, axis=1, keys=list_name_csv)
     if (multiindex == False) : df.columns = [col[0] for col in df.columns]
     df.to_csv("auchan_csv/produits_merge.csv", sep=';')
@@ -97,20 +95,50 @@ def nombre_de_produit_pas_cher_par_ville (df, choix):
 def variance_calcul (df):
     DF = df.copy()
     DF["variance"] = df.var(axis=1)
-    DF = DF.sort_values(by=['variance'])
+    DF = DF.sort_values(by=['variance'], ascending=False)
     return DF
 
-print(get_list_csv_file())
+def ile_de_france_VS_reste (df, choix):
+    DF = nombre_de_produit_pas_cher_par_ville (df, choix)
+    list_dep_iledefrance = ['78','75', '91','92','93','94','95']
+    DF['dep'] = DF.apply(lambda row: row["localisation"][:2], axis=1)
+    DF_1 = DF[DF['dep'].isin(list_dep_iledefrance)]
+    DF_2 = DF[~DF['dep'].isin(list_dep_iledefrance)]
+    intermediate_dictionary = {'localisation': ['ile_de_france','autre'], 'nb_prix': [DF_1['nb_prix'].sum(), DF_2['nb_prix'].sum()]}
+    DFF = pd.DataFrame(intermediate_dictionary)
+    return DFF
+
+def population_VS_nbProduit ():
+    df_pop = pd.read_csv("auchan_csv/adresse_auchan_population.csv", sep=',')
+    df_merge = create_csv_merge(True)
+    list_name_csv = get_list_csv_file()
+    list_nb_produit = []
+    list_population = []
+    for i in range (len(list_name_csv)):
+        name = list_name_csv[i]
+        list_nb_produit.append(len(df_merge) - df_merge[name].prix.isna().sum())
+        df_pop_intermediaire =df_pop[df_pop['ville'] == name]
+        list_population.append(df_pop_intermediaire['population'].values[0])
+    DF = pd.DataFrame(list(zip(list_name_csv,list_nb_produit,list_population)), columns = ['localisation','nb_produit','population'])
+    DF.sort_values(by=['population'], ascending=False)
+    return DF
+
 # Application des fonctions
 df = create_csv_merge(True)
 df, list_name_csv_clean = cleaning_data(df)
 df = df.reset_index()
 
-variance_calcul (df)
 
 # Enregister
 df.to_csv("auchan_csv/produits_cleaning.csv", sep=';')
 
+
+
+DF = population_VS_nbProduit()
+line_chart = px.line(DF,
+                     y='population',
+                     x='nb_produit',
+                     title='population_VS_nbProduit')
 
 
 # --------------------------------- Interface dash ---------------------------------------------------------------------
@@ -122,39 +150,77 @@ app.layout=html.Div(children =[
     html.Hr(),
     html.P(children='Nombre de magasins Auchan scappé :'+ str(len(get_list_csv_file())), style={'textAlign': 'center'}),
     html.P(children='Nombre de magasins Auchan inclue dans l\'analyse :'+ str(len(list_name_csv_clean)), style={'textAlign': 'center'}),
+
+    dcc.Graph(figure=line_chart ),
+
     dcc.RadioItems(
-        id='radio_button',
-        options=[{'label': 'Tout', 'value': 'choix_1'},
-                 {'label': 'Marque Auchan', 'value': 'choix_2'},
-                 {'label': 'Marque Auchan BIO', 'value': 'choix_3'},
-                 {'label': 'Toutes les marques sauf Auchan', 'value': 'choix_4'},
-                 {'label': 'Toutes les légumes bio', 'value': 'choix_5'},
-                 {'label': 'Tous le BIO', 'value': 'choix_6'},
-                 {'label': 'Par département', 'value': 'choix_7'}],
+        id='radio_button_2',
+        options=[{'label': 'Ile-de-France VS le reste de la France', 'value': 'choix_1'},
+                 {'label': 'Toute la France', 'value': 'choix_2'}],
         value='choix_1',
     ),
-    dcc.Graph(id='scatter',
-              style={'height': '800px'}),
 
-    dcc.Graph(figure= px.pie(nombre_de_produit_pas_cher_par_ville(df, 'minimum'),
-                             values='nb_prix',
-                             names='localisation',
-                             title='Nombre de produits le moins cher présent dans le magasin'),
+    dcc.Graph(id='pie_chart_1',
               style={'textAlign': 'center', 'width': '45%','display': 'inline-block'},),
 
-    dcc.Graph(figure=px.pie(nombre_de_produit_pas_cher_par_ville(df, 'maximum'),
-                            values='nb_prix',
-                            names='localisation',
-                            title='Nombre de produits le plus cher présent dans le magasin'),
+    dcc.Graph(id='pie_chart_2',
               style={'textAlign': 'center', 'width': '45%','display': 'inline-block'},),
 
     dcc.Graph(figure=px.bar(variance_calcul(df),
                             y='variance',
                             x='nom',
-                            title='Nombre de produits le plus cher présent dans le magasin')),
-
+                            title='Variances des différents produits')),
+    """
+    dcc.RadioItems(
+            id='radio_button',
+            options=[
+                #{'label': 'Tout', 'value': 'choix_1'},
+                     {'label': 'Marque Auchan', 'value': 'choix_2'},
+                     {'label': 'Marque Auchan BIO', 'value': 'choix_3'},
+                     {'label': 'Toutes les marques sauf Auchan', 'value': 'choix_4'},
+                     {'label': 'Toutes les légumes bio', 'value': 'choix_5'},
+                     {'label': 'Tous le BIO', 'value': 'choix_6'},
+                     {'label': 'Par département', 'value': 'choix_7'}],
+            value='choix_5',
+        ),
+        dcc.Graph(id='scatter',
+          style={'height': '800px'}),
+        """
 ])
 
+
+@app.callback(Output('pie_chart_1', 'figure'),
+              Output('pie_chart_2', 'figure'),
+              Input('radio_button_2', 'value')
+)
+
+def update_pie_chart (radio_button_2):
+    if (radio_button_2 == 'choix_1'):
+        DF_1 = ile_de_france_VS_reste(df, 'minimum')
+        DF_2 = ile_de_france_VS_reste(df, 'maximum')
+    if (radio_button_2 == 'choix_2'):
+        DF_1 = nombre_de_produit_pas_cher_par_ville(df, 'minimum')
+        DF_2 = nombre_de_produit_pas_cher_par_ville(df, 'maximum')
+
+    pie_chart_1 = px.pie(DF_1,
+                            values='nb_prix',
+                            names='localisation',
+                            title='Pourcentage du nb de produits le MOINS cher dans le magasin')
+    if (radio_button_2 == 'choix_1'): pie_chart_1.update_traces(marker=dict(colors=['blue', 'red']))
+
+    pie_chart_2 = px.pie(DF_2,
+                    values='nb_prix',
+                    names='localisation',
+                    title='Pourcentage du nb de produits le PLUS cher dans le magasin')
+    if (radio_button_2 == 'choix_1'): pie_chart_2.update_traces(marker=dict(colors=['blue', 'red']))
+
+    return pie_chart_1, pie_chart_2
+
+if __name__ == '__main__':
+    app.run_server() #debug=True
+
+
+"""
 
 @app.callback(Output('scatter', 'figure'),
               Input('radio_button', 'value')
@@ -163,7 +229,7 @@ app.layout=html.Div(children =[
 def update_bar (radio_button):
     DF = mettre_en_poucentage_en_fonction_prix_max()
     list_name = list_name_csv_clean
-    if (radio_button == 'choix_1'): DF = DF.copy()
+    #if (radio_button == 'choix_1'): DF = DF.copy()
     if (radio_button == 'choix_2'): DF = DF[DF['nom'].str[:6] == 'AUCHAN']
     if (radio_button == 'choix_3'): DF = DF[DF['nom'].str[:10] == 'AUCHAN BIO']
     if (radio_button == 'choix_4'): DF = DF[DF['nom'].str[:6] != 'AUCHAN']
@@ -184,25 +250,16 @@ def update_bar (radio_button):
                              "z": "Nom de la ville"
                          },
                          title="Répartition des prix d'Auchan en pourcentage par rapport au produit le plus cher" )
-
     scatter.update_xaxes(showticklabels= False)
     return scatter
-
-if __name__ == '__main__':
-    app.run_server(debug=True)
-
-
-
-
+"""
 
 
 
 """
 
-
-
 def commandes_utiles(df):
-    list_df, list_name_csv = create_list_df(False)
+    list_df, list_name_csv = create_list_df()
     print('-------------- le prix pour chaque lieu --------------')
     #print(df.loc[:, (list_name_csv, ['prix'])])
 
@@ -231,19 +288,6 @@ def commandes_utiles(df):
     print('-------------- Obtenir les magasins ayant le + de promot --------------')
 
 
-#commandes_utiles(df)
-#create_list_df(True)
-#df.prix.mean()
-
-
-# -- Par département
-#liste_nom_lieu = get_list_csv_file()
-#for i in range (96):
-#    df_prix_lieu = df.loc[:, ('Paris','prix')]
-
-
-
-
 # -- Commandes utiles --
 #print(df.loc[:, (['Paris', 'Lyon'], ['prix'])])
 #print(df.loc[:, pd.IndexSlice[:, ['prix', 'promo']]])
@@ -255,8 +299,6 @@ def commandes_utiles(df):
 
 # -- A tester --
 #df = df.filter(regex="Adj Close")
-
-
 
 
 # ========================= BROUILLON ==================================================================================

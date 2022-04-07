@@ -5,6 +5,27 @@ from selenium import webdriver
 import time
 from selenium.webdriver.common.keys import Keys
 
+def choix_loc():
+    searchresults_text = driver.find_element_by_xpath(
+        "/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div").find_elements_by_class_name(
+        "place-pos__main-infos")
+    time.sleep(3)
+    list_type = []
+    for element in searchresults_text:
+        element = element.text.split("\n")
+        list_type.append(element)
+    for k in range(len(list_type)):
+        print(list_type[k])
+        if (list_type[k][0] == type_pickup):  # and list_type[k][1] == localisation
+            print("OK")
+            time.sleep(1)
+            driver.find_element_by_xpath("/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div/div[" + str(
+                2 + k) + "]/div/div/div[2]/form/button").click()
+            break
+        else:
+            print("nope")
+    time.sleep(4)
+
 #driver = webdriver.Firefox()
 #driver = webdriver.Chrome('C:\Program Files\chromedriver_win32\chromedriver.exe')
 
@@ -74,26 +95,27 @@ for index_row in df_adresse.index:
                 else:
                     driver.find_element_by_xpath('/html/body/div[2]/header/div[1]/div[1]/div/button').click()
                 time.sleep(2)
-                # -- Cherche ville de paris + selectionne Paris 1er --
+                # -- Cherche ville + selectionne la 1ère proposition --
                 element = driver.find_element_by_xpath('/html/body/div[11]/div[1]/main/div[1]/div[1]/div/div[1]/input')
                 element.send_keys(localisation)
                 time.sleep(2)
                 element.send_keys(Keys.DOWN + Keys.ENTER)
                 time.sleep(3)
+
+
                 # -- Choisit la localisation parmi les choix de la liste --
-                searchresults_text = driver.find_element_by_xpath("/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div").find_elements_by_class_name("place-pos__main-infos")
-                list_type = []
-                for element in searchresults_text:
-                    element = element.text.split("\n")
-                    list_type.append(element)
-                    print(element)
-                for k in range (len(list_type)):
-                    if(list_type[k][0] == type_pickup): # and list_type[k][1] == localisation
-                        print("OK")
-                        driver.find_element_by_xpath("/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div/div["+ str(2+k) +"]/div/div/div[2]/form/button").click()
-                        break
-                    else : print("nope")
-                time.sleep(5)
+                try:
+                    choix_loc()
+                except:
+                    for k in range (len(localisation)): element.send_keys(Keys.BACKSPACE)
+                    localisation = localisation[5:] + ' ' +localisation[:5]
+                    element = driver.find_element_by_xpath('/html/body/div[11]/div[1]/main/div[1]/div[1]/div/div[1]/input')
+                    element.send_keys(localisation)
+                    time.sleep(2)
+                    element.send_keys(Keys.DOWN + Keys.ENTER)
+                    time.sleep(3)
+
+                    choix_loc()
 
             # ========================= Scroll pour charger tous les éléments ======================================================
 
@@ -124,14 +146,15 @@ for index_row in df_adresse.index:
                   promo = "non"
                   prix_par_kilo =""
                   for el in txt:
-                     if (el[-1] == 'g' and el[-2].isdigit() == True and len(el) < 8): poids = el[:-1]
+                     if (el[-1] == 'g' and el[-2].isdigit() == True and len(el) < 8): poids = el #poids = el[:-1]
                      if (el[-6:] == '€ / kg' or el[-7:] == '€ / pce'): prix_par_kilo = el #[:-6]
                      if (el == 'Voir l\'offre'): promo = txt[compt]
                      compt += 1
 
                   l = list_grandes_categorie[j][1]
-                  # Ecriture dans le fichier CSV
-                  csvWriter.writerow((list_grandes_categorie[j][0],l[i], txt[0], poids, prix_par_kilo, txt[-1].replace('€', ''), promo))
+                  if (nom != 'A retirer dans la journée'): # Permet de ne pas sélectionner le pannier anti gaspi
+                      # Ecriture dans le fichier CSV
+                      csvWriter.writerow((list_grandes_categorie[j][0],l[i], txt[0], poids, prix_par_kilo, txt[-1].replace('€', ''), promo))
 
 
 # ========================= BROUILLON ==================================================================================
