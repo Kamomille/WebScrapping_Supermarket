@@ -19,7 +19,7 @@ def choix_loc():
         if (list_type[k][0] == type_pickup):  # and list_type[k][1] == localisation
             print("OK")
             time.sleep(1)
-            driver.find_element_by_xpath("/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div/div[" + str(3 + k) + "]/div/div/div[2]/form/button").click()
+            driver.find_element_by_xpath("/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div/div[" + str(2 + k) + "]/div/div/div[2]/form/button").click()
             break
         else:
             print("nope")
@@ -123,12 +123,10 @@ for index_row in df_adresse.index:
 
             for element in searchresults_text:
                 txt = element.text.split("\n")
-                print(txt)
                 a = int(txt[0])
                 print(a)
-            nb_scroll = a * 50 /15
             y = 1000
-            for timer in range(0, a):
+            for timer in range(0, a*15):
                 driver.execute_script("window.scrollTo(0, " + str(y) + ")")
                 y += 1000
                 time.sleep(2)

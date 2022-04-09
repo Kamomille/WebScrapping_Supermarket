@@ -149,7 +149,7 @@ variance_bar_chart = px.bar(variance_calcul(df),
 
 variance_bar_chart.update_xaxes(showticklabels= False)
 
-
+"""
 # --------------------------------- Interface dash ---------------------------------------------------------------------
 app = Dash(__name__)
 server=app.server
@@ -210,7 +210,7 @@ def update_pie_chart (radio_button_2):
 if __name__ == '__main__':
     app.run_server() #debug=True
 
-
+"""
 """
 
     dcc.RadioItems(
