@@ -9,7 +9,7 @@ def choix_loc():
     searchresults_text = driver.find_element_by_xpath(
         "/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div").find_elements_by_class_name(
         "place-pos__main-infos")
-    time.sleep(3)
+    time.sleep(4)
     list_type = []
     for element in searchresults_text:
         element = element.text.split("\n")
@@ -19,8 +19,7 @@ def choix_loc():
         if (list_type[k][0] == type_pickup):  # and list_type[k][1] == localisation
             print("OK")
             time.sleep(1)
-            driver.find_element_by_xpath("/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div/div[" + str(
-                2 + k) + "]/div/div/div[2]/form/button").click()
+            driver.find_element_by_xpath("/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div/div[" + str(3 + k) + "]/div/div/div[2]/form/button").click()
             break
         else:
             print("nope")
@@ -118,10 +117,18 @@ for index_row in df_adresse.index:
                     choix_loc()
 
             # ========================= Scroll pour charger tous les éléments ======================================================
-
             # -- Scroll down --
+            div = driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/nav/div')
+            searchresults_text = div.find_elements_by_tag_name("a")
+
+            for element in searchresults_text:
+                txt = element.text.split("\n")
+                print(txt)
+                a = int(txt[0])
+                print(a)
+            nb_scroll = a * 50 /15
             y = 1000
-            for timer in range(0, 50):
+            for timer in range(0, a):
                 driver.execute_script("window.scrollTo(0, " + str(y) + ")")
                 y += 1000
                 time.sleep(2)
@@ -146,7 +153,7 @@ for index_row in df_adresse.index:
                   promo = "non"
                   prix_par_kilo =""
                   for el in txt:
-                     if (el[-1] == 'g' and el[-2].isdigit() == True and len(el) < 8): poids = el #poids = el[:-1]
+                     if (el[-1] == 'g' and (el[-2].isdigit() == True or el[-3].isdigit() == True) and len(el) < 8): poids = el #poids = el[:-1]
                      if (el[-6:] == '€ / kg' or el[-7:] == '€ / pce'): prix_par_kilo = el #[:-6]
                      if (el == 'Voir l\'offre'): promo = txt[compt]
                      compt += 1
