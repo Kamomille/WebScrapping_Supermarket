@@ -20,196 +20,106 @@ Auchan = Auchan.values.tolist()
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])  # initialisation du dash app
 
 SIDEBAR_STYLE = {
-    "position": "fixed",
+    "position": "fixed", #ne bouge pas même quand on bouge la page
     "top": 0,
     "left": 0,
     "bottom": 0,
+    #"transition": "all 0.5s",
     "width": "16rem",
-    "padding": "2rem 1rem",
-    "background-color": "#f8f9fa",
-}
-
-SIDEBAR_HIDEN = {
-    "position": "fixed",
-    "top": 62.5,
-    "left": "-16rem",
-    "bottom": 0,
-    "width": "16rem",
-    "height": "100%",
-    "z-index": 1,
-    "overflow-x": "hidden",
-    "transition": "all 0.5s",
-    "padding": "0rem 0rem",
+    "padding": "2rem 1rem", #L'espace avec le haut puis l'espace avec la droite
     "background-color": "#f8f9fa",
 }
 
 CONTENT_STYLE = {
-    "transition": "margin-left .5s",
-    "margin-left": "18rem",
-    "margin-right": "2rem",
+    #"transition": "margin-left .5s",
+    "margin-left": "10rem",
+    "margin-right": "0rem",
     "padding": "2rem 1rem",
-    "background-color": "#f8f9fa",
+    'background-image': 'url("/assets/Faire_ses_courses.jpg")',
+    'background-repeat': 'no-repeat',
+    'background-size': 'cover',
 }
 
-CONTENT_STYLE1 = {
-    "transition": "margin-left .5s",
-    "margin-left": "2rem",
-    "margin-right": "2rem",
-    "padding": "2rem 1rem",
-    "background-color": "#f8f9fa",
-}
-
-navbar = dbc.NavbarSimple(children=[
-        dbc.Button("Sidebar", outline=True, color="secondary", className="mr-1", id="btn_sidebar"),
-        dbc.NavItem(dbc.NavLink("Page 1", href="#")),
-        dbc.DropdownMenu(
-            children=[
-                dbc.DropdownMenuItem("More pages", header=True),
-                dbc.DropdownMenuItem("Carte", href="/Carte"),
-                dbc.DropdownMenuItem("Statistics", href="/Statistics"),
-            ],
-            nav=True,
-            in_navbar=True,
-            label="More",
-        ),
-    ],
-    brand="Outils",
-    brand_href="/",
-    color="dark",
-    dark=True,
-    fluid=True,
-)
-
-#On ajoute un layout sur la page
 sidebar = html.Div([
     html.H2("Sidebar", className="display-4"),
     html.Hr(),
     #html.P("More", className="Lead"),
     dbc.Nav([
-        dbc.NavLink("Filtre", href="/", active="exact"),
-        dbc.NavLink("Carte", href="/Carte", active="exact"),
-        dbc.NavLink("Statistics", href="/Statistics", active="exact")],
-        vertical=True,
-        pills=True
+        dbc.NavLink("Filtre", href="/", id="page-1-link"),
+        dbc.NavLink("Carte", href="/Carte", id="page-2-link"),
+        dbc.NavLink("Statistics", href="/Statistics", id="page-3-link")],
+        vertical=True, #On écrit les lien de haut en bas
+        pills=True #La bar bleu qui apparait pour nous dire sur quelle page on est
     ),
-],
-    id ="sidebar",
-    style=SIDEBAR_STYLE
+], style=SIDEBAR_STYLE
 )
 
-content = html.Div([
-                html.Div(children=[
-                    html.H1('Where can I find the cheaper products ?'),
-                    html.P('Enter the details to generate infographics')
-                ],
+content = html.Div(id="page-content", children=[], style=CONTENT_STYLE)
 
-                    style={
-                        'color': 'black',
-                        'width': '100%',
-                        'height': '100px',
-                        'text-align': "center"
-                    }
-                ),
+contentFilter = html.Div([
+                    html.Div(children=[
+                        html.H1('Where can I find the cheaper products ?'),
+                        html.P('Enter the details to generate infographics')
+                    ],
 
-                html.Div([
-                    dcc.Input(
-                        id="Search_Bar",
-                        # placeholder="",
-                        type='search'
+                        style={
+                            'color': 'white',
+                            'width': '100%',
+                            'height': '100px',
+                            'text-align': "center",
+                        }
                     ),
-                    html.Div(id='Display-output')
+                    html.Div([
+                        dcc.Dropdown(Auchan, id='dropdown', clearable=False,
+                                     style={"width": "15rem",
+                                            "margin-left": "4rem",
+                                            "margin-top": "4rem",
+                                            'display': 'inline-block',
+                                            "margin-down": "50rem"
+                                            }),
 
-                ],
-                    style={
-                        'width': '200rem',
-                        'height': '200rem',
-                        'text-align': "center"
-                    }
-                ),
+                        dcc.Input(id="Search_Bar", placeholder="produit", type='search',
+                                    style={
+                                        "margin-left": "6rem",
+                                        "width": "20rem",
+                                        "margin-top": "0rem",
+                                        "margin-down": "50rem",
+                                        'display': 'inline-block'
+                                    })
+                    ])])
 
-                html.Div([
-                    html.Iframe(id='map', srcDoc=open('carte.html', 'r').read(), width='80%', height='600vh')
+contentCard = html.Div([
+                        html.Iframe(id='map', srcDoc=open('carte.html', 'r').read(), width='80%', height='600vh',
+                                    style={
+                                        "margin-left": "6rem",
+                                        "margin-right": "2rem",
+                                        "margin-top": "0rem"})])
 
-                ],
-                    id="page-content",
-                    style=CONTENT_STYLE
-                )
-
-        ])
+contentStatistics = html.Div([
+    #Pour Camille - Mets tes graphiques ici, dis moi si tu as besoin de plus d'onglet faut juste ajouter
+    #Une fois le "contentStatistics" remplis, descends dans le call back et change le return
+])
 
 app.layout = html.Div([
-        dcc.Store(id='side_click'),
         dcc.Location(id="url"),
-        navbar,
         sidebar,
         content
-
-],
-""" 
-    style={
-        'background-image': 'url("/assets/Faire_ses_courses.jpg")',
-        'background-repeat': 'no-repeat',
-        'width': '100%',
-        'height': '100%',
-        'background-size': 'cover',
-        'background-position': 'center'
-        }
-"""
-)
-""" 
-@app.callback(
-    Output('dropdown', 'loc'),
-    Input('dropdown', 'value')
-)
-def Localisation(selected_location):
-    return f'You have selected {selected_location}'
+])
 
 @app.callback(
-    Output('Search_Bar', 'Bar'),
-    Input('Search_Bar', 'value')
+    [Output("page-content", "children")],
+    [Input("url", "pathname")], #On va prendre le pathname du url dans app.layout
 )
-def Result_Search(choix):
-    return f'You have selected {Result}'
-"""
-@app.callback(
-    [
-        Output("sidebar", "style"),
-        Output("page-content", "style"),
-        Output("side_click", "data"),
-    ],
-
-    [Input("btn_sidebar", "n_clicks")],
-    [
-        State("side_click", "data"),
-    ]
-)
-
-def toggle_sidebar(n, nclick):
-    if n:
-        if nclick == "SHOW":
-            sidebar_style = SIDEBAR_HIDEN
-            content_style = CONTENT_STYLE1
-            cur_nclick = "HIDDEN"
-        else:
-            sidebar_style = SIDEBAR_STYLE
-            content_style = CONTENT_STYLE
-            cur_nclick = "SHOW"
+def Content(pathname):
+    if pathname == "/":
+        return [contentFilter] #On retourne entre crochet,pour pouvoir envoyer au children de "content"
+    elif pathname == "/Carte":
+        return [contentCard]
+    elif pathname == "/Statistics":
+        return [html.H1("unfortunetly, we don't have anything yet")] # Pour Camille - Juste ici !
     else:
-        sidebar_style = SIDEBAR_STYLE
-        content_style = CONTENT_STYLE
-        cur_nclick = 'SHOW'
+        return [html.H1("unfortunetly, we don't have anything yet")]
 
-    return sidebar_style, content_style, cur_nclick
-""" 
-@app.callback(
-    Output('Display-output', 'children'),
-    Input('Search_Bar', 'value')
-)
-def Result_Search(value):
-    Result = auchan_search.Bar_De_Recherche(value)
-    return f'You choose {Result}'
-"""
-# Run the app
+
 if __name__ == '__main__':
     app.run_server(debug=True)
-
