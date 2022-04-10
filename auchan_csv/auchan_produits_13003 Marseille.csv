@@ -1,0 +1,311 @@
+categorie;type;nom;poids;prix_par_kg;prix;promo
+Fruits, légumes;Bio;Tomates rondes en grappes bio;500g;4,00€ / kg;2,00;non
+Fruits, légumes;Bio;AUCHAN BIO Carottes filière responsable;;1,49€ / kg;1,49;non
+Fruits, légumes;Bio;AUCHAN BIO Pommes de terre pour salade et à la vapeur;;2,20€ / kg;5,49;non
+Fruits, légumes;Bio;Courgettes bio;;3,29€ / kg;3,29;non
+Fruits, légumes;Bio;Avocat bio;;1,69€ / pce;1,69;non
+Fruits, légumes;Bio;Concombre bio;;1,59€ / pce;1,59;non
+Fruits, légumes;Bio;AUCHAN BIO Betteraves rouges entières cuites bio;500g;2,38€ / kg;1,19;non
+Fruits, légumes;Bio;Butternut bio;;2,00€ / pce;2,00;non
+Fruits, légumes;Bio;Potimarron bio;;2,99€ / pce;2,99;non
+Fruits, légumes;Bio;AUCHAN BIO Citrons jaunes;400g;4,48€ / kg;1,79;non
+Fruits, légumes;Bio;AUCHAN BIO Pommes bicolores;;3,49€ / kg;3,49;non
+Fruits, légumes;Bio;AUCHAN BIO Kiwis;;3,89€ / pce;3,89;non
+Fruits, légumes;Bio;AUCHAN BIO Pur jus d'oranges pressées;;;2,69;non
+Fruits, légumes;Bio;AUCHAN BIO Pur jus de pommes;;;2,29;non
+Fruits, légumes;Fruit;Bon plan du week-end;;0,59€ / pce;0,59;non
+Fruits, légumes;Fruit;Oranges à jus;;2,00€ / kg;3,99;non
+Fruits, légumes;Fruit;Oranges à déguster;;1,85€ / kg;3,69;non
+Fruits, légumes;Fruit;Pomelo rose;;0,99€ / pce;0,99;non
+Fruits, légumes;Fruit;AUCHAN BIO Pommes bicolores;;3,49€ / kg;3,49;non
+Fruits, légumes;Fruit;Pommes Golden filière responsable;;2,99€ / pce;2,99;non
+Fruits, légumes;Fruit;AUCHAN BIO Kiwis;;3,89€ / pce;3,89;non
+Fruits, légumes;Fruit;Clémentines plateau;;1,30€ / kg;2,99;non
+Fruits, légumes;Fruit;Citrons verts;500g;5,78€ / kg;2,89;non
+Fruits, légumes;Fruit;AUCHAN BIO Citrons jaunes;400g;4,48€ / kg;1,79;non
+Fruits, légumes;Fruit;Framboises;125g;12,00€ / kg;1,50;non
+Fruits, légumes;Fruit;Myrtilles;125g;22,00€ / kg;2,75;non
+Fruits, légumes;Fruit;Kiwis jaunes;;1,07€ / pce;4,29;non
+Fruits, légumes;Fruit;Kiwi jaune;;0,75€ / pce;0,75;non
+Fruits, légumes;Fruit;Ananas sweet;;1,75€ / pce;1,75;non
+Fruits, légumes;Fruit;Kaki;;0,69€ / pce;0,69;non
+Fruits, légumes;Fruit;Mangue;;2,29€ / pce;2,29;non
+Fruits, légumes;Fruit;Fruit de la passion;;1,50€ / pce;1,50;non
+Fruits, légumes;Fruit;AUCHAN RIK & ROK Raisins sans pépins;500g;7,58€ / kg;3,79;non
+Fruits, légumes;Fruit;AUCHAN Noisettes décortiquées;175g;17,94€ / kg;3,14;non
+Fruits, légumes;Fruit;AUCHAN GOURMET Amandes décortiquées;150g;19,53€ / kg;2,93;non
+Fruits, légumes;Fruit;AUCHAN Cerneaux de noix;200g;19,90€ / kg;3,98;non
+Fruits, légumes;Fruit;AUCHAN Pruneaux d'Agen dénoyautés;500g;8,38€ / kg;4,19;non
+Fruits, légumes;Fruit;AUCHAN GOURMET Dattes deglet nour branchées;500g;4,04€ / kg;2,02;non
+Fruits, légumes;Fruit;WONDERFUL Wonderful pistaches grillées non salées 250g;250g;19,96€ / kg;4,99;-60% sur le 2ème
+Fruits, légumes;Légumes;Chou rouge;;2,79€ / pce;2,79;non
+Fruits, légumes;Légumes;Chou blanc;;2,39€ / pce;2,39;non
+Fruits, légumes;Légumes;Chou vert frisé;;2,89€ / pce;2,89;non
+Fruits, légumes;Légumes;Chou-fleur;;1,99€ / pce;1,99;non
+Fruits, légumes;Légumes;Radis roses;;1,00€ / pce;1,00;0,58€ de remise si 2 achetés
+Fruits, légumes;Légumes;Oignons filet;;1,00€ / kg;1,00;non
+Fruits, légumes;Légumes;AUCHAN Tomates cerises rondes en grappes filière responsable;350g;12,83€ / kg;4,49;non
+Fruits, légumes;Légumes;Tomates rondes en grappes bio;500g;4,00€ / kg;2,00;non
+Fruits, légumes;Légumes;Tomates cerises allongées;250g;5,16€ / kg;1,29;non
+Fruits, légumes;Légumes;Pommes de terre de consommation vapeur salade sautées;;1,80€ / kg;4,49;non
+Fruits, légumes;Légumes;AUCHAN Pommes de terre frites purée potage;;0,80€ / kg;1,99;non
+Fruits, légumes;Légumes;AUCHAN BIO Pommes de terre pour salade et à la vapeur;;2,20€ / kg;5,49;non
+Fruits, légumes;Légumes;Courgettes 1er prix;;1,29€ / kg;1,29;non
+Fruits, légumes;Légumes;Courgettes bio;;3,29€ / kg;3,29;non
+Fruits, légumes;Légumes;Poivrons tricolores rouge vert et jaune;500g;4,38€ / kg;2,19;non
+Fruits, légumes;Légumes;AUCHAN BIO Carottes filière responsable;;1,49€ / kg;1,49;non
+Fruits, légumes;Légumes;AUCHAN Carottes;;0,83€ / kg;1,00;non
+Fruits, légumes;Légumes;Mélange pour pot au feu : carotte, oignon, chou, poireau, céleri rave, navet et persil;;1,95€ / kg;1,95;non
+Fruits, légumes;Légumes;Concombre;;1,49€ / pce;1,49;non
+Fruits, légumes;Légumes;Avocat bio;;1,69€ / pce;1,69;non
+Fruits, légumes;Légumes;Concombre bio;;1,59€ / pce;1,59;non
+Fruits, légumes;Légumes;Avocat prêt à déguster;;1,15€ / pce;1,15;non
+Fruits, légumes;Légumes;FLORETTE Radis long;200g;12,25€ / kg;2,45;non
+Fruits, légumes;Légumes;Cœur de laitue;;0,33€ / pce;1,00;non
+Fruits, légumes;Légumes;Salade batavia filière responsable;;1,09€ / pce;1,09;non
+Fruits, légumes;Légumes;AUCHAN BIO Betteraves rouges entières cuites bio;500g;2,38€ / kg;1,19;non
+Fruits, légumes;Légumes;Brocoli;500g;3,18€ / kg;1,59;non
+Fruits, légumes;Légumes;Epinards;500g;4,98€ / kg;2,49;non
+Fruits, légumes;Légumes;Butternut bio;;2,00€ / pce;2,00;non
+Fruits, légumes;Légumes;Potimarron bio;;2,99€ / pce;2,99;non
+Fruits, légumes;Prêt à consommer;Tomates cerises allongées;250g;5,16€ / kg;1,29;non
+Fruits, légumes;Prêt à consommer;AUCHAN Tomates cerises rondes en grappes filière responsable;350g;12,83€ / kg;4,49;non
+Fruits, légumes;Prêt à consommer;Chou-fleur;;1,99€ / pce;1,99;non
+Fruits, légumes;Prêt à consommer;Concombre;;1,49€ / pce;1,49;non
+Fruits, légumes;Prêt à consommer;Concombre bio;;1,59€ / pce;1,59;non
+Fruits, légumes;Prêt à consommer;AUCHAN BIO Betteraves rouges entières cuites bio;500g;2,38€ / kg;1,19;non
+Fruits, légumes;Prêt à consommer;FLORETTE Salade mâche maxi sachet;200g;12,70€ / kg;2,54;non
+Fruits, légumes;Prêt à consommer;AUCHAN Roquette;125g;13,20€ / kg;1,65;non
+Fruits, légumes;Prêt à consommer;AUCHAN Cœur de laitue;200g;7,35€ / kg;1,47;non
+Fruits, légumes;Prêt à consommer;AUCHAN Auchan Jeunes pousses d'épinards 125g;125g;14,16€ / kg;1,77;non
+Fruits, légumes;Prêt à consommer;AUCHAN Mâche;125g;10,48€ / kg;1,31;non
+Fruits, légumes;Prêt à consommer;AUCHAN Cœur de laitue;320g;6,53€ / kg;2,09;non
+Fruits, légumes;Prêt à consommer;AUCHAN Mélange de jeunes pousses épinard et laitue;125g;12,16€ / kg;1,52;non
+Fruits, légumes;Prêt à consommer;AUCHAN Mélange gourmand de frisée mâche et chicorée rouge;200g;6,55€ / kg;1,31;non
+Fruits, légumes;Prêt à consommer;AUCHAN Laitue iceberg;300g;3,87€ / kg;1,16;non
+Fruits, légumes;Prêt à consommer;FLORETTE Cœur de laitue;200g;9,75€ / kg;1,95;non
+Fruits, légumes;Prêt à consommer;FERME D'ANCHIN Suprême d'asperge;;;4,22;non
+Fruits, légumes;Prêt à consommer;FERME D'ANCHIN Suprême de tomate;;;4,22;non
+Fruits, légumes;Prêt à consommer;FLORETTE Carottes rapées;250g;6,48€ / kg;1,62;non
+Fruits, légumes;Prêt à consommer;LUNOR Pommes de terre entières cuites;2x500g;3,04€ / kg;3,04;non
+Fruits, légumes;Prêt à consommer;LES CRUDETTES Baby carottes;200g;10,00€ / kg;2,00;non
+Fruits, légumes;Prêt à consommer;FLORETTE Plateau apéritif de crudités;600g;9,58€ / kg;5,75;non
+Fruits, légumes;Prêt à consommer;FLORETTE Radis long;200g;12,25€ / kg;2,45;non
+Epicerie sucrée;Cafe;STARBUCKS Capsules de café Colombie intensité 7 compatibles Nespresso;57g;62,63€ / kg;3,57;non
+Epicerie sucrée;Cafe;L'OR Capsules de café forza intensité 9 compatibles Nespresso maxi pack;208g;54,23€ / kg;11,28;non
+Epicerie sucrée;Cafe;L'OR Capsules de café lungo profondo intensité 8 compatibles Nespresso;104g;62,40€ / kg;6,49;non
+Epicerie sucrée;Cafe;L'OR Capsules de café ristretto intensité 11 compatibles Nespresso;208g;54,18€ / kg;11,27;non
+Epicerie sucrée;Cafe;L'OR Capsules de café décaféiné intensité 6 compatibles Nespresso;104g;53,46€ / kg;5,56;-68% sur le 2ème
+Epicerie sucrée;Cafe;L'OR ESPRESSO Capsules de café delizioso intensité 5 compatibles Nespresso;104g;53,46€ / kg;5,56;-68% sur le 2ème
+Epicerie sucrée;Cafe;L'OR Capsules de café splendente intensité 7 compatibles Nespresso;104g;53,46€ / kg;5,56;-68% sur le 2ème
+Epicerie sucrée;Cafe;TASSIMO Dosettes de café L'Or espresso café long classique;156g;40,71€ / kg;6,35;non
+Epicerie sucrée;Cafe;TASSIMO Dosettes de café L'Or espresso classique;104g;44,10€ / kg;4,41;non
+Epicerie sucrée;Cafe;DOLCE GUSTO Capsules de café Lungo Intensité 6 compatibles Dolce Gusto;195g;38,62€ / kg;7,53;non
+Epicerie sucrée;Cafe;DOLCE GUSTO Capsules de café Espresso intensité 5 compatibles Dolce Gusto;165g;45,64€ / kg;7,53;non
+Epicerie sucrée;Cafe;DOLCE GUSTO Capsules de café cappuccino compatibles Dolce Gusto;186g;22,63€ / kg;4,21;non
+Epicerie sucrée;Cafe;CARTE NOIRE Dosettes de café corsé compatibles Senseo;420g;15,76€ / kg;6,62;non
+Epicerie sucrée;Cafe;CARTE NOIRE Dosettes de café classique intensité 5 compatibles Senseo;420g;15,69€ / kg;6,59;non
+Epicerie sucrée;Cafe;SENSEO Dosettes de café corsé format familial;375g;18,96€ / kg;7,11;non
+Epicerie sucrée;Cafe;SENSEO Dosettes de café classique;375g;18,96€ / kg;7,11;non
+Epicerie sucrée;Cafe;CARTE NOIRE Café moulu pur arabica;3X250g;15,59€ / kg;11,69;non
+Epicerie sucrée;Cafe;AUCHAN BIO Café moulu du Guatemala intensité 8;250g;14,48€ / kg;3,62;non
+Epicerie sucrée;Cafe;MALONGO Café moulu des petits producteurs l'original;250g;12,60€ / kg;3,15;non
+Epicerie sucrée;Cafe;L'OR Absolu Café en grains grand cru;;11,00€ / kg;11,00;non
+Epicerie sucrée;Cafe;CARTE NOIRE Café en grains pur arabica;;14,84€ / kg;14,84;non
+Epicerie sucrée;Cafe;NATURELA Café en grains bio pur arabica intensité 7;;12,64€ / kg;12,64;non
+Epicerie sucrée;Cafe;AUCHAN Auchan Filtres à café bruns non blanchis n°4 X80;;0,01€ / pce;0,95;non
+Epicerie sucrée;Cafe;NESCAFE Café soluble cappuccino;280g;14,11€ / kg;3,95;non
+Epicerie sucrée;Cafe;NESCAFE L'original café soluble spécial filtre;200g;30,45€ / kg;6,09;non
+Epicerie sucrée;Cafe;NESTLE Café chicorée soluble Ricoré original;260g;20,00€ / kg;5,20;non
+Epicerie sucrée;Petit dej, boissons chaudes;HARRYS Pain de mie nature sans huile de palme sans croûte;650g;3,02€ / kg;1,96;non
+Epicerie sucrée;Petit dej, boissons chaudes;HARRYS Pain de mie nature sans sucre ajouté sans huile de palme avec croûte;500g;2,66€ / kg;1,33;non
+Epicerie sucrée;Petit dej, boissons chaudes;JACQUET Pain de mie complet sans sucres ajoutés;550g;3,11€ / kg;1,71;non
+Epicerie sucrée;Petit dej, boissons chaudes;HARRYS Pain de mie céréales et graines sans huile de palme;320g;6,00€ / kg;1,92;non
+Epicerie sucrée;Petit dej, boissons chaudes;AUCHAN MMM! Pain de mie aux graines et céréales;500g;4,18€ / kg;2,09;non
+Epicerie sucrée;Petit dej, boissons chaudes;AUCHAN Pain de mie spécial sandwich aux 7 céréales 14 tranches;550g;1,96€ / kg;1,08;non
+Epicerie sucrée;Petit dej, boissons chaudes;AUCHAN Pain de mie sans huile de palme sans croûte;500g;2,70€ / kg;1,35;non
+Epicerie sucrée;Petit dej, boissons chaudes;AUCHAN Pain de mie complet sans huile de palme sans croûte;500g;2,76€ / kg;1,38;non
+Epicerie sucrée;Petit dej, boissons chaudes;HARRYS Pain de mie complet;500g;3,26€ / kg;1,63;non
+Epicerie sucrée;Petit dej, boissons chaudes;HARRYS Pain de mie nature sans huile de palme sans croûte;500g;3,18€ / kg;1,59;non
+Epicerie sucrée;Petit dej, boissons chaudes;AUCHAN Petits pains précuits;300g;3,00€ / kg;0,90;non
+Epicerie sucrée;Petit dej, boissons chaudes;AUCHAN Minis baguettes précuites;2x150g;1,93€ / kg;0,58;non
+Epicerie sucrée;Petit dej, boissons chaudes;LA BOULANGERE Pain de mie complet bio grandes tranches;500g;4,14€ / kg;2,07;non
+Epicerie sucrée;Petit dej, boissons chaudes;NESQUIK Chocolat en poudre sans arôme artificiel;500g;5,34€ / kg;2,67;non
+Epicerie sucrée;Petit dej, boissons chaudes;POULAIN Grand arôme chocolat en poudre 32% cacao;800g;3,99€ / kg;3,19;non
+Epicerie sucrée;Petit dej, boissons chaudes;LIPTON Thé vert fresh menthe intense;34g;48,53€ / kg;1,65;non
+Epicerie sucrée;Petit dej, boissons chaudes;TWININGS Original earl grey thé aromatisé bergamote;50g;42,00€ / kg;2,10;non
+Epicerie sucrée;Petit dej, boissons chaudes;CLIPPER Thé bio fabulous thé vert citron;35g;78,29€ / kg;2,74;non
+Epicerie sucrée;Petit dej, boissons chaudes;ELEPHANT Infusion bio verveine et menthe;30g;110,77€ / kg;2,88;non
+Epicerie sucrée;Petit dej, boissons chaudes;NOCCIOLATA Pâte à tartiner bio au cacao et noisettes sans huile de palme;700g;11,24€ / kg;7,87;non
+Epicerie sucrée;Petit dej, boissons chaudes;NUTELLA Pâte à tartiner aux noisettes;350g;8,14€ / kg;2,85;non
+Epicerie sucrée;Petit dej, boissons chaudes;ETHIQUABLE Beurre de cacahuète du Nicaragua;350g;11,23€ / kg;3,93;non
+Epicerie sucrée;Petit dej, boissons chaudes;AUCHAN Pasta cao Pâte à tartiner cacao et noisettes sans huile de palme;750g;4,13€ / kg;3,10;non
+Epicerie sucrée;Petit dej, boissons chaudes;NUTELLA Pâte à tartiner aux noisettes;750g;6,20€ / kg;4,65;non
+Epicerie sucrée;Petit dej, boissons chaudes;FAUGIER Crème de marrons;250g;8,00€ / kg;2,00;non
+Epicerie sucrée;Petit dej, boissons chaudes;L'APICULTEUR Miel de fleurs de montagne crémeux et onctueux;500g;12,98€ / kg;6,49;non
+Epicerie sucrée;Petit dej, boissons chaudes;LUNE DE MIEL Miel de fleurs liquide en flacon doseur;500g;8,94€ / kg;4,47;non
+Epicerie sucrée;Petit dej, boissons chaudes;LUNE DE MIEL Miel de fleurs liquide bio en flacon doseur;500g;11,58€ / kg;5,79;non
+Epicerie sucrée;Petit dej, boissons chaudes;MAPLE JOE Sirop d'érable ambré goût riche;250g;15,00€ / kg;3,75;non
+Epicerie sucrée;Petit dej, boissons chaudes;AUCHAN BIO Confiture extra de fraises;350g;5,97€ / kg;2,09;non
+Epicerie sucrée;Petit dej, boissons chaudes;BONNE MAMAN Intense confiture de myrtilles;335g;8,48€ / kg;2,84;non
+Epicerie sucrée;Petit dej, boissons chaudes;BONNE MAMAN Intense confiture de framboises;335g;9,64€ / kg;3,23;non
+Epicerie sucrée;Petit dej, boissons chaudes;BONNE MAMAN Intense confiture de fraises;335g;6,48€ / kg;2,17;non
+Epicerie sucrée;Petit dej, boissons chaudes;AUCHAN Confiture extra de fraises;360g;2,89€ / kg;1,04;non
+Epicerie sucrée;Petit dej, boissons chaudes;BONNE MAMAN Intense confiture d'abricots;335g;6,99€ / kg;2,34;non
+Epicerie sucrée;Petit dej, boissons chaudes;HARRYS Brioche tranchée recette classique sans additifs;680g;4,00€ / kg;2,72;non
+Epicerie sucrée;Petit dej, boissons chaudes;FOURNEE DOREE La gâche brioche tranchée au sucre;500g;6,30€ / kg;3,15;non
+Epicerie sucrée;Petit dej, boissons chaudes;PASQUIER Brioche tressée aux pépites de chocolat;630g;4,27€ / kg;2,69;non
+Epicerie sucrée;Petit dej, boissons chaudes;HARRYS Brioche tressée nature sans additifs au sucre perlé;500g;5,64€ / kg;2,82;non
+Epicerie sucrée;Petit dej, boissons chaudes;AUCHAN Brioche tranchée aux œufs frais;500g;3,20€ / kg;1,60;non
+Epicerie sucrée;Petit dej, boissons chaudes;DOOWAP Brioches sans additifs aux pépites de chocolat au lait;320g;6,69€ / kg;2,14;non
+Epicerie sucrée;Petit dej, boissons chaudes;DOOWAP Brioches sans additifs aux pépites de chocolat;320g;6,69€ / kg;2,14;non
+Epicerie sucrée;Petit dej, boissons chaudes;PITCH Choco barre brioches au chocolat au lait;310g;8,32€ / kg;2,58;non
+Epicerie sucrée;Petit dej, boissons chaudes;PASQUIER Pains au lait au levain;350g;3,86€ / kg;1,35;non
+Epicerie sucrée;Petit dej, boissons chaudes;AUCHAN Briochettes nature aux œufs frais;480g;3,44€ / kg;1,65;non
+Epicerie sucrée;Petit dej, boissons chaudes;AUCHAN Pains au chocolat;720g;4,08€ / kg;2,94;non
+Epicerie sucrée;Petit dej, boissons chaudes;LA BOULANGERE Pains au chocolat pur beurre bio;270g;10,33€ / kg;2,79;non
+Epicerie sucrée;Petit dej, boissons chaudes;PASQUIER Croissants au levain;320g;5,47€ / kg;1,75;non
+Epicerie sucrée;Petit dej, boissons chaudes;LA BOULANGERE Pains au chocolat pur beurre;400g;5,78€ / kg;2,31;non
+Epicerie sucrée;Petit dej, boissons chaudes;PASQUIER Pancakes natures;350g;5,86€ / kg;2,05;non
+Epicerie sucrée;Petit dej, boissons chaudes;LOTUS Gaufres de Liège nappées de chocolat belge, sachets individuels;363g;9,36€ / kg;3,37;non
+Epicerie sucrée;Petit dej, boissons chaudes;AUCHAN Gaufres liégeoises aux perles de sucre sachets individuels;300g;4,43€ / kg;1,33;non
+Epicerie sucrée;Petit dej, boissons chaudes;WHAOU Crêpes fourrées chocolat;480g;7,98€ / kg;3,83;non
+Epicerie sucrée;Petit dej, boissons chaudes;KELLOGG'S Trésor Céréales fourrées chocolat au lait;620g;6,77€ / kg;4,20;non
+Epicerie sucrée;Petit dej, boissons chaudes;KELLOGG'S Céréales Extra chocolat au lait;500g;6,10€ / kg;3,05;non
+Epicerie sucrée;Petit dej, boissons chaudes;BJORG Croustillant céréales bio au chocolat;500g;6,52€ / kg;3,26;non
+Epicerie sucrée;Petit dej, boissons chaudes;KELLOGG'S Céréales Spécial K chocolat noir;550g;7,73€ / kg;4,25;non
+Epicerie sucrée;Petit dej, boissons chaudes;JORDAN'S Country crisp chocolat noir;550g;5,55€ / kg;3,05;non
+Epicerie sucrée;Petit dej, boissons chaudes;CHOCAPIC Céréales au chocolat;430g;5,56€ / kg;2,39;non
+Epicerie sucrée;Petit dej, boissons chaudes;KELLOGG'S Trésor Céréales fourrées chocolat noisettes;620g;6,77€ / kg;4,20;non
+Epicerie sucrée;Petit dej, boissons chaudes;KELLOGG'S Céréales variety mini pack;215g;13,67€ / kg;2,94;non
+Epicerie sucrée;Petit dej, boissons chaudes;BJORG Flocons d'avoine complète bio;500g;3,92€ / kg;1,96;non
+Epicerie sucrée;Petit dej, boissons chaudes;KELLOGG'S Corn Flakes céréales nature;500g;4,50€ / kg;2,25;non
+Epicerie sucrée;Petit dej, boissons chaudes;BJORG Muesli de céréales bio superfruits;375g;8,69€ / kg;3,26;non
+Epicerie sucrée;Petit dej, boissons chaudes;KELLOGG'S Trésor stix céréales fourrées chocolat noisettes;5x20.5g;23,79€ / kg;2,45;non
+Epicerie sucrée;Petit dej, boissons chaudes;KELLOGG'S Extra Barres de céréales amandes grillées et chocolat;128g;23,05€ / kg;2,95;non
+Epicerie sucrée;Petit dej, boissons chaudes;BELVITA Biscuits petit-déjeuner moelleux cœur chocolat noisette, sachets individuel;250g;10,48€ / kg;2,62;non
+Epicerie sucrée;Petit dej, boissons chaudes;BELVITA Biscuits petit-déjeuner au chocolat, sachets fraîcheur;400g;5,68€ / kg;2,27;non
+Epicerie sucrée;Petit dej, boissons chaudes;CRACOTTE Tartine croustillante fourrée chocolat fabriqué en France;200g;7,60€ / kg;1,52;non
+Epicerie sucrée;Petit dej, boissons chaudes;HEUDEBERT La biscotte;290g;5,07€ / kg;1,47;non
+Epicerie sucrée;Petit dej, boissons chaudes;KRISPROLLS Petits pains suédois au blé complet sans sucres ajoutés;425g;6,33€ / kg;2,69;non
+Epicerie sucrée;Petit dej, boissons chaudes;KINDER CereAlé Biscuits aux 7 céréales pépites de chocolat noir;204g;13,68€ / kg;2,79;non
+Epicerie sucrée;Biscuits, gateaux;LOTUS Gaufres de Liège nappées de chocolat belge, sachets individuels;363g;9,36€ / kg;3,37;non
+Epicerie sucrée;Biscuits, gateaux;AUCHAN Gaufres liégeoises aux perles de sucre sachets individuels;300g;4,43€ / kg;1,33;non
+Epicerie sucrée;Biscuits, gateaux;WHAOU Crêpes fourrées chocolat;480g;7,98€ / kg;3,83;non
+Epicerie sucrée;Biscuits, gateaux;GRANOLA Cookies aux gros éclats de chocolat;276g;8,12€ / kg;2,24;non
+Epicerie sucrée;Biscuits, gateaux;BONNE MAMAN Petits cookies aux pépites de chocolat;250g;9,72€ / kg;2,43;non
+Epicerie sucrée;Biscuits, gateaux;NUTELLA B-Ready gaufrettes fourrées de pâte à tartiner;330g;12,00€ / kg;3,96;non
+Epicerie sucrée;Biscuits, gateaux;PEPITO Pockitos biscuits fourrés au chocolat au lait, sachets individuels;295g;9,56€ / kg;2,82;non
+Epicerie sucrée;Biscuits, gateaux;NUTELLA B-Ready gaufrettes fourrées de pâte à tartiner;130g;15,85€ / kg;2,06;non
+Epicerie sucrée;Biscuits, gateaux;KINDER Cards gaufrettes nappées de chocolat;256g;15,59€ / kg;3,99;non
+Epicerie sucrée;Biscuits, gateaux;BN Biscuits mini goût chocolat;175g;10,17€ / kg;1,78;non
+Epicerie sucrée;Biscuits, gateaux;NUTELLA Biscuits croquants au cœur onctueux de Nutella;304g;10,59€ / kg;3,22;non
+Epicerie sucrée;Biscuits, gateaux;MILKA Choco pause, biscuits fourrés au chocolat;260g;7,38€ / kg;1,92;non
+Epicerie sucrée;Biscuits, gateaux;BJORG Biscuits bio fourrés au chocolat noir, sachets fraîcheur;225g;10,84€ / kg;2,44;non
+Epicerie sucrée;Biscuits, gateaux;PRINCE Biscuits fourrés goût chocolat au blé complet ouverture facile;3x300g;4,23€ / kg;3,81;non
+Epicerie sucrée;Biscuits, gateaux;LU Figolu biscuits aux figues;192g;8,96€ / kg;1,72;non
+Epicerie sucrée;Biscuits, gateaux;KINDER Happy Hippo Biscuits et cacao;103,5g;19,81€ / kg;2,06;non
+Epicerie sucrée;Biscuits, gateaux;BJORG Biscuits bio lunettes à la fraise, sachets individuels;200g;13,35€ / kg;2,67;non
+Epicerie sucrée;Biscuits, gateaux;AUCHAN Goûters fondants fourrés au chocolat;225g;5,47€ / kg;1,23;non
+Epicerie sucrée;Biscuits, gateaux;PETIT ECOLIER Biscuits avec tablette de chocolat au lait;150g;9,20€ / kg;1,38;non
+Epicerie sucrée;Biscuits, gateaux;LU Lulu barquettes à la fraise;2x120g;7,46€ / kg;1,79;non
+Epicerie sucrée;Biscuits, gateaux;AUCHAN Biscuits sablés nappés de chocolat au lait, sachets fraîcheur;200g;5,05€ / kg;1,01;non
+Epicerie sucrée;Biscuits, gateaux;GRANOLA Biscuits sablés nappés de chocolat au lait;2x200g;6,38€ / kg;2,55;non
+Epicerie sucrée;Biscuits, gateaux;PIM'S Génoises nappées de chocolat saveur framboise;150g;7,87€ / kg;1,18;non
+Epicerie sucrée;Biscuits, gateaux;LU Lulu barquettes au chocolat;2X120g;7,42€ / kg;1,78;non
+Epicerie sucrée;Biscuits, gateaux;LOTUS Biscuits nappés de chocolat noir, sachets fraîcheur;225g;8,76€ / kg;1,97;non
+Epicerie sucrée;Biscuits, gateaux;PETIT ECOLIER Biscuits pocket avec tablette de chocolat au lait, sachets fraîcheur;250g;8,96€ / kg;2,24;non
+Epicerie sucrée;Biscuits, gateaux;NUTELLA Nutella&Go biscuits et pâte à tartiner;104g;22,60€ / kg;2,35;non
+Epicerie sucrée;Biscuits, gateaux;ST MICHEL Petites madeleines sans huile de palme;500g;4,78€ / kg;2,39;non
+Epicerie sucrée;Biscuits, gateaux;BROSSARD Savane Gâteau marbré au chocolat;310g;6,74€ / kg;2,09;non
+Epicerie sucrée;Biscuits, gateaux;BONNE MAMAN Quatre-quarts au beurre frais;500g;6,84€ / kg;3,42;non
+Epicerie sucrée;Biscuits, gateaux;AUCHAN Madeleines longues aux œufs frais;440g;5,39€ / kg;2,37;non
+Epicerie sucrée;Biscuits, gateaux;ST MICHEL Petites madeleines aux pépites de chocolat sans huile de palme;400g;6,68€ / kg;2,67;non
+Epicerie sucrée;Biscuits, gateaux;BROSSARD Brownie choco pépites, sachets individuels;240g;9,13€ / kg;2,19;non
+Epicerie sucrée;Biscuits, gateaux;LULU L'OURSON Gâteaux fourrés au chocolat, sachets individuels;150g;8,47€ / kg;1,27;non
+Epicerie sucrée;Biscuits, gateaux;KINDER Délice gâteaux enrobé chocolat et fourrés au lait;390g;8,33€ / kg;3,25;non
+Epicerie sucrée;Biscuits, gateaux;NAPOLITAIN L'original Gâteau moelleux en sachets individuels;180g;9,17€ / kg;1,65;non
+Epicerie sucrée;Biscuits, gateaux;ST MICHEL Doonuts nappés au chocolat sans huile de palme, sachets individuels;180g;10,50€ / kg;1,89;non
+Epicerie sucrée;Biscuits, gateaux;LU Véritable petit beurre pocket, sachets fraîcheur;300g;5,80€ / kg;1,74;non
+Epicerie sucrée;Biscuits, gateaux;LU Thé nature sachets fraîcheur;350g;4,09€ / kg;1,43;non
+Epicerie sucrée;Biscuits, gateaux;ST MICHEL Roudor palets croustillants et fondants, sachets fraîcheur;2x150g;8,50€ / kg;2,55;non
+Epicerie sucrée;Biscuits, gateaux;AUCHAN Boudoirs aux œufs frais, sachets fraîcheur;400g;4,05€ / kg;1,62;non
+Epicerie sucrée;Biscuits, gateaux;AUCHAN Biscuits cuillers spécial dessert aux œufs frais, sachets fraîcheur;300g;7,87€ / kg;2,36;non
+Epicerie sucrée;Biscuits, gateaux;BISCOFF Biscuits Speculoos original, sachets fraîcheur;3x125g;7,55€ / kg;2,83;non
+Epicerie sucrée;Biscuits, gateaux;KINDER CereAlé Biscuits aux 7 céréales pépites de chocolat noir;204g;13,68€ / kg;2,79;non
+Epicerie sucrée;Biscuits, gateaux;GERBLE Biscuits lait chocolat sachets fraîcheur;230g;6,30€ / kg;1,45;non
+Epicerie sucrée;Biscuits, gateaux;BJORG Biscuits bio avoine et pépites de chocolat;130g;19,62€ / kg;2,55;non
+Epicerie sucrée;Biscuits, gateaux;AUCHAN Cigarettes gourmandes, sachets fraîcheur;125g;5,39€ / kg;0,97;non
+Epicerie sucrée;Biscuits, gateaux;DELACRE Tea Time assortiment de biscuits fins;;13,11€ / kg;13,11;non
+Epicerie sucrée;Biscuits, gateaux;GERBLE Biscuits au sésame sans huile de palme sachets fraîcheur;230g;6,30€ / kg;1,45;non
+Epicerie sucrée;Biscuits, gateaux;GERBLE Biscuits aux pépites de chocolat sans huile de palme sachets fraîcheur;250g;5,80€ / kg;1,45;non
+Epicerie sucrée;Chocolat, confiseries;MALTESERS Billes chocolatées sablées et croquantes;192,5g;13,49€ / kg;2,59;non
+Epicerie sucrée;Chocolat, confiseries;M&M'S Peanut bonbons chocolatés à la cacahuète;550g;7,71€ / kg;4,24;non
+Epicerie sucrée;Chocolat, confiseries;KINDER Bueno barres chocolatées;220g;15,86€ / kg;3,49;non
+Epicerie sucrée;Chocolat, confiseries;KINDER Country barres chocolatées;212g;13,51€ / kg;2,85;non
+Epicerie sucrée;Chocolat, confiseries;KINDER Barres chocolatées fourrées au lait;200g;12,45€ / kg;2,49;non
+Epicerie sucrée;Chocolat, confiseries;KINDER Maxi barres de chocolat;380g;12,84€ / kg;4,88;non
+Epicerie sucrée;Chocolat, confiseries;AUCHAN Rochers lait et praline sans huile de palme;245g;8,61€ / kg;2,11;non
+Epicerie sucrée;Chocolat, confiseries;AUCHAN Tablette de chocolat noir pâtissier 52% de cacao Filière responsable;2x200g;4,48€ / kg;1,79;non
+Epicerie sucrée;Chocolat, confiseries;NESTLE DESSERT Tablette de chocolat noir pâtissier;2x205g;9,93€ / kg;4,07;non
+Epicerie sucrée;Chocolat, confiseries;COTE D'OR L'original tablette de chocolat au lait en barres;200g;10,05€ / kg;2,01;3 achetés = 2 payés
+Epicerie sucrée;Chocolat, confiseries;CRUNCH Tablettes de chocolat au lait et riz croustillant;2x100g;9,70€ / kg;1,94;non
+Epicerie sucrée;Chocolat, confiseries;MILKA Tablette de chocolat au lait et noisettes entières;2x100g;12,00€ / kg;2,40;non
+Epicerie sucrée;Chocolat, confiseries;MILKA Tablette de chocolat au lait du pays alpin;3x100g;10,30€ / kg;3,09;non
+Epicerie sucrée;Chocolat, confiseries;COTE D'OR Tablette de chocolat au lait et noisettes entières;180g;13,61€ / kg;2,45;3 achetés = 2 payés
+Epicerie sucrée;Chocolat, confiseries;LINDT Tablettes de chocolat au lait extra fin;3x110g;9,36€ / kg;3,09;non
+Epicerie sucrée;Chocolat, confiseries;COTE D'OR Tablette de chocolat noir et noisettes entières;180g;14,56€ / kg;2,62;3 achetés = 2 payés
+Epicerie sucrée;Chocolat, confiseries;GALAK Tablette de chocolat blanc;2x100g;10,20€ / kg;2,04;non
+Epicerie sucrée;Chocolat, confiseries;COTE D'OR Tablette de chocolat au lait fourré praliné et double lait;200g;12,90€ / kg;2,58;3 achetés = 2 payés
+Epicerie sucrée;Chocolat, confiseries;LINDT Lindor Tablette de chocolat au lait;150g;15,93€ / kg;2,39;non
+Epicerie sucrée;Chocolat, confiseries;LINDT Excellence tablette de chocolat noir dégustation intense 70%;100g;15,90€ / kg;1,59;non
+Epicerie sucrée;Chocolat, confiseries;LINDT Excellence tablette de chocolat noir dégustation pointe de fleur de sel;100g;15,90€ / kg;1,59;non
+Epicerie sucrée;Chocolat, confiseries;HARIBO Pocket Assortiment de bonbons mini sachets;380g;9,24€ / kg;3,51;non
+Epicerie sucrée;Chocolat, confiseries;LUTTI Bonbons long fizz;200g;7,95€ / kg;1,59;non
+Epicerie sucrée;Chocolat, confiseries;HARIBO Tagada zip Bonbons sachet refermable;220g;5,95€ / kg;1,31;non
+Epicerie sucrée;Chocolat, confiseries;HARIBO Happy'box Boite d'assortiment de bonbons;600g;7,62€ / kg;4,57;non
+Epicerie sucrée;Chocolat, confiseries;LUTTI Scoubidou bonbons gélifiés goût fruité;200g;7,95€ / kg;1,59;non
+Epicerie sucrée;Chocolat, confiseries;CEMOI Guimauves authentiques petit ourson chocolat au lait;180g;7,83€ / kg;1,41;non
+Epicerie sucrée;Chocolat, confiseries;HARIBO Chamallows l'original bonbons guimauve;300g;4,60€ / kg;1,38;non
+Epicerie sucrée;Chocolat, confiseries;TIC TAC Bonbons goût menthe;54g;45,37€ / kg;2,45;non
+Epicerie sucrée;Chocolat, confiseries;MENTOS Pure fresh chewing-gum menthe et thé vert;100g;35,30€ / kg;3,53;non
+Epicerie sucrée;Chocolat, confiseries;HOLLYWOOD Green fresh chewing-gums sans sucres menthe verte;70g;37,57€ / kg;2,63;non
+Epicerie sucrée;Chocolat, confiseries;NESTLE DESSERT Pépites de chocolat noir pâtissier;100g;25,60€ / kg;2,56;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN Gourdes pomme fraise poire banane sans sucres ajoutés;12x90g;3,88€ / kg;4,19;non
+Epicerie sucrée;Dessert, sucre, farine;POM'POTES Gourdes bio pomme nature sans sucres ajoutés sans conservateur;12x90g;5,79€ / kg;6,25;non
+Epicerie sucrée;Dessert, sucre, farine;POM'POTES Gourdes pomme fraise framboise sans sucres ajoutés sans conservateur;32x90g;4,61€ / kg;13,27;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN Coupelles pomme banane sans sucres ajoutés;4x100g;3,23€ / kg;1,29;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN Coupelles pomme nature sans sucres ajoutés;4x100g;1,98€ / kg;0,79;non
+Epicerie sucrée;Dessert, sucre, farine;POM'POTES Gourdes pomme nature sans sucres ajoutés sans conservateur;12x90g;4,90€ / kg;5,29;non
+Epicerie sucrée;Dessert, sucre, farine;POM'POTES Gourdes pomme poire fraise banane sans sucres ajoutés sans conservateur;12x90g;4,79€ / kg;5,17;non
+Epicerie sucrée;Dessert, sucre, farine;POM'POTES Gourdes pomme nature sans conservateur;20x90g;4,19€ / kg;7,54;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN BIO Gourdes purée pomme fruits panachés sans sucres ajoutés bio;;5,82€ / kg;6,29;non
+Epicerie sucrée;Dessert, sucre, farine;MATERNE Coupelles pomme framboise pêche abricot poire sans sucres ajoutés;12x100g;3,85€ / kg;4,62;non
+Epicerie sucrée;Dessert, sucre, farine;JARDIN BIO ETIC Dessert pomme poire williams sans sucres ajoutés, en bocal;680g;4,69€ / kg;3,19;non
+Epicerie sucrée;Dessert, sucre, farine;ANDROS Dessert pomme nature en bocal;660g;1,95€ / kg;1,29;non
+Epicerie sucrée;Dessert, sucre, farine;RÉCRÉ OLÉ Goûter laitier en gourde saveur vanille;4x85g;6,15€ / kg;2,09;non
+Epicerie sucrée;Dessert, sucre, farine;MONT BLANC Crème dessert saveur chocolat;570g;3,88€ / kg;2,21;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN Farine de blé T45;;0,76€ / kg;0,76;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN BIO Auchan Bio Farine de blé T65 1kg;;0,97€ / kg;0,97;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN Levure chimique;66g;4,55€ / kg;0,30;non
+Epicerie sucrée;Dessert, sucre, farine;TIPIAK Fine chapelure de pain;275g;3,16€ / kg;0,87;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN Sucre vanillé à l'extrait de vanille;10x7,5g;9,60€ / kg;0,72;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN Pignons de pin décortiqués sachet refermable;50g;53,60€ / kg;2,68;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN Amandes émondées en poudre sachet refermable;125g;15,52€ / kg;1,94;non
+Epicerie sucrée;Dessert, sucre, farine;VAHINE Arôme vanille;;;2,85;non
+Epicerie sucrée;Dessert, sucre, farine;VAHINE Gousses de vanille Bourbon;;1 922,50€ / kg;7,69;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN Pépites de chocolat, sachet refermable;100g;15,00€ / kg;1,50;non
+Epicerie sucrée;Dessert, sucre, farine;NESTLE DESSERT Pépites de chocolat noir pâtissier;100g;25,60€ / kg;2,56;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN Ananas en tranches au jus;340g;5,71€ / kg;1,94;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN Pêches demi-fruits au sirop léger;820g;4,57€ / kg;2,17;non
+Epicerie sucrée;Dessert, sucre, farine;DADDY Sucre en morceaux n°4;;1,68€ / kg;1,68;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN Sucre extra fin en poudre;750g;1,76€ / kg;1,32;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN BIO Sucre de canne blond en poudre;500g;3,42€ / kg;1,71;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN ESSENTIEL Sucre blanc en poudre;;0,69€ / kg;0,69;non
+Epicerie sucrée;Dessert, sucre, farine;DADDY Cassonade sucre pure canne en poudre;750g;2,71€ / kg;2,03;non
+Epicerie sucrée;Dessert, sucre, farine;NESTLE Préparation pour fondant au chocolat;317g;12,27€ / kg;3,89;-68% sur le 2ème
+Epicerie sucrée;Dessert, sucre, farine;ALSA Ferments lactiques pour préparation de yaourts maison;8g;361,25€ / kg;2,89;non
+Epicerie sucrée;Dessert, sucre, farine;AUCHAN BIO Boisson avoine;;;1,64;non
+Epicerie sucrée;Dessert, sucre, farine;BJORG Lait d'amande calcium bio sans sucres ajoutés;;;2,18;non
+Epicerie sucrée;Dessert, sucre, farine;GERBLE Biscuits au sésame sans huile de palme sachets fraîcheur;230g;6,30€ / kg;1,45;non
+Epicerie sucrée;Dessert, sucre, farine;GERBLE Biscuits aux pépites de chocolat sans huile de palme sachets fraîcheur;250g;5,80€ / kg;1,45;non

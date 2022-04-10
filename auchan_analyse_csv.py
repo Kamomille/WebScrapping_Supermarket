@@ -25,6 +25,7 @@ def create_list_df():
         df['prix'] = df['prix'].astype(float)
         df['poids'] = df['poids'].astype(str)
         df['poids'] = df.apply(lambda row: row["poids"][:-1] if row["poids"][-1] == 'g' else row["poids"], axis=1)
+        df['poids'] = df['poids'].str.replace('X','x')
         list_df.append(df)
     return list_df, list_name_csv
 
@@ -42,10 +43,10 @@ def create_csv_merge(multiindex):
 def cleaning_data (df):
     list_name_csv = get_list_csv_file()
     list_name_csv_new = []
-    # Retirer les magasins ayant plus de 50% des produits vides
+    # Retirer les magasins ayant plus de 60% des produits vides
     for i in range (len(list_name_csv)):
         name = list_name_csv[i]
-        if (df[name].prix.isna().sum()  * 100.0 / len(df) > 50 ):
+        if (df[name].prix.isna().sum()  * 100.0 / len(df) > 60 ):
             df.drop((name,'prix'), axis=1, inplace=True)
         else : list_name_csv_new.append(name)
 
@@ -100,7 +101,7 @@ def variance_calcul (df):
 
 def ile_de_france_VS_reste (df, choix):
     DF = nombre_de_produit_pas_cher_par_ville (df, choix)
-    list_dep_iledefrance = ['78','75', '91','92','93','94','95']
+    list_dep_iledefrance = ['77','78','75','91','92','93','94','95']
     DF['dep'] = DF.apply(lambda row: row["localisation"][:2], axis=1)
     DF_1 = DF[DF['dep'].isin(list_dep_iledefrance)]
     DF_2 = DF[~DF['dep'].isin(list_dep_iledefrance)]
@@ -134,13 +135,21 @@ df.to_csv("auchan_csv/produits_cleaning.csv", sep=';')
 
 
 
-DF = population_VS_nbProduit()
-line_chart = px.line(DF,
-                     y='population',
-                     x='nb_produit',
+line_chart = px.scatter(population_VS_nbProduit(),
+                     x='population',
+                     y='nb_produit',
+                        hover_name='localisation',
                      title='population_VS_nbProduit')
 
+variance_bar_chart = px.bar(variance_calcul(df),
+                            y='variance',
+                            x='nom',
+                            color='type',
+                            title='Variances des différents produits')
 
+variance_bar_chart.update_xaxes(showticklabels= False)
+
+"""
 # --------------------------------- Interface dash ---------------------------------------------------------------------
 app = Dash(__name__)
 server=app.server
@@ -166,26 +175,8 @@ app.layout=html.Div(children =[
     dcc.Graph(id='pie_chart_2',
               style={'textAlign': 'center', 'width': '45%','display': 'inline-block'},),
 
-    dcc.Graph(figure=px.bar(variance_calcul(df),
-                            y='variance',
-                            x='nom',
-                            title='Variances des différents produits')),
-    """
-    dcc.RadioItems(
-            id='radio_button',
-            options=[
-                #{'label': 'Tout', 'value': 'choix_1'},
-                     {'label': 'Marque Auchan', 'value': 'choix_2'},
-                     {'label': 'Marque Auchan BIO', 'value': 'choix_3'},
-                     {'label': 'Toutes les marques sauf Auchan', 'value': 'choix_4'},
-                     {'label': 'Toutes les légumes bio', 'value': 'choix_5'},
-                     {'label': 'Tous le BIO', 'value': 'choix_6'},
-                     {'label': 'Par département', 'value': 'choix_7'}],
-            value='choix_5',
-        ),
-        dcc.Graph(id='scatter',
-          style={'height': '800px'}),
-        """
+    dcc.Graph(figure= variance_bar_chart),
+
 ])
 
 
@@ -219,8 +210,23 @@ def update_pie_chart (radio_button_2):
 if __name__ == '__main__':
     app.run_server() #debug=True
 
-
 """
+"""
+
+    dcc.RadioItems(
+            id='radio_button',
+            options=[
+                #{'label': 'Tout', 'value': 'choix_1'},
+                     {'label': 'Marque Auchan', 'value': 'choix_2'},
+                     {'label': 'Marque Auchan BIO', 'value': 'choix_3'},
+                     {'label': 'Toutes les marques sauf Auchan', 'value': 'choix_4'},
+                     {'label': 'Toutes les légumes bio', 'value': 'choix_5'},
+                     {'label': 'Tous le BIO', 'value': 'choix_6'},
+                     {'label': 'Par département', 'value': 'choix_7'}],
+            value='choix_5',
+        ),
+        dcc.Graph(id='scatter',
+          style={'height': '800px'}),
 
 @app.callback(Output('scatter', 'figure'),
               Input('radio_button', 'value')
@@ -296,9 +302,6 @@ def commandes_utiles(df):
 #print(df[('Paris','prix')])
 #print(df.index.get_level_values('type'))
 #print(df.columns.get_loc('02500 Hirson'))
-
-# -- A tester --
-#df = df.filter(regex="Adj Close")
 
 
 # ========================= BROUILLON ==================================================================================
