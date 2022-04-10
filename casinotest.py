@@ -62,7 +62,6 @@ def Openheader():
     for j in button:
         j.click()
 
-
 def OpenLinkInTab(link):
     link.send_keys(Keys.CONTROL + Keys.RETURN)
     driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.TAB)
