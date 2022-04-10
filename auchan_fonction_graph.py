@@ -64,8 +64,6 @@ def cleaning_data (df):
 
 
 
-
-
 def population_VS_nbProduit ():
     df_pop = pd.read_csv("auchan_csv/adresse_auchan_population.csv", sep=',')
     df_merge = create_csv_merge(True)
@@ -80,6 +78,7 @@ def population_VS_nbProduit ():
     DF = pd.DataFrame(list(zip(list_name_csv,list_nb_produit,list_population)), columns = ['localisation','nb_produit','population'])
     DF.sort_values(by=['population'], ascending=False)
     return DF
+
 def population_VS_nbProduit_chart ():
     return px.scatter(population_VS_nbProduit(), x='population', y='nb_produit',hover_name='localisation',
                       labels={"y": "Number of products","x": "Number of inhabitants"},
@@ -100,7 +99,7 @@ def variance_chart(df):
                                 y='variance',
                                 x='nom',
                                 color='type',
-                                title='Variances des différents produits')
+                                title='Variances of different products')
 
     variance_bar_chart.update_xaxes(showticklabels=False)
     return variance_bar_chart
@@ -129,6 +128,18 @@ def nombre_de_produit_pas_cher_par_ville (df, choix, list_name_csv_clean):
     DF = pd.DataFrame(intermediate_dictionary)
     return DF
 
+def nombre_de_produit_pas_cher_par_dep(df, choix, list_name_csv_clean):
+    DF = nombre_de_produit_pas_cher_par_ville (df, choix, list_name_csv_clean)
+    list_dep, prix = [], []
+
+    DF['dep'] = DF.apply(lambda row: row["localisation"][:2], axis=1)
+    list_dep = DF['dep'].unique()
+    for i in range (len(list_dep)):
+        DFF = DF[DF['dep'] == list_dep[i]]
+        prix.append(DFF['nb_prix'].sum())
+    DF = pd.DataFrame(list(zip(list_dep,prix)), columns = ['localisation','nb_prix'])
+    return DF
+
 def ile_de_france_VS_reste (df, choix, list_name_csv_clean):
     DF = nombre_de_produit_pas_cher_par_ville (df, choix, list_name_csv_clean)
     list_dep_iledefrance = ['77','78','75','91','92','93','94','95']
@@ -139,3 +150,30 @@ def ile_de_france_VS_reste (df, choix, list_name_csv_clean):
     DFF = pd.DataFrame(intermediate_dictionary)
     return DFF
 
+def nombre_de_produit_pas_cher_par_region(df, choix, list_name_csv_clean):
+    list_region = [['Auvergne-Rhône-Alpes','03','63','15','42','43','69','07','01','38','26','74','73'],
+                    ['Bourgogne-Franche-Comté','89','58','21','71','70','39','25','90'],
+                    ['Bretagne','29','22','56','35'],
+                    ['Centre-Val de Loire','28','45','41','37','36','18'],
+                    ['Corse','20'],
+                    ['Grand Est','08','51','10','55','52','54','88','57','67','68'],
+                    ['Hauts-de-France','62','59','80','02','60'],
+                    ['Île-de-France','77','78','75','91','92','93','94','95'],
+                    ['Normandie','50','14','76','27','61'],
+                    ['Nouvelle-Aquitaine','79','86','87','23','19','16','17','24','33','47','40','64'],
+                    ['Occitanie','46','12','48','30','34','81','82','32','31','65','09','11','66'],
+                    ['Pays de la Loire','44','53','72','49','85'],
+                    ['Provence-Alpes-Côte d\'Azur','84','13','83','04','05','06']]
+
+    DF = nombre_de_produit_pas_cher_par_ville (df, choix, list_name_csv_clean)
+    list_r, prix = [], []
+
+    DF['dep'] = DF.apply(lambda row: row["localisation"][:2], axis=1)
+
+    for i in range (len(list_region)):
+        DFF = DF[DF['dep'].isin(list_region[i])]
+        list_r.append(list_region[i][0])
+        prix.append(DFF['nb_prix'].sum())
+
+    DF = pd.DataFrame(list(zip(list_r,prix)), columns = ['localisation','nb_prix'])
+    return DF

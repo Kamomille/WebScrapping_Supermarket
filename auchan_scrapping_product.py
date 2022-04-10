@@ -9,7 +9,7 @@ def choix_loc():
     searchresults_text = driver.find_element_by_xpath(
         "/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div").find_elements_by_class_name(
         "place-pos__main-infos")
-    time.sleep(4)
+    time.sleep(3)
     list_type = []
     for element in searchresults_text:
         element = element.text.split("\n")
@@ -23,7 +23,7 @@ def choix_loc():
             break
         else:
             print("nope")
-    time.sleep(4)
+    time.sleep(3)
 
 #driver = webdriver.Firefox()
 #driver = webdriver.Chrome('C:\Program Files\chromedriver_win32\chromedriver.exe')
@@ -99,8 +99,7 @@ for index_row in df_adresse.index:
                 element.send_keys(localisation)
                 time.sleep(2)
                 element.send_keys(Keys.DOWN + Keys.ENTER)
-                time.sleep(3)
-
+                time.sleep(2)
 
                 # -- Choisit la localisation parmi les choix de la liste --
                 try:
@@ -112,7 +111,7 @@ for index_row in df_adresse.index:
                     element.send_keys(localisation)
                     time.sleep(2)
                     element.send_keys(Keys.DOWN + Keys.ENTER)
-                    time.sleep(3)
+                    time.sleep(2)
 
                     choix_loc()
 
@@ -125,8 +124,11 @@ for index_row in df_adresse.index:
                 txt = element.text.split("\n")
                 a = int(txt[0])
                 print(a)
+            print('---------------')
+            print(driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/nav/div').find_element_by_class_name('pagination-item').text)
             y = 1000
-            for timer in range(0, a*15):
+            for timer in range(0, a*11):
+                print(driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/nav/div').find_element_by_class_name('pagination-item').text)
                 driver.execute_script("window.scrollTo(0, " + str(y) + ")")
                 y += 1000
                 time.sleep(2)

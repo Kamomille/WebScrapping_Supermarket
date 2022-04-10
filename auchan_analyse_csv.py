@@ -2,8 +2,8 @@ import pandas as pd
 import os
 from dash import Dash, html, dcc, Input, Output
 import plotly.express as px
-import warnings
-warnings.filterwarnings('ignore')
+#import warnings
+#warnings.filterwarnings('ignore')
 
 def get_list_csv_file():
     list = []
@@ -59,14 +59,14 @@ def cleaning_data (df):
 
     return df, list_name_csv_new
 
-def mettre_en_poucentage_en_fonction_prix_max ():
+def mettre_en_poucentage_en_fonction_prix_max (df, list_name_csv_clean):
     df["maximum"] = df.max(axis=1)
     for i in range (len(list_name_csv_clean)):
         name = list_name_csv_clean[i]
         df[name] = 100 * df[name] / df["maximum"]
     return df
 
-def en_fonction_des_departement ():
+def en_fonction_des_departement (df):
     df_departement = pd.DataFrame()
     df_departement['nom'] = df['nom']
     list_dep = []
@@ -80,7 +80,7 @@ def en_fonction_des_departement ():
                 list_dep.append(str(j)+str(i))
     return df_departement, list_dep
 
-def nombre_de_produit_pas_cher_par_ville (df, choix):
+def nombre_de_produit_pas_cher_par_ville (df, choix,list_name_csv_clean):
     DF = df.copy()
     list_nb = []
     if(choix == 'minimum'): DF["m"] = DF.min(axis=1, skipna=True)
@@ -123,7 +123,7 @@ def population_VS_nbProduit ():
     DF = pd.DataFrame(list(zip(list_name_csv,list_nb_produit,list_population)), columns = ['localisation','nb_produit','population'])
     DF.sort_values(by=['population'], ascending=False)
     return DF
-
+"""
 # Application des fonctions
 df = create_csv_merge(True)
 df, list_name_csv_clean = cleaning_data(df)
@@ -149,7 +149,7 @@ variance_bar_chart = px.bar(variance_calcul(df),
 
 variance_bar_chart.update_xaxes(showticklabels= False)
 
-"""
+
 # --------------------------------- Interface dash ---------------------------------------------------------------------
 app = Dash(__name__)
 server=app.server

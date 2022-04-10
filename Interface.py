@@ -113,21 +113,21 @@ contentStatistics = html.Div([
                style={'color': 'white','width': '100%','height': '100px','text-align': "center"}),
 
     # ---- Graphiques ----
-    html.Div(children=[dcc.Graph(figure = auchan.population_VS_nbProduit_chart()),
-                       html.Br(),
-                       dcc.Graph(figure = auchan.variance_chart(df)),
-
-                       dcc.RadioItems(id='radio_button',
-                                      options=[{'label': 'Ile-de-France VS le reste de la France', 'value': 'choix_1'},
-                                               {'label': 'Toute la France', 'value': 'choix_2'}],
-                                      style={'color': 'white'},
-                                      value='choix_1',),
-                       dcc.Graph(id='pie_chart_1',
-                                 style={'textAlign': 'center', 'width': '45%', 'display': 'inline-block','margin-right':'5%'}),
+    html.Div(children=[dcc.Graph(id='pie_chart_1',
+                                 style={'textAlign': 'center', 'width': '40%', 'display': 'inline-block','margin-right':'1%'}),
                        dcc.Graph(id='pie_chart_2',
-                                 style={'textAlign': 'center', 'width': '45%', 'display': 'inline-block','margin-left':'5%'}),
+                                 style={'textAlign': 'center', 'width': '40%', 'display': 'inline-block','margin-right':'1%'}),
+                       dcc.RadioItems(id='radio_button',
+                                      options=[{'label': 'Ile-de-France VS the rest of France', 'value': 'choix_1'},
+                                               {'label': 'The whole of France', 'value': 'choix_2'},
+                                               {'label': 'By department', 'value': 'choix_3'},
+                                               {'label': 'By region', 'value': 'choix_4'}],
+                                      style={"margin-top": "3%",'color': 'black','width': '18%', 'display': 'inline-block','background-color': 'white'},
+                                      value='choix_1'),
+                       dcc.Graph(figure = auchan.population_VS_nbProduit_chart(), style={"margin-top": "50px"}),
+                       dcc.Graph(figure = auchan.variance_chart(df), style={"margin-top": "50px"}),
                        ],
-             style={"margin-left": "7rem", "margin-right": "2rem","margin-top": "5rem"}
+             style={"margin-left": "8rem", "margin-right": "2rem","margin-top": "5rem"}
 )
     #Pour Camille - Mets tes graphiques ici, dis moi si tu as besoin de plus d'onglet faut juste ajouter
     #Une fois le "contentStatistics" remplis, descends dans le call back et change le return
@@ -144,17 +144,23 @@ def update_pie_chart (radio_button):
     if (radio_button == 'choix_2'):
         DF_1 = auchan.nombre_de_produit_pas_cher_par_ville(df, 'minimum',list_name_csv_clean)
         DF_2 = auchan.nombre_de_produit_pas_cher_par_ville(df, 'maximum',list_name_csv_clean)
+    if (radio_button == 'choix_3'):
+        DF_1 = auchan.nombre_de_produit_pas_cher_par_dep(df, 'minimum',list_name_csv_clean)
+        DF_2 = auchan.nombre_de_produit_pas_cher_par_dep(df, 'maximum',list_name_csv_clean)
+    if (radio_button == 'choix_4'):
+        DF_1 = auchan.nombre_de_produit_pas_cher_par_region(df, 'minimum',list_name_csv_clean)
+        DF_2 = auchan.nombre_de_produit_pas_cher_par_region(df, 'maximum',list_name_csv_clean)
 
     pie_chart_1 = px.pie(DF_1,
                             values='nb_prix',
                             names='localisation',
-                            title='Percentage of number of CHEAPEST products in the store')
+                            title='Percentage of number of CHEAPEST products')
     if (radio_button == 'choix_1'): pie_chart_1.update_traces(marker=dict(colors=['pink', 'orange']))
 
     pie_chart_2 = px.pie(DF_2,
                     values='nb_prix',
                     names='localisation',
-                    title='Percentage of the number of MOST EXPENSIVE products in the store')
+                    title='Percentage of the number of MOST EXPENSIVE products')
     if (radio_button == 'choix_1'): pie_chart_2.update_traces(marker=dict(colors=['pink', 'orange']))
 
     return pie_chart_1, pie_chart_2
@@ -185,4 +191,4 @@ def Content(pathname):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
