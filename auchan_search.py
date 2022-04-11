@@ -15,7 +15,7 @@ def tokenization_one_product(x):
     stop_words = ['à','avec' ,'au' ,'aux' ,'d' ,'pour' ,'on' ,'pas' ,'dans' ,'de' ,'des','un' ,'une' ,'du' ,'et' ,'en' ,
                   'est' ,'le' ,'la' ,'les','l','n','s' ,'a', 'q' ,'qu' ,'j' ,'t', 's','peu' ,'sans']
     new_word =""
-    # -- on enlève la ponstuation --
+    # -- on enlève la ponctuation --
     punct = string.punctuation
     for c in punct: x = x.replace(c, " ")
     # -- token --
@@ -37,22 +37,10 @@ def filter(df, list_word_search):
     return df.loc[:, pd.IndexSlice[:, ['prix']]]
 
 
-def create_csv_merge():
-    list_df, list_name_csv = create_list_df()
-    list_concat_df =[]
-    for i in range (len(list_df)):
-        list_df[i] = list_df[i].drop_duplicates(subset= ["categorie","type","nom","poids"])
-        list_concat_df.append(list_df[i].set_index(["categorie","type","nom","poids"]))
-    df = pd.concat(list_concat_df,sort=False, axis=1, keys=list_name_csv)
-    df.columns = [col[0] for col in df.columns]
-    df.to_csv("auchan_csv/produits_merge.csv", sep=';')
-    return df
-
-
 def create_list_df():
     list_name_csv = get_list_csv_file()
-    list_df=[]
-    for i in range (len(list_name_csv)):
+    list_df= []
+    for i in range(len(list_name_csv)):
         df = pd.read_csv("auchan_csv/auchan_produits_" + list_name_csv[i] + ".csv", sep=';')
         list_df.append(df)
     return list_df, list_name_csv
@@ -66,18 +54,6 @@ def create_csv_merge():
     df = pd.concat(list_concat_df,sort=False, axis=1, keys=list_name_csv)
     df.to_csv("auchan_csv/produits_merge.csv", sep=';')
     return df
-
-df = create_csv_merge()
-
-liste_produits = list(df.index.get_level_values('nom'))
-
-df_produits = tokenization_all_products()
-
-word_search = tokenization_one_product('Cookies noisette')
-
-print("TABLEAU DES PRODUITS CORRESPONDANT A VOTRE RECHERCHE")
-df_filter = filter(df_produits,word_search.split(' '))
-print(df_filter)
 
 """
 name_multiindex_columns = df.columns.get_level_values(0).unique()
