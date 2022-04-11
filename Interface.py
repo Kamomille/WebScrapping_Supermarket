@@ -5,16 +5,18 @@ https://medium.com/generating-folium-maps-based-on-user-input-for-a/generating-f
 https://dash.plotly.com/dash-core-components/dropdown
 """
 
-
 from dash import Dash, html, dcc, Input, Output, State
 import dash_bootstrap_components as dbc
 import plotly.express as px
 import pandas as pd
-#import auchan_search
+import auchan_search
 
 Adresse_Auchan = pd.read_csv('Adresses_auchan.csv')
 Auchan = Adresse_Auchan['Adresse']
 Auchan = Auchan.values.tolist()
+
+df_Produit_Auchan = auchan_search.create_csv_merge()
+Produit = list(df_Produit_Auchan.index.get_level_values('nom'))
 
 # Load data
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])  # initialisation du dash app
@@ -25,9 +27,10 @@ SIDEBAR_STYLE = {
     "left": 0,
     "bottom": 0,
     #"transition": "all 0.5s",
-    "width": "16rem",
-    "padding": "2rem 1rem", #L'espace avec le haut puis l'espace avec la droite
+    "width": "14rem",
+    "padding": "4rem 1rem", #L'espace avec le haut puis l'espace avec la droite
     "background-color": "#f8f9fa",
+    "background-position": "fixed"
 }
 
 CONTENT_STYLE = {
@@ -56,44 +59,95 @@ sidebar = html.Div([
 
 content = html.Div(id="page-content", children=[], style=CONTENT_STYLE)
 
+navbar = dbc.NavbarSimple(children=[
+        dbc.Button("Sidebar", outline=True, color="secondary", className="mr-1", id="btn_sidebar"),
+        dbc.NavItem(dbc.NavLink("Page 1", href="#")),
+        dbc.DropdownMenu(
+            children=[
+                dbc.DropdownMenuItem("More pages", header=True),
+                dbc.DropdownMenuItem("Carte", href="/"),
+                dbc.DropdownMenuItem("Carte", href="/Carte"),
+                dbc.DropdownMenuItem("Statistics", href="/Statistics"),
+            ],
+            nav=True,
+            in_navbar=True,
+            label="More",
+        ),
+    ],
+    brand="Outils",
+    brand_href="/",
+    color="dark",
+    dark=True,
+    fluid=True
+)
+
 contentFilter = html.Div([
                     html.Div(children=[
                         html.H1('Where can I find the cheaper products ?'),
                         html.P('Enter the details to generate infographics')
                     ],
-
                         style={
                             'color': 'white',
-                            'width': '100%',
-                            'height': '100px',
+                            'height': '5rem',
                             'text-align': "center",
+                            "margin-left": "5rem",
+                            "background-color": "black"
                         }
                     ),
                     html.Div([
-                        dcc.Dropdown(Auchan, id='dropdown', clearable=False,
-                                     style={"width": "15rem",
-                                            "margin-left": "4rem",
-                                            "margin-top": "4rem",
-                                            'display': 'inline-block',
-                                            "margin-down": "50rem"
-                                            }),
+                        dcc.Dropdown(Produit, id='dropdown', placeholder="Produit",
+                             style={"width": "30rem",
+                                    })],
+                        style={"margin-top": "5rem",
+                                "margin-left": "5rem",
+                               'display': 'flex', 'align-items': 'center', 'justify-content': 'center'}),
 
-                        dcc.Input(id="Search_Bar", placeholder="produit", type='search',
-                                    style={
-                                        "margin-left": "6rem",
-                                        "width": "20rem",
-                                        "margin-top": "0rem",
-                                        "margin-down": "50rem",
-                                        'display': 'inline-block'
-                                    })
-                    ])])
+                    html.Div([
+                        dcc.Dropdown(Auchan, id="dropdown2", placeholder="Localisation",
+                              style={"width": "15rem",
+                                     })],
+                        style={"margin-left": "5rem",
+                               "margin-top": "1rem",
+                               'display': 'flex', 'align-items': 'center', 'justify-content': 'center'}),
+
+                    html.Div([
+                        html.Button('Submit', id='submit-val', n_clicks=0,
+                                style={
+                                    "width": "5rem",
+                                })],
+                        style={"margin-left": "5rem",
+                               "margin-top": "5rem",
+                               'display': 'flex', 'align-items': 'center', 'justify-content': 'center'}),
+
+                    html.Div(id='container-button-basic',
+                             children='Enter a value and press submit',
+                             style={
+                                 "margin-left": "6rem",
+                                 "margin-top": "0rem",
+                                 "margin-down": "50rem"
+                             })
+])
+
+@app.callback(
+    Output('container-button-basic', 'children'),
+    Input('submit-val', 'n_clicks'),
+    State('dropdown', 'value'),
+    State('dropdown2', 'value')
+)
+def Button_Submit(n_clicks, valueProd, valueLoc):
+
+    return html.Div(['You choose "{}" and "{} '.format(
+        valueProd,
+        valueLoc
+    )], style={'color': 'white'})
 
 contentCard = html.Div([
-                        html.Iframe(id='map', srcDoc=open('carte.html', 'r').read(), width='80%', height='600vh',
-                                    style={
-                                        "margin-left": "6rem",
-                                        "margin-right": "2rem",
-                                        "margin-top": "0rem"})])
+                    html.Iframe(id='map', srcDoc=open('carte.html', 'r').read(), width='80%', height='600vh',
+                                   )],
+                        style = {
+                            "margin-left": "5rem",
+                            "textAlign": "center"}
+                        )
 
 # ======================================================================================================================
 #                               Partie Statistics
@@ -129,8 +183,6 @@ contentStatistics = html.Div([
                        ],
              style={"margin-left": "8rem", "margin-right": "2rem","margin-top": "5rem"}
 )
-    #Pour Camille - Mets tes graphiques ici, dis moi si tu as besoin de plus d'onglet faut juste ajouter
-    #Une fois le "contentStatistics" remplis, descends dans le call back et change le return
 ])
 
 @app.callback(Output('pie_chart_1', 'figure'),
@@ -168,9 +220,11 @@ def update_pie_chart (radio_button):
 #                               Layout slidebar
 # ======================================================================================================================
 
+
 app.layout = html.Div([
         dcc.Location(id="url"),
         sidebar,
+        navbar,
         content
 ])
 
@@ -184,11 +238,10 @@ def Content(pathname):
     elif pathname == "/Carte":
         return [contentCard]
     elif pathname == "/Statistics":
-        #return [html.H1("unfortunetly, we don't have anything yet")] # Pour Camille - Juste ici !
         return [contentStatistics]
     else:
         return [html.H1("unfortunetly, we don't have anything yet")]
 
 
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    app.run_server(debug=True)
