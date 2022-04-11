@@ -5,7 +5,8 @@ import unidecode
 import auchan_analyse_csv
 
 def tokenization_all_products():
-    df['nom_tokenizer'] = df.index.get_level_values('nom')
+    #df['nom_tokenizer'] = df.index.get_level_values('nom')
+    df['nom_tokenizer'] = df['nom']
     df['nom_tokenizer'] = df['nom_tokenizer'].apply(lambda x: tokenization_one_product(x))
     return df
 
@@ -32,12 +33,17 @@ def filter(df, list_word_search):
         df = df[df['nom_tokenizer'].notnull()].copy()
         df['nom_tokenizer_contain'] = df['nom_tokenizer'].str.contains(list_word_search[i])
         df = df[df['nom_tokenizer_contain'] == True]
-    return df.loc[:, pd.IndexSlice[:, ['prix']]]
+    return df #df.loc[:, pd.IndexSlice[:, ['prix']]]
+
+import auchan_fonction_graph as auchan
+
+df_merge = auchan.create_csv_merge(True)
+df, list_name_csv_clean = auchan.cleaning_data(df_merge)
+df = df.reset_index()
 
 
-df = auchan_analyse_csv.create_csv_merge()
-
-liste_produits = list(df.index.get_level_values('nom'))
+#liste_produits = list(df.index.get_level_values('nom'))
+liste_produits = list(df['nom'])
 
 df_produits = tokenization_all_products()
 
