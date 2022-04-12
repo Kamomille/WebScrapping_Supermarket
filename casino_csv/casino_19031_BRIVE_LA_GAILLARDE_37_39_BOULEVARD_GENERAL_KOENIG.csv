@@ -1,0 +1,875 @@
+categorie;type;nom;poids;prix_par_kg;prix;promo
+Fruits et légumes;Légumes;CASINO BIO Avocats - Cat.2 - Biologique;x2;3,49€;3,49€;non
+Fruits et légumes;Légumes;CASINO BIO Betteraves - Cat. 2 - Biologique;500g ;3,18€/KG;1,59€;non
+Fruits et légumes;Légumes;CASINO BIO Pomme de terre de consommation - Variété à chair ferme - Cat. 2 - Cal. 35/55 – Biologique - Non traité;1,5kg ;2,66€/KG;3,99€;non
+Fruits et légumes;Légumes;CASINO BIO Tomate - Variété cerise allongée - Cat. 2 - Biologique;250g ;10,36€/KG;2,59€;non
+Fruits et légumes;Légumes; Aubergines - Cat. 1;De 800g à 1kg ;3,49€/KG;3,49€;non
+Fruits et légumes;Légumes; Ail blanc - Cat. 1;De 400g à 500g ;10€/KG;5€;non
+Fruits et légumes;Légumes; Ail blanc 3 têtes - Cat. 1;La pièce ;14,95€/KG;2,99€;non
+Fruits et légumes;Légumes; Carotte - Cat. 1;1,5kg ;1,06€/KG;1,59€;non
+Fruits et légumes;Légumes; Carottes - Cat. 1;De 800g à 1kg ;1,09€/KG;1,09€;non
+Fruits et légumes;Légumes; Champignon de Paris - Sans résidu de pesticides - Cat. 1;500g ;6,98€/KG;3,49€;non
+Fruits et légumes;Légumes; Champignons blancs - Cat. 1;250g ;3,96€/KG;0,99€;non
+Fruits et légumes;Légumes; Champignons blancs géants - Cat. 1;De 800g à 1kg ;4,99€/KG;4,99€;non
+Fruits et légumes;Légumes; Chou blanc - Cat. 1;La pièce;2,29€;2,29€;non
+Fruits et légumes;Légumes; Chou vert frisé - Cat. 1;La pièce;2,29€;2,29€;non
+Fruits et légumes;Légumes; Brocoli - Cat. 1;500g ;3,58€/KG;1,79€;non
+Fruits et légumes;Légumes; Chou-Fleur gros - Cat. 1;La pièce;2,39€;2,39€;non
+Fruits et légumes;Légumes;DOREOC Pomme de terre de consommation - Variété spéciale frites - Filet  - Cat. 2 - Cal. 50/70 - Traité contre la germination;2kg ;1,40€/KG;2,79€;non
+Fruits et légumes;Légumes; Pommes de terre de consommation - Variété à chair ferme - Cat. 1 - Cal. +45 - Traité contre la germination;De 800g à 1kg ;1,79€/KG;1,79€;non
+Fruits et légumes;Légumes;DOREOC Pommes de terre de consommation - Variété à chair ferme - Cat. 1 - Cal. 35/45 - sachet micro-ondable - Traité contre la germination;750g ;1,32€/KG;0,99€;non
+Fruits et légumes;Légumes;DOREOC Pommes de terre de consommation - Variété cuisson vapeur - Filet - Cat. 1 - Cal. 35/55 - Traité contre la germination;2,5kg ;1,60€/KG;3,99€;non
+Fruits et légumes;Légumes; Courgettes vrac - Cat. 1;De 800g à 1kg ;3,99€/KG;3,99€;non
+Fruits et légumes;Légumes; Echalotes traditionnelles longues - Cat. 1;De 800g à 1kg ;5,99€/KG;5,99€;non
+Fruits et légumes;Légumes;VAJOU Echalotes traditionnelles longues - Sans résidu de pesticides - Cat. 1;250g ;9,96€/KG;2,49€;non
+Fruits et légumes;Légumes; Navet plat primeur - Cat. 1;De 400g à 500g ;2,60€/KG;1,30€;non
+Fruits et légumes;Légumes; Oignon jaune - 4 têtes - Sans résidu de pesticides - Cat.1;x4 ;5,58€/KG;2,79€;non
+Fruits et légumes;Légumes;FERME DE FONTENAY Oignons jaunes - Cat. 1;1kg ;1,59€/KG;1,59€;non
+Fruits et légumes;Légumes; Oignons jaunes - Cat. 1;De 800g à 1kg ;2,79€/KG;2,79€;non
+Fruits et légumes;Légumes; Oignons rouges - Cat. 1;De 800g à 1kg ;2,79€/KG;2,79€;non
+Fruits et légumes;Légumes; Poireaux - Cat. 1;De 800g à 1kg ;1,29€/KG;1,29€;non
+Fruits et légumes;Légumes; Poivron tricolore - Cat. 1;500g ;5,58€/KG;2,79€;non
+Fruits et légumes;Légumes; Poivron rouge - Cat. 1;De 800g à 1kg ;4,79€/KG;4,79€;non
+Fruits et légumes;Légumes; Poivron Vert - Cat. 1;De 800g à 1kg ;4,79€/KG;4,79€;non
+Fruits et légumes;Légumes; Patates douces - Cat. 1;De 800g à 1kg ;2,49€/KG;2,49€;non
+Fruits et légumes;Légumes; Haricot vert ébouté - Cat. 2;500g ;10,98€/KG;5,49€;non
+Fruits et légumes;Légumes; Artichaut blanc - Variété cardinal - Cat. 1;La pièce;2,49€;2,49€;non
+Fruits et légumes;Légumes; Avocat Hass - Pré-mûris - Cat. 1;La pièce;1,59€;1,59€;non
+Fruits et légumes;Légumes; Avocats - Murs à Point - Cat. 1;x2;3,99€;3,99€;non
+Fruits et légumes;Légumes; Betterave cuite - Cat.1 - Sans résidu de pesticides;500g ;1,98€/KG;0,99€;non
+Fruits et légumes;Légumes; Cèleri rave - Cat. 1;La pièce;2,39€;2,39€;non
+Fruits et légumes;Légumes; Concombre - Cat. 1;La pièce;1,69€;1,69€;non
+Fruits et légumes;Légumes; Radis botte - Cat. 1;La pièce;1,59€;1,59€;non
+Fruits et légumes;Légumes; Endives - Cat. 1;De 800g à 1kg ;2,39€/KG;2,39€;non
+Fruits et légumes;Légumes; Endives jeunes pousses - Cat. 1;x6;2,99€;2,99€;non
+Fruits et légumes;Légumes; Salade jeunes pousses mélange - Cat. 1;100g ;9,90€/KG;0,99€;non
+Fruits et légumes;Légumes; Salade mâche - Cat. 1;125g ;7,92€/KG;0,99€;non
+Fruits et légumes;Légumes; Salade - Variété Laitue - Cat. 1;La pièce;1,49€;1,49€;non
+Fruits et légumes;Légumes; Salade Batavia - Cat. 1;La pièce;1,49€;1,49€;non
+Fruits et légumes;Légumes; Salade Feuille de chêne blonde - Cat. 1;La pièce;1,49€;1,49€;non
+Fruits et légumes;Légumes; Salade laitue - Variété Iceberg - Cat. 1;La pièce;0,99€;0,99€;non
+Fruits et légumes;Légumes; Salade Sucrine - Cat. 1;x3;0,99€;0,99€;non
+Fruits et légumes;Légumes; Tomate allongée - Cat. 1;De 800g à 1kg ;5,99€/KG;5,99€;non
+Fruits et légumes;Légumes; Tomates cerises rondes - Sans résidu de pesticides - Cat. 1;250g ;13,96€/KG;3,49€;non
+Fruits et légumes;Légumes; Tomate ronde - Variété Grappe - Cat. 1;De 800g à 1kg ;3,79€/KG;3,79€;non
+Fruits et légumes;Légumes; Tomates rondes - Cat. 1;De 800g à 1kg ;5,49€/KG;5,49€;non
+Fruits et légumes;Légumes; Tomates rondes charnues - Cat. 1;De 800g à 1kg ;5,99€/KG;5,99€;non
+Fruits et légumes;Légumes;LUNOR Brut du potager - Pommes de terre en robes des champs;750g ;3,53€/KG;2,65€;non
+Fruits et légumes;Légumes;LUNOR Légumes vapeur - Pommes de terre en lamelles;500g ;3,18€/KG;1,59€;non
+Fruits et légumes;Légumes;CASINO Batavia;200g ;8,45€/KG;1,69€;non
+Fruits et légumes;Légumes;CASINO Coeur de laitue;200g ;7,25€/KG;1,45€;non
+Fruits et légumes;Légumes;CASINO Feuille de chêne blonde;125g ;10,80€/KG;1,35€;non
+Fruits et légumes;Légumes;CASINO Frisée 100% cœur;200g ;8,45€/KG;1,69€;non
+Fruits et légumes;Légumes;CASINO Salades aux 4 saveurs;200g ;7,75€/KG;1,55€;non
+Fruits et légumes;Légumes;LES HERBES DU PERUSSIER Coriandre fraîche - Cat. 1;15g ;66€/KG;0,99€;non
+Fruits et légumes;Légumes;LES HERBES DU PERUSSIER Ciboulette fraîche - Cat. 1;15g ;66€/KG;0,99€;non
+Fruits et légumes;Légumes;LES HERBES DU PERUSSIER Menthe fraîche - Cat. 1;15g ;66€/KG;0,99€;non
+Fruits et légumes;Légumes; Persil frisé - Botte - Cat. 1;La pièce;1,49€;1,49€;non
+Fruits et légumes;Fruits;CASINO BIO Banane Max Havelaar - Cat. 2 - Biologique;x5 ;3,27€/KG;2,29€;non
+Fruits et légumes;Fruits; Bananes - Cat. 1;De 800g à 1kg ;1,89€/KG;1,89€;non
+Fruits et légumes;Fruits; Melon charentais vert - Cat. 1;La pièce;1,79€;1,79€;non
+Fruits et légumes;Fruits; Citrons Star - Cat. 1;500g ;4,38€/KG;2,19€;non
+Fruits et légumes;Fruits; Citrons verts - Cat. 1;De 400g à 500g ;5€/KG;2,50€;non
+Fruits et légumes;Fruits; Mandarine Nadorcott - Cat. 1;De 800g à 1kg ;3,99€/KG;3,99€;non
+Fruits et légumes;Fruits; Fraise - Variété Gariguette - Cat. 1;250g ;8,76€/KG;2,19€;non
+Fruits et légumes;Fruits; Fraises - Cat. 1;250g ;15,16€/KG;3,79€;non
+Fruits et légumes;Fruits; Fraises - Cat. 1;500g ;4,58€/KG;2,29€;non
+Fruits et légumes;Fruits; Kiwi - Cat. 1;La pièce;0,99€;0,99€;non
+Fruits et légumes;Fruits;TERRE D'AGRUMES Oranges - Variété Naveline - Cat. 1;2kg ;1,90€/KG;3,79€;non
+Fruits et légumes;Fruits; Orange à jus - Cat.1;2kg ;1,50€/KG;2,99€;non
+Fruits et légumes;Fruits; Orange sélection - Variété Naveline - Cat. 1;De 800g à 1kg ;2,59€/KG;2,59€;non
+Fruits et légumes;Fruits; Marron cuit sous vide - Cat. 1;400g ;14,98€/KG;5,99€;non
+Fruits et légumes;Fruits; Poires - Variété Conférence - Cat. 1;De 800g à 1kg ;3,99€/KG;3,99€;non
+Fruits et légumes;Fruits; Poire - Variété Rocha - Cat. 1;De 800g à 1kg ;2,99€/KG;2,99€;non
+Fruits et légumes;Fruits; Poires - Variété William verte - Cat. 1;De 800g à 1kg ;3,99€/KG;3,99€;non
+Fruits et légumes;Fruits; Pommes - Variété Braeburn - Cat. 1;De 800g à 1kg ;2,99€/KG;2,99€;non
+Fruits et légumes;Fruits; Pommes - Variété Gala - Cat. 1;De 800g à 1kg ;2,79€/KG;2,79€;non
+Fruits et légumes;Fruits; Pommes - Variété Pink Lady - Cat. 1;De 800g à 1kg ;3,79€/KG;3,79€;non
+Fruits et légumes;Fruits; Pommes - Variété Golden Label rouge - Cat. 1;De 800g à 1kg ;2,99€/KG;2,99€;non
+Fruits et légumes;Fruits; Pommes Chanteclerc - Cat. 1;De 800g à 1kg ;3,49€/KG;3,49€;non
+Fruits et légumes;Fruits;CASINO Arachide coque;500g ;6,18€/KG;3,09€;non
+Fruits et légumes;Fruits;MAITRE PRUNILLE Chouchou - Cacahuètes sucrées - Bocal;500g ;7,62€/KG;3,81€;non
+Fruits et légumes;Fruits;SEEBERGER Assortiment de noix;150g ;28,33€/KG;4,25€;non
+Fruits et légumes;Fruits;CASINO Noix de pécan;125g ;28,40€/KG;3,55€;non
+Fruits et légumes;Fruits;CASINO Pause punch - Mélange de fruits secs - Raisins amandes pécan cranberries;250g ;14,76€/KG;3,69€;non
+Fruits et légumes;Fruits;CASINO Noix de Cajou grillées - Sans sel ajouté;200g ;24,95€/KG;4,99€;non
+Fruits et légumes;Fruits;SEEBERGER Mendiant de luxe - Assortiment de noix et raisins secs;150g ;19,73€/KG;2,96€;non
+Fruits et légumes;Fruits;CASINO Pistaches - Sans sel ajouté;125g ;27,60€/KG;3,45€;non
+Fruits et légumes;Fruits;CASINO Pause harmony - Mélange de fruits secs - Amande noisette pomme cerise;250g ;16,60€/KG;4,15€;non
+Fruits et légumes;Fruits;CASINO Pause superfruits - Mélange de fruits secs - Mûre cerise myrtille cranberrie125g;125g ;21,52€/KG;2,69€;non
+Fruits et légumes;Fruits;MAITRE PRUNILLE Amandes - Décortiquées;250g ;16,84€/KG;4,26€;non
+Fruits et légumes;Fruits;MAITRE PRUNILLE Amandes décortiquées;300g;4,40€;4,40€;non
+Fruits et légumes;Fruits;CASINO Pause chocolaté - Mélange de fruits secs;250g ;15,40€/KG;3,85€;non
+Fruits et légumes;Fruits;CASINO Cerneaux de noix;125g ;29,52€/KG;3,69€;non
+Fruits et légumes;Fruits;MAITRE PRUNILLE Pâte d'amande - Tricolore;250g ;7,24€/KG;1,82€;non
+Fruits et légumes;Fruits;CASINO BIO Raisins secs - Biologiques;250g ;8,52€/KG;2,13€;non
+Fruits et légumes;Fruits;CASINO Raisins secs - Golden;125g ;11,92€/KG;1,49€;non
+Fruits et légumes;Fruits;CASINO BIO Amandes décortiquées - Biologique;200g ;24,75€/KG;4,95€;non
+Fruits et légumes;Fruits;CASINO Cranberrie;125g ;13,28€/KG;1,66€;non
+Fruits et légumes;Fruits;CASINO Mélange de fruits à coque;250g ;15,40€/KG;3,85€;non
+Fruits et légumes;Fruits;CASINO Pignons de pin;125g ;55,92€/KG;6,99€;non
+Fruits et légumes;Fruits; Noisettes décortiquées;300g ;18,97€/KG;5,69€;non
+Fruits et légumes;Fruits;CASINO Abricots moelleux;250g ;11,40€/KG;2,85€;non
+Fruits et légumes;Fruits;CASINO Abricots secs;250g ;11,96€/KG;2,99€;non
+Fruits et légumes;Fruits;CASINO BIO Abricots secs - Biologique;250g ;14,20€/KG;3,55€;non
+Fruits et légumes;Fruits;CASINO Duo de raisins moelleux;250g ;9,80€/KG;2,45€;non
+Fruits et légumes;Fruits;CASINO Dattes;500g ;4,78€/KG;2,39€;non
+Fruits et légumes;Fruits;CASINO BIO Dattes - Deglet nour - Dénoyautées - Biologique;250g ;9,16€/KG;2,29€;non
+Fruits et légumes;Fruits;CASINO BIO Figues sèches - Biologique;250g ;13,76€/KG;3,44€;non
+Fruits et légumes;Fruits;CASINO Figues moelleuses;250g ;10,20€/KG;2,55€;non
+Fruits et légumes;Fruits;CASINO Figues moelleuses;500g ;9,98€/KG;4,99€;non
+Fruits et légumes;Fruits;CASINO Prunes Moelleuses dénoyautées;250g ;14,20€/KG;3,55€;non
+Fruits et légumes;Fruits;CASINO Pruneaux d'Agen géants dénoyautés;2x250g ;10,90€/KG;5,45€;non
+Fruits et légumes;Fruits;CASINO BIO Pruneaux d'Agen - Biologique;250g ;11,96€/KG;2,99€;non
+Fruits et légumes;Fruits;MAITRE PRUNILLE Pruneaux d'agen;500g ;7,18€/KG;3,77€;non
+Fruits et légumes;Fruits;MAISON ROUCADIL Pruneaux d'Agen - Entiers - 28/33 - Sans conservateur;500g ;9,08€/KG;4,54€;non
+Fruits et légumes;Fruits;CASINO Pruneaux d'Agen - Très gros;500g ;8,90€/KG;4,45€;non
+Fruits et légumes;Fruits; Noix - Cat. 2 - Biologique;500g ;9,98€/KG;4,99€;non
+Fruits et légumes;Fruits; Dattes - Variété ravier - Cat. 2;250g ;5,16€/KG;1,29€;non
+Fruits et légumes;Fruits;LES VERGERS D'ESCOUTE Arachide sucrée - Chouchou;210g ;17,62€/KG;3,70€;non
+Fruits et légumes;Fruits;LES VERGERS D'ESCOUTE Banane chips;150g ;16€/KG;2,40€;non
+Fruits et légumes;Fruits;LES VERGERS D'ESCOUTE Mélange méditerranéen;190g ;14,21€/KG;2,70€;non
+Fruits et légumes;Fruits;LES VERGERS D'ESCOUTE Noix de cajou salée - Au thym et citron;200g ;34,50€/KG;6,90€;non
+Fruits et légumes;Fruits;LES VERGERS D'ESCOUTE Pâte de fruits;320g ;18,44€/KG;5,90€;non
+Fruits et légumes;Fruits;LES VERGERS D'ESCOUTE Pignon de pin;195g ;55,90€/KG;10,90€;non
+Fruits et légumes;Fruits;LES VERGERS D'ESCOUTE Pomme cannelle;230g ;21,30€/KG;4,90€;non
+Épicerie sucrée;Cafés et boissons chaudes;STARBUCKS Cappuccino - 6 Capsules - 100% Arabica - Rich & Creamy - Café;120g ;31,42€/KG;3,77€;non
+Épicerie sucrée;Cafés et boissons chaudes;STARBUCKS Caramel Macchiato - 6 Capsules - 100% Arabica - Café;128g ;29,92€/KG;3,83€;non
+Épicerie sucrée;Cafés et boissons chaudes;STARBUCKS Colombia - 10 Capsules Aluminium - Intensité 7 - Café;Capsules Aluminium ;59,12€/KG;3,37€;non
+Épicerie sucrée;Cafés et boissons chaudes;STARBUCKS Espresso - Colombia - 12 Capsules - 100% Arabica - Intensité 7 - Café;66g ;56,97€/KG;3,76€;non
+Épicerie sucrée;Cafés et boissons chaudes;STARBUCKS Espresso Roast - 10 Capsules Aluminium - Intensité 11 - Café;Capsules Aluminium ;58,77€/KG;3,35€;non
+Épicerie sucrée;Cafés et boissons chaudes;STARBUCKS Espresso Roast - Blonde - 10 Capsules Aluminium - Intensité 6 - Café;Capsules Aluminium ;63,02€/KG;3,34€;non
+Épicerie sucrée;Cafés et boissons chaudes;STARBUCKS Lungo - House Blend - 10 Capsules Aluminium - Intensité 8 - Café;Capsules Aluminium ;58,95€/KG;3,36€;non
+Épicerie sucrée;Cafés et boissons chaudes;SENSEO Brazil - 36 Dosetttes;250g;4,99€;4,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Café - Corsé - 52 dosettes souples;Dosettes Souples ;12,06€/KG;4,39€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Café - Corsé - Fort et Intense - 36 Dosettes Souples;Dosettes Souples ;12,28€/KG;3,07€;non
+Épicerie sucrée;Cafés et boissons chaudes;SENSEO Café - Dosettes - Doux;x40 ;15,60€/KG;4,32€;non
+Épicerie sucrée;Cafés et boissons chaudes;SENSEO Café - Dosettes - Doux;x54 ;15,17€/KG;5,69€;non
+Épicerie sucrée;Cafés et boissons chaudes;SENSEO Café - Dosettes - Extra corsé;x40 ;16,14€/KG;4,47€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Café - Doux - 52 dosettes souples;Dosettes Souples ;13,16€/KG;4,79€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Café - Expresso - 36 Dosettes Souples;Dosettes Souples ;12,56€/KG;3,14€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Café - Pur arabica - 52 dosettes souples;Dosettes Souples ;12,06€/KG;4,39€;non
+Épicerie sucrée;Cafés et boissons chaudes;SENSEO Café dosette Senseo - Saveur Caramel - x32;222g ;18,78€/KG;4,17€;non
+Épicerie sucrée;Cafés et boissons chaudes;SENSEO Cappucino - 8 Dosettes Souples  - Café;Dosettes Souples ;23,48€/KG;2,16€;non
+Épicerie sucrée;Cafés et boissons chaudes;SENSEO Classique - 40 Dosettes Souples - Equilibré - Café;Dosettes Souples ;16,10€/KG;4,46€;non
+Épicerie sucrée;Cafés et boissons chaudes;SENSEO Classique - Equilibré - 18 Dosettes Souples - Café;Dosettes Souples ;17,44€/KG;2,18€;non
+Épicerie sucrée;Cafés et boissons chaudes;SENSEO Classique - Equilibré - 54 Dosettes Souples  - Café;Dosettes Souples ;15,17€/KG;5,69€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Corsé - 36 Dosettes Souples - Intensité 6 - Café;Dosettes Souples ;14,84€/KG;3,71€;non
+Épicerie sucrée;Cafés et boissons chaudes;SENSEO Corsé - 54 Dosettes Souples - Format Familial - Café;Dosettes Souples ;15,44€/KG;5,79€;non
+Épicerie sucrée;Cafés et boissons chaudes;GRAND MERE Corsé - 54 Dosettes Souples - Maxi Format  - Café;Dosettes Souples ;12,22€/KG;4,35€;non
+Épicerie sucrée;Cafés et boissons chaudes;SENSEO Corsé - Aromatique et Riche - 18 Dosettes Souples - Café;Dosettes Souples ;17,28€/KG;2,16€;non
+Épicerie sucrée;Cafés et boissons chaudes;SENSEO Corsé - Aromatique et Riche - 40 Dosettes Souples - Café;Dosettes Souples ;15,56€/KG;4,31€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Décaféiné - 36 Dosettes Souples - Pur Arabica - Maxi Format - Café;Dosettes Souples ;12,76€/KG;3,19€;non
+Épicerie sucrée;Cafés et boissons chaudes;SENSEO Décaféiné - Equilibré - 40 Dosettes Souples - Café;Dosettes Souples ;15,60€/KG;4,32€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Doux - 36 Dosettes Souples - Maxi Format - Café;Dosettes Souples ;13,84€/KG;3,46€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Espresso - Lungo Classique - 30 Capsules Plastique - Maxi Format - Café;Capsules Plastique ;37,20€/KG;6,25€;non
+Épicerie sucrée;Cafés et boissons chaudes;SENSEO Espresso Décaféiné - 36 Dosettes;250g;4,99€;4,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Expresso - 36 Dosettes - Intensité 8 - Café;250g ;19,96€/KG;4,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Familial - Café - Corsé et Généreux - 18 Dosettes Souples;Dosettes Souples ;15,36€/KG;1,92€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Familial - Café - Corsé et généreux - 52 Dosettes Souples;Dosettes Souples ;12,16€/KG;4,39€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Familial - Corsé et Genereux - 36 Dosettes Souples  - Café;Dosettes Souples ;12,28€/KG;3,07€;non
+Épicerie sucrée;Cafés et boissons chaudes;LEADER PRICE Folie Noire - Café - Corsé - 18 dosettes souples;Dosettes Souples ;10,72€/KG;1,34€;non
+Épicerie sucrée;Cafés et boissons chaudes;TASSIMO L'Or - Café Long - Classique - 16 Dosettes Rigides;Dosettes Rigides ;35€/KG;3,64€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Pur Arabica - 36 Dosettes Souples - Maxi Format - Café;Dosettes Souples ;12,72€/KG;3,18€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Aromatisé Caramel - 10 Capsules Plastique - Intensité 4  - Café;Capsules Plastique ;49,81€/KG;2,59€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Aromatisé Noisette - 10 Capsules Plastique - Intensité 7 - Café;Capsules Plastique ;49,81€/KG;2,59€;non
+Épicerie sucrée;Cafés et boissons chaudes;SAN MARCO Bio - 10 Capsules Biodégradable - Intense et Rond - Intensité 8 - Café - Biologique;50g ;53,73€/KG;2,73€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Bio - Colombie - 10 Capsules Plastique - Intensité 7 - Café - Biologique;Capsules Plastique ;46,35€/KG;2,41€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Bio - Espresso - 30 Capsules Plastique - Maxi Format - Café - Biologique;Capsules Plastique ;40,50€/KG;6,44€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Bio - Pérou - 10 Capsules Plastique - Intensité 4 - Café - Biologique;Capsules Plastique ;48,08€/KG;2,50€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Brésil - 10 Capsules Plastique - Intensité 4  - Café;Capsules Plastique ;47,69€/KG;2,48€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO DELICES Café - Capsules - x10 - Sélection Chiapas;52g ;35,36€/KG;2,97€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO DELICES Café - Capsules - x10 - Sélection Costa Rica;52g ;33,65€/KG;2,86€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO DELICES Café - Capsules - x10 - Sélection Honduras;52g ;32,35€/KG;2,75€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO DELICES Café - Capsules - x10 - Sélection Salvador;52g ;34,35€/KG;2,92€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Café - Capsules - x44 - Intensité 3;230g ;30,39€/KG;6,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO SAVEURS D'AILLEURS Café - Colombie - 30 capsules - Intensité 7;;40,50€/KG;6,44€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO SAVEURS D'AILLEURS Café - Pérou - 30 capsules - Intensité 4;;40,50€/KG;6,44€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Café au Lait - Robusta - 16 Capsules;x16 ;23,44€/KG;3,79€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO DELICES Café d'exception - Capsules - x10 - Edition limitée - Intensité 6 - Biologique;52g ;30,83€/KG;2,59€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO DELICES Café d'exception - Capsules plastiques - x12 - Edition limitée - Intensité 6 - Biologique;Capsules Plastique ;47,02€/KG;3,95€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Cappuccino - 8 Capsules - Premium Arabica - Café;x8 ;20,16€/KG;3,79€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Cappuccino - 8 Capsules Plastique - Café;Capsules Plastique ;20,30€/KG;3,37€;non
+Épicerie sucrée;Cafés et boissons chaudes;CAFE ROYAL Caramel - 10 Capsules Aluminium - Intensité 4 - Café;Capsules Aluminium ;58,40€/KG;2,92€;non
+Épicerie sucrée;Cafés et boissons chaudes;TASSIMO Carte Noire - Espresso - Classique - 16 Dosettes Rigides - Intensité 5 - 100% Arabica - Café;Dosettes Rigides ;39,90€/KG;4,15€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Corsé - 10 Capsules Plastique - Intensité 8 - Café;Capsules Plastique ;42,12€/KG;2,19€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Corsé - 20 Capsules Plastique - Intensité 8 - Café;Capsules Plastique ;42,21€/KG;4,39€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Décaféiné - 10 Capsules Plastique - Intensité 4 - Café;Capsules Plastique ;42,12€/KG;2,19€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Décaféiné - 16 Capsules Plastique - Intensité 6 - Café;Capsules Plastique ;32,95€/KG;3,64€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Delizioso Espresso - Café - 40 capsules;208g ;47,26€/KG;9,83€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Doux - 10 Capsules Plastique - Intensité 3 - Café;Capsules Plastique ;42,12€/KG;2,19€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Doux matin - 16 Dosettes Rigides - Doux et Parfumé;Dosettes Rigides ;39,90€/KG;4,15€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Espresso - 16 Capsules Plastique - Intensité 6 - Café;Capsules Plastique ;31,54€/KG;3,29€;non
+Épicerie sucrée;Cafés et boissons chaudes;CAFE ROYAL Espresso - 36 Capsules Aluminium - Intensité 5 - Café;Capsules Aluminium ;42,57€/KG;7,96€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Espresso - Café - 30 capsules - Intensité 5;x30 ;41,45€/KG;6,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Espresso - Café - 30 capsules - Intensité 6;195g ;31,18€/KG;6,11€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Espresso - Classique - 30 Capsules Plastique - Intensité 7 - Maxi Format - Café;Capsules Plastique ;39,50€/KG;6,31€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Decaffeinato - 10 Capsules Aluminium- Intensité 6 - Café;Capsules Aluminium ;50,77€/KG;2,61€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Espresso - Decaffeinato - 16 Capsules - Intensité 5 - Arabica  - Café;x16 ;43,23€/KG;4,10€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Delizio - 10 Capsules Aluminium - Intensité 5 - Café;Capsules Aluminium ;49,62€/KG;2,58€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Delizioso - 20 Capsules Aluminium - Intensité 5 - Café;Capsules Aluminium ;47,88€/KG;4,80€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso  Forza - Café - Capsules - Intensité 9;x40 ;46,20€/KG;9,29€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Espresso - Intense - 16 Capsules Plastique - Intensité 7 - Café;Capsules Plastique ;29,64€/KG;3,31€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Espresso - Intense - 30 Capsules Plastique - Intensité 9 - Maxi Format - Café;Capsules Plastique ;38,55€/KG;6,15€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Lungo Elegante - 10 Capsules Aluminium - Intensité 6 - Café;Capsules Aluminium ;61,35€/KG;3,19€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Lungo Mattinata - 10 Capsules Aluminium - Intensité 5 - Café;Capsules Aluminium ;57,50€/KG;2,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Lungo Profondo - 10 Capsules Aluminium - Intensité 8 - Café;Capsules Aluminium ;55,58€/KG;2,83€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Lungo Profondo - Intensité 08 - 20 capsules;104g ;54,42€/KG;5,54€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Or Absolu - 10 Capsules Aluminium - Intensité 9 - Café;Capsules Aluminium ;56,73€/KG;2,90€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Or Rose - 10 Capsules Aluminium - Intensité 7 - Café;Capsules Aluminium ;57,50€/KG;2,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Ristretto - 10 Capsules Aluminium - Intensité 11 - Café;Capsules Aluminium ;51,54€/KG;2,69€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Ristretto - 20 Capsules Aluminium - Intensité 11 - Café;Capsules Aluminium ;47,60€/KG;4,97€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Satinato - 10 Capsules Aluminium - Intensité 6 - Café;Capsules Aluminium ;54,62€/KG;2,82€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Sontuoso - 10 Capsules Aluminium - Intensité 8 - Café;Capsules Aluminium ;52,31€/KG;2,72€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Splendente - 10 Capsules Aluminium - Intensité 7 - Café;Capsules Aluminium ;50,38€/KG;2,62€;non
+Épicerie sucrée;Cafés et boissons chaudes;OR Espresso - Splendente - 20 Capsules Aluminium - Intensité 7 - Café;Capsules Aluminium ;47,98€/KG;4,86€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Espresso - Supremo - 10 Capsules Aluminium - Intensité 10 - Café;Capsules Aluminium ;51,35€/KG;2,68€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Espresso Barista - 16 Capsules - Intensité 9 - Arabica et Robusta - Café;x16 ;33,66€/KG;3,82€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Espresso intense - Café - 30 capsules - Intensité 7;210g ;29,33€/KG;6,14€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Espresso Intenso - 16 Capsules - Intensité 7 - Arabica et Robusta - Café;x16 ;33,39€/KG;3,73€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Farmers Origins Brazil  café 10 capsules;53g ;56,15€/KG;2,94€;non
+Épicerie sucrée;Cafés et boissons chaudes;TASSIMO Grand Mère - Espresso - 16 Dosettes Rigides  - Café;Dosettes Rigides ;31,15€/KG;3,24€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Grande - 16 Capsules - Intensité 5 - Premium Arabica - Café;x16 ;29,30€/KG;3,73€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Grande - 16 Capsules Plastique - Intensité 5 - Café;Capsules Plastique ;29,73€/KG;3,31€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Grande - 30 Capsules - Intensité 5 - Premium Arabica - Café;x30 ;27,67€/KG;6,78€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Grande - Café - 30 capsules - Intensité 5;210g ;28,43€/KG;6,10€;non
+Épicerie sucrée;Cafés et boissons chaudes;DOLCE GUSTO Grande Intenso - Café - 16 capsules - Intensité 7;144g ;27,71€/KG;3,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;MALONGO La Grande Reserve - Pur Arabica - 16 Dosettes Fibres Naturelles - Maxi Format;104g ;36,92€/KG;3,95€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Latte amande - café -  12 capsules - vegan;132g ;27,88€/KG;3,69€;non
+Épicerie sucrée;Cafés et boissons chaudes;TASSIMO L'Or - Espresso - Classique - 16 Dosettes Rigides - Café;Dosettes Rigides ;35,67€/KG;3,59€;non
+Épicerie sucrée;Cafés et boissons chaudes;TASSIMO L'Or - Espresso - Decaffeinato - 16 Dosettes Rigides - Café;Dosettes Rigides ;35,94€/KG;3,82€;non
+Épicerie sucrée;Cafés et boissons chaudes;TASSIMO L'Or - Espresso - Delizioso - 16 Dosettes Rigides - Intensité 5 - Café;Dosettes Rigides ;36,35€/KG;3,78€;non
+Épicerie sucrée;Cafés et boissons chaudes;TASSIMO L'Or - Espresso - Splendente - 16 Dosettes Rigides - Intensité 7 - Café;Dosettes Rigides ;33,75€/KG;3,73€;non
+Épicerie sucrée;Cafés et boissons chaudes;TASSIMO L'Or - Long - Classique - Intensité 4 - 24 Dosettes Rigides  - Café;Dosettes Rigides ;35,45€/KG;5,25€;non
+Épicerie sucrée;Cafés et boissons chaudes;TASSIMO L'Or - Long - Doux - 8 Dosettes Rigides  - Café;Dosettes Rigides ;44,83€/KG;3,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;TASSIMO L'Or - Petit Déjeuner - Classique - 24 Dosettes Rigides - Format Famille - Café;Dosettes Rigides ;28,34€/KG;5,67€;non
+Épicerie sucrée;Cafés et boissons chaudes;TASSIMO L'Or -Café Long - Intense - 16 Dosettes Rigides;Dosettes Rigides ;28,67€/KG;3,64€;non
+Épicerie sucrée;Cafés et boissons chaudes;MALONGO L'Original - Pur Arabica - 16 Dosettes Fibres Naturelles - Maxi Format;104g ;37,88€/KG;3,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Lungo - 10 Capsules Plastique - Intensité 7 - Café;Capsules Plastique ;41,73€/KG;2,17€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Lungo - 16 capsules - Intensité 6 - Café;x16 ;35,48€/KG;3,73€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Lungo - 16 Capsules Plastique - Intensité 5  - Café;Capsules Plastique ;29,29€/KG;3,31€;non
+Épicerie sucrée;Cafés et boissons chaudes;CAFE ROYAL Lungo - 36 Capsules Aluminium - Intensité 4 - Café;Capsules Aluminium ;40,89€/KG;7,77€;non
+Épicerie sucrée;Cafés et boissons chaudes;CAFE ROYAL Lungo - Café - 18 capsules - Intensité 4;x18 ;43,37€/KG;4,15€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Lungo - Café - Capsules - x44 - Intensité 7;230g ;30,39€/KG;6,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Lungo - Decaffeinato - Arabica - 16 Capsules - Intensité 6 - Café;x16 ;32,50€/KG;3,82€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Lungo profondo - Café - 40 capsules;208g ;52,84€/KG;10,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Marrakech Tea - Thé - 16 capsules;x16 ;47,23€/KG;3,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;TASSIMO Milka - Chocolat - 8 Dosettes;240g ;16,17€/KG;3,66€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Nesquik - Chocolat - 16 Capsules;x16 ;14,38€/KG;3,69€;non
+Épicerie sucrée;Cafés et boissons chaudes;TASSIMO Petit dejeuner classique - café - 21 dosettes;168g ;29,46€/KG;4,95€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Pur Arabica - 10 Capsules Plastique - Intensité 6 - Café;Capsules Plastique ;42,12€/KG;2,19€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Pur Arabica - 16 Dosettes Rigides - Puissant et Fruité;Dosettes Rigides ;42,21€/KG;4,39€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Pur Arabica - 20 Capsules Plastique - Intensité 6 - Café;Capsules Plastique ;42,21€/KG;4,39€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Ricoré - Latte - Chicorée et Café au Lait - 16 Capsules;x16 ;23,75€/KG;3,87€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Ristretto - 10 Capsules Plastique - Intensité 9 - Café;Capsules Plastique ;40,38€/KG;2,10€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Ristretto - Café - Capsules - x44 - Intensité 9;230g ;30,66€/KG;6,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;TASSIMO tassimo espresso classique cafe en dosettes x 21 - 126 gr;;46,83€/KG;5,90€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE DOLCE GUSTO Espresso - Café - 16 capsules - Intensité 5;x16 ;41,93€/KG;3,70€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO BIO Café moulu - Laos Guatemala - Biologique;250g ;11,56€/KG;2,89€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO BIO Café moulu - Origine Mexique - Pur arabica - Biologique;250g ;15,20€/KG;3,80€;non
+Épicerie sucrée;Cafés et boissons chaudes;JACQUES VABRE Bahia Brésil - Grand Cru d'Arabica - Café Moulu - Doux et Fruité;Café Moulu ;11,40€/KG;2,60€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO DELICES Bouquet d'arômes - Café moulu - Suave et parfumé - Pur arabica;Café Moulu ;17,56€/KG;4,39€;non
+Épicerie sucrée;Cafés et boissons chaudes; Café moulu - Biologique;Café Moulu ;26,12€/KG;6,62€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO SAVEURS D'AILLEURS Ethiopie - Café Moulu - Pur Arabica - Subtil et Parfumé;Café Moulu ;10,64€/KG;2,66€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO SAVEURS D'AILLEURS Kenya - Café Moulu - Pur Arabica - Acidulé et Aromatique;Café Moulu ;10,64€/KG;2,66€;non
+Épicerie sucrée;Cafés et boissons chaudes;JACQUES VABRE Kitalé Kenya - Grand Cru d'Arabica - Café Moulu - Fin et Epicé;Café Moulu ;11,96€/KG;2,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;MALONGO L'Original - Pur Arabica - Café Moulu - Commerce Equitable - Boite;Café Moulu ;12,32€/KG;3,15€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO SAVEURS D'AILLEURS Mexique - Café Moulu - Pur Arabica - Corsé et Parfurmé;Café Moulu ;16,08€/KG;4,02€;non
+Épicerie sucrée;Cafés et boissons chaudes;JACQUES VABRE Popayan Colombie - Café moulu - Grand Cru d'Arabica;Café Moulu ;11,96€/KG;2,92€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Pur Brésil - 100% Arabica - Café Moulu - Equilibré et Doux;Café Moulu ;9,64€/KG;2,31€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Pur Brésil - 100% Arabica - Café Moulu - Equilibré et Doux;Café Moulu ;9,58€/KG;4,62€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO SAVEURS D'AILLEURS Pur Colombie - 100% Arabica - Café Moulu - Fruité et Acidulé;Café Moulu ;13,16€/KG;3,29€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Doux - Café Moulu - 100% Arabica - Intensité 5;Café Moulu ;11,74€/KG;5,58€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Pur Arabica - Café Moulu - Doux;Café Moulu ;14,04€/KG;3,51€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Pur Arabica - Café Moulu - Doux;Café Moulu ;10,32€/KG;4,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;VELOURS NOIR Velours Noir - Arabica Exclusif - Café Moulu - Doux;Café Moulu ;11,52€/KG;2,88€;non
+Épicerie sucrée;Cafés et boissons chaudes;VELOURS NOIR Velours Noir - Arabica Exclusif - Café Moulu - Doux;Café Moulu ;11,60€/KG;5,61€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO SAVEURS D'AILLEURS Costa Rica - Café Moulu - Pur Arabica - Puissant et Aromatique;Café Moulu ;17,56€/KG;4,39€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO SAVEURS D'AILLEURS Pérou - Café Moulu - Pur Arabica - Doux et Equilibré;Café Moulu ;19,32€/KG;4,83€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Absolu - Café Moulu - 100% Arabica - Aromatique et Raffiné - Intensité 7;Café Moulu ;11,84€/KG;5,94€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Arôme Intense et Gôut Unique - Café Moulu - Pur Arabica;Café Moulu ;12,66€/KG;6,42€;non
+Épicerie sucrée;Cafés et boissons chaudes; Café Moulu - 100% Arabica;Café Moulu ;7,64€/KG;1,91€;non
+Épicerie sucrée;Cafés et boissons chaudes;CAFES MEO Café moulu - Boite métal - Biologique - Max Havelaar;Café Moulu ;11,72€/KG;2,95€;non
+Épicerie sucrée;Cafés et boissons chaudes;LEADER PRICE Folie noire - Café moulu - Pur arabica;Café Moulu ;5,82€/KG;3,35€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Intense - Café Moulu - 100% Arabica - Intensité 7;Café Moulu ;11,68€/KG;2,81€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Intense - Café Moulu - 100% Arabica - Intensité 7;Café Moulu ;11,26€/KG;5,34€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Pur Arabica - Café Moulu;Café Moulu ;8,60€/KG;2,15€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Pur Arabica - Café Moulu;Café Moulu ;7,58€/KG;3,79€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Scilior - Pur Arabica - Café Moulu - Intense et Généreux;Café Moulu ;10,36€/KG;2,50€;non
+Épicerie sucrée;Cafés et boissons chaudes; Café torréfié moulu;250g ;23,52€/KG;5,88€;non
+Épicerie sucrée;Cafés et boissons chaudes;LAVAZZA Espresso - Arabica - Café Moulu - Intensité 6;Café Moulu ;11,32€/KG;2,87€;non
+Épicerie sucrée;Cafés et boissons chaudes;ILLY Expresso Caffè Macinato;250g ;26,24€/KG;6,14€;non
+Épicerie sucrée;Cafés et boissons chaudes;MALONGO Gout Italien - Pur Arabica - Café Moulu - Boite;Café Moulu ;13,52€/KG;3,25€;non
+Épicerie sucrée;Cafés et boissons chaudes;LAVAZZA L'Espresso Italiano - Classico - Café Moulu - 100% Arabica - Intensité 7;Café Moulu ;10,24€/KG;5,18€;non
+Épicerie sucrée;Cafés et boissons chaudes;MALONGO L'Express - Commerce Equitable - Café Moulu - Boite;Café Moulu ;14€/KG;3,40€;non
+Épicerie sucrée;Cafés et boissons chaudes;SAN MARCO Pur Arabica - Café Moulu - Doux;Café Moulu ;11,98€/KG;5,96€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Pur Arabica - Expresso - Café Moulu;Café Moulu ;9,64€/KG;2,41€;non
+Épicerie sucrée;Cafés et boissons chaudes;SAN MARCO Pur Arabica Premium - Café Moulu - Intensité 7;Café Moulu ;12,36€/KG;3,13€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Décaféiné - Pur Arabica - Café Moulu;Café Moulu ;10,80€/KG;2,70€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Familial - Décaféiné - Café Moulu;Café Moulu ;7,08€/KG;1,77€;non
+Épicerie sucrée;Cafés et boissons chaudes;MALONGO Itialian style  - Café en grains;Café en Grains ;12,90€/KG;6,67€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO DELICES Bouquet d’Arômes - Café en Grains - Pur Arabica;Café en Grains ;19,16€/KG;4,79€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO BIO Café en grain - Ethiopie - Biologique;250g ;16,24€/KG;4,06€;non
+Épicerie sucrée;Cafés et boissons chaudes;ILLY Café en grain - Intense;250g ;24,64€/KG;6,28€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO SAVEURS D'AILLEURS Café en grains - Costa Rica - Puissant et aromatique;Café en Grains ;13,42€/KG;6,77€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO SAVEURS D'AILLEURS Café en grains - Ethiopie - Subtil et parfumé;Café en Grains ;10,98€/KG;5,49€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO SAVEURS D'AILLEURS Café en grains - Pérou - Doux et équilibré;Café en Grains ;13,18€/KG;6,59€;non
+Épicerie sucrée;Cafés et boissons chaudes; CAFE PLAINE DELICE GRAIN BIO250G;;26,12€/KG;6,62€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO DELICES Expresso - Pur Arabica - Café en Grains - Intense et Sauvage;Café en Grains ;11,08€/KG;5,63€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Grains - Arabica Exclusif - Café en Grains - Maxi Format;Café en Grains ;11,93€/KG;11,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Grains - Café en Grains - Arabica Exclusif;Café en Grains ;12,80€/KG;3,24€;non
+Épicerie sucrée;Cafés et boissons chaudes;MALONGO Petits producteurs - L'original - Café grains - Commerce équitable -;500g ;13,22€/KG;6,53€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Absolu - Café Moulu - 100% Arabica - Aromatique et Raffiné - Intensité 7;Café Moulu ;13,12€/KG;3,27€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Arôme Intense et Gôut Unique - Café Moulu - Pur Arabica;Café Moulu ;12,80€/KG;3,24€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Familial - Café Moulu - Corsé et Généreux;Café Moulu ;6,12€/KG;1,46€;non
+Épicerie sucrée;Cafés et boissons chaudes;GRAND MERE Familial - Café Moulu - Généreux;Café Moulu ;6,92€/KG;1,65€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Il Mattino - Intense et Généreux - Café Moulu;Café Moulu ;6,48€/KG;1,66€;non
+Épicerie sucrée;Cafés et boissons chaudes;MAISON DU CAFE Ma Tradition - Café Moulu;Café Moulu ;7,28€/KG;1,79€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Familial - Café Moulu - Corsé et Généreux;Café Moulu ;6,14€/KG;2,93€;non
+Épicerie sucrée;Cafés et boissons chaudes;GRAND MERE Familial - Café Moulu - Généreux - Maxi Pack;Café Moulu ;6,80€/KG;3,40€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Arôme Intense et Gôut Unique - Café Moulu - Pur Arabica;Café Moulu ;12€/KG;9,43€;non
+Épicerie sucrée;Cafés et boissons chaudes;JACQUES VABRE Café moulu - Goût riche et généreux;Café Moulu ;6,99€/KG;7,16€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Familial - Café Moulu - Corsé;Café Moulu ;5,34€/KG;5,34€;non
+Épicerie sucrée;Cafés et boissons chaudes;GRAND MERE Familial - Café Moulu - Gout Généreux;Café Moulu ;6,71€/KG;6,62€;non
+Épicerie sucrée;Cafés et boissons chaudes;LAVAZZA Il Mattino - Café Moulu - Intensité 10;Café Moulu ;5,99€/KG;5,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;MALONGO Bio - La Tierra - Café Moulu - Pur Arabica - Boite - Biologique;Café Moulu ;14,32€/KG;3,66€;non
+Épicerie sucrée;Cafés et boissons chaudes;JACQUES VABRE Café en grain - Délicat & fruité - Biologique;400g ;14,75€/KG;5,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;LEADER PRICE Café moulu - Amérique Latine - Biologique;Café Moulu;2,99€;2,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO BIO Café soluble - Lyophilisé - Pur arabica - Biologique;100g ;39,90€/KG;3,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;RICORE Au Lait - Chicorée et Café - Soluble - Boite;400g ;10,88€/KG;4,36€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Chicorée  et Café au Lait - Soluble - Boite;400g ;11,70€/KG;4,68€;non
+Épicerie sucrée;Cafés et boissons chaudes;RICORE Noir intense - Mélange café et chicorée;240g ;22,71€/KG;5,65€;non
+Épicerie sucrée;Cafés et boissons chaudes;RICORE Original - Chicorée et Café - soluble - Boite;260g ;17,15€/KG;4,50€;non
+Épicerie sucrée;Cafés et boissons chaudes;RICORE Original - Chicorée et Café - Soluble - Boite;100g ;21,90€/KG;2,16€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESTLE Ricoré - Lait d'amande - Café et chicorée -  boite 190g;;19€/KG;3,61€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Café Viennois - Café et Chocolat - Café Soluble - Bocal;Café Soluble ;11,96€/KG;3,66€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Cappuccino - Café Soluble - Bocal;Café Soluble ;12,46€/KG;3,49€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Cappuccino Vanille - Café Soluble - Bocal;Café Soluble ;12,23€/KG;3,82€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Café au lait d'amande - vegan;96g ;25,63€/KG;2,46€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Cappuccino - Café Soluble - Sticks;Café Soluble ;15,79€/KG;2,31€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Cappuccino - En poudre - Nature;250g ;10,36€/KG;2,59€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Cappuccino - Nature - 10 sachets;140g ;10,64€/KG;1,49€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Cappuccino - Saveur chocolat;360g ;10,36€/KG;3,73€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Cappuccino - Saveur chocolat - 8 sachets;144g ;16,74€/KG;2,41€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Chicorée et Café - Soluble - Boite;100g ;19,40€/KG;1,92€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Chicorée et Café - Soluble - Boite;250g ;12,12€/KG;3,03€;non
+Épicerie sucrée;Cafés et boissons chaudes;LEROUX Chicorée Torrefiée en Grains - Sans Caféine;520g ;3,40€/KG;1,79€;non
+Épicerie sucrée;Cafés et boissons chaudes;LEADER PRICE Chicorée;250g ;8,20€/KG;2,05€;non
+Épicerie sucrée;Cafés et boissons chaudes;TOUS LES JOURS Chicorée et Café - Soluble - Bocal;200g ;9,30€/KG;1,86€;non
+Épicerie sucrée;Cafés et boissons chaudes;LEROUX Nature - Chicorée Soluble - Sans caféine - Bocal;200g ;14,85€/KG;2,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Qualité Filtre - Décaféiné - Café Soluble - Sticks;Café Soluble ;38€/KG;1,90€;non
+Épicerie sucrée;Cafés et boissons chaudes;MAXWELL HOUSE Qualité Filtre - Décaféiné - Café Soluble - Sticks;Café Soluble ;42,89€/KG;1,93€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Special Filtre - Décaféiné - Café Soluble - Bocal;Café Soluble ;39€/KG;3,95€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Spécial Filtre - Décaféiné - Café Soluble - Bocal;Café Soluble ;28,60€/KG;6,38€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Spécial Filtre - Décaféiné - Café Soluble - Sticks;Café Soluble ;39,80€/KG;1,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE 3en1 - Boisson au café soluble - 10 Sticks;Café Soluble ;11,15€/KG;1,85€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Café - Classique;180g ;29,44€/KG;5,42€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Café Soluble - Bocal;Café Soluble ;32€/KG;1,60€;non
+Épicerie sucrée;Cafés et boissons chaudes;LEADER PRICE Café soluble - En sticks - Extra;Café Soluble ;30,60€/KG;1,53€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Classique - Café Soluble - Délicat et Aromatique - Bocal;Café Soluble ;42,70€/KG;4,29€;non
+Épicerie sucrée;Cafés et boissons chaudes;CARTE NOIRE Classique - Café Soluble - Délicat et Aromatique - Sticks;Café Soluble ;46,22€/KG;2,08€;non
+Épicerie sucrée;Cafés et boissons chaudes;L'OR Classique - cafe soluble stick x25;Café Soluble ;36,67€/KG;1,65€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Espresso - Intenso - Café Soluble - 100% Arabica - Intensité 7 - Boite;Café Soluble ;44,32€/KG;4,22€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Espresso - Intenso - Café Soluble - 100% Arabica - Intensité 7 - Sticks;Café Soluble ;58,22€/KG;2,63€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Espresso Original - Café Soluble - 100% Arabica - Intensité 5 - Boite;Café Soluble ;49,26€/KG;4,68€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Espresso Original - Café Soluble - 100% Arabica - Intensité 5 - Sticks;Café Soluble ;47,56€/KG;2,16€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Nes - Sans Amertume - Café Soluble;Café Soluble ;22,50€/KG;4,37€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Nes - Sans Amertume - Café Soluble - Sticks;Café Soluble ;35,80€/KG;1,69€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Qualité Filtre - Café Soluble;Café Soluble ;29,20€/KG;2,92€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Qualité Filtre - Café Soluble;Café Soluble ;18,45€/KG;3,69€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Qualité Filtre - Café Soluble;Café Soluble ;23,78€/KG;4,28€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Qualité Filtre - Café Soluble;Café Soluble ;25,45€/KG;5,17€;non
+Épicerie sucrée;Cafés et boissons chaudes;MAXWELL HOUSE Qualité Filtre - Café Soluble - Bocal;Café Soluble ;29,60€/KG;2,96€;non
+Épicerie sucrée;Cafés et boissons chaudes;MAXWELL HOUSE Qualité Filtre - Café Soluble - Bocal;Café Soluble ;22,10€/KG;4,42€;non
+Épicerie sucrée;Cafés et boissons chaudes;MAXWELL HOUSE Qualité Filtre - Café Soluble - Sticks;Café Soluble ;39,33€/KG;1,77€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Qualité Filtre - Café Soluble - Sticks;Café Soluble ;43,80€/KG;2,19€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Selection - Café Soluble - Corsé - Bocal;Café Soluble ;23,55€/KG;4,73€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Selection - Café Soluble - Corsé et Intense - Bocal;Café Soluble ;31€/KG;3,25€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Spécial Filtre - Café Soluble - Bocal;Café Soluble ;36,20€/KG;3,64€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Spécial Filtre - Café Soluble - Bocal;Café Soluble ;28,60€/KG;5,82€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Spécial Filtre - Fine Créma - Café Soluble - Bocal;Café Soluble ;46,10€/KG;4,63€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Spécial Filtre - Original - Café Soluble - Sticks;Café Soluble ;37,20€/KG;2,11€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESCAFE Spécial Filtre - Recharge - Café Soluble;Café Soluble ;27,60€/KG;4,25€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO DELICES Cacao en poudre : 100% cacao;250g ;9€/KG;2,25€;non
+Épicerie sucrée;Cafés et boissons chaudes;VAN HOUTEN Cacao pour pâtisseries et chocolats chauds - Non sucré;245g ;10,49€/KG;2,60€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESTLE Dessert - Poudre de cacao - Brute non sucrée;250g ;8,96€/KG;2,24€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Poudre instantanée cacaotée intense;450g ;4,20€/KG;1,89€;non
+Épicerie sucrée;Cafés et boissons chaudes;LES DOODINGUES Granulés cacaotés instantanés;800g ;3,53€/KG;2,76€;non
+Épicerie sucrée;Cafés et boissons chaudes;LES DOODINGUES Granulés cacaotés instantanés;400g ;3,60€/KG;1,44€;non
+Épicerie sucrée;Cafés et boissons chaudes;LEADER PRICE Poudre chocolat instantanée;400g ;3,13€/KG;1,25€;non
+Épicerie sucrée;Cafés et boissons chaudes;OVOMALTINE Préparation petit-déjeuner;400g ;7,48€/KG;2,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESTLE Tonimalt - Cacao;450g ;6,62€/KG;2,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;POULAIN Grand arôme - Chocolat en poudre;250g ;4,40€/KG;1,11€;non
+Épicerie sucrée;Cafés et boissons chaudes;POULAIN Grand arôme - Chocolat en poudre;450g ;4,20€/KG;1,84€;non
+Épicerie sucrée;Cafés et boissons chaudes;POULAIN Grand arôme - Chocolat en poudre;800g ;3,66€/KG;3,08€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESTLE Le chocolat - Chocolat en poudre;500 g ;5,78€/KG;2,88€;non
+Épicerie sucrée;Cafés et boissons chaudes;TOUS LES JOURS Boisson instantanée cacaotée;800g ;2,84€/KG;2,27€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESTLE Nesquik - Moins de sucre - Poudre boisson instantanée cacaotée;350g ;7,69€/KG;2,71€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESTLE Nesquik - Poudre boisson instantanée cacaotée;1kg ;3,79€/KG;3,79€;non
+Épicerie sucrée;Cafés et boissons chaudes;NESTLE Nesquik - Poudre pour boisson instantanée cacaotée;500g ;5,24€/KG;2,62€;non
+Épicerie sucrée;Cafés et boissons chaudes;BANANIA Poudre chocolatée - Moins de sucres;750g ;6,08€/KG;4,73€;non
+Épicerie sucrée;Cafés et boissons chaudes;LES DOODINGUES Poudre instantanée cacaotée;450g ;4,42€/KG;1,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;LES DOODINGUES Poudre instantanée cacaotée;1kg ;3,37€/KG;3,37€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO BIO Poudre cacaotée - Biologique;500g ;7,10€/KG;3,55€;non
+Épicerie sucrée;Cafés et boissons chaudes;LEADER PRICE Thé vert - 20 sachets - Biologique;40g ;31,25€/KG;1,25€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO BIO Thé vert - A la menthe - Biologique;36g ;46,25€/KG;1,85€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Thé vert en sachet - Goût citron - Biologique - 20 sachets;26g ;67,69€/KG;1,76€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Thé vert en sachet - Goût menthe orient - Biologique - 21 sachets;26g ;66,54€/KG;1,79€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS English breakfast - Thé noir;40g ;60,25€/KG;2,41€;non
+Épicerie sucrée;Cafés et boissons chaudes;DIVIE La divine - Infusion CBD, Gingembre et Citron;50g;13,49€;13,49€;non
+Épicerie sucrée;Cafés et boissons chaudes;DIVIE La rouge - Infusion CBD et Rooibos;50g;13,49€;13,49€;non
+Épicerie sucrée;Cafés et boissons chaudes;DIVIE La verte - Infusion CBD et Thé vert;50g;13,49€;13,49€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Yellow label - Finest tea blend - Thé noir - 60 sachets;120g ;167,50€/KG;2,01€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Yellow label - Thé - 100 sachets;200g ;15,60€/KG;3,12€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Yellow label - Thé - 30 sachets;60g ;17,17€/KG;1,03€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Thé du Darjeeling - x25;50g ;47,20€/KG;2,36€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Thé de Ceylan - x20;x20 ;54,75€/KG;2,19€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Lady Grey - Thé noir arométisé bergamote et agrumes - Gout russe - 20 sachets;40g ;54,50€/KG;2,18€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Original - Thé - Earl grey - Aromatisée bergamote;x50 ;35,40€/KG;3,54€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Original - Thé aromatisé bergamote - x25;x25 ;35,80€/KG;1,79€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Original Earl Grey - Thé;200g ;25,75€/KG;5,17€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Russian earl grey - Thé - Saveur bergamote et citron;150g ;37,53€/KG;5,65€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Russian earl grey - Thé aromatisé - Bergamote et citron - Sachet;30g ;76,33€/KG;2,30€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Thé earl grey;x25 ;49,75€/KG;1,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO DELICES Thé noir d'Inde - Cacao et orange - Biologique;100g ;39,90€/KG;3,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO DELICES Thé noir d'Inde - Menthe citron et mangue - Biologique;100g ;39,90€/KG;3,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;LES 2 MARMOTTES Infusion - Fenouil - 30 sachets;69g ;77,67€/KG;4,67€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Infusion - Nuit paisible - Tilleul et verveine - 25 sachets;40g ;27,89€/KG;1,06€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Thé - Framboise, Passion;32g ;74,06€/KG;2,37€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Thé 5 fruits rouges;x20 ;37,35€/KG;1,27€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Thé agrumes;x20 ;38,33€/KG;1,38€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Thé aromatisé orange cannelle;25x2g ;39,80€/KG;1,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Thé arômatisé vanille;x25 ;33,60€/KG;1,68€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Thé caramel morceaux caramel;x25 ;34,75€/KG;1,38€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Thé citron écorces citron;x25 ;32,75€/KG;1,32€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé noir - Arômatisé citron - 25 sachets;45g ;22€/KG;0,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Sachet de thé vert simplement pur;x25 ;63,78€/KG;2,36€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé vert - 25 sachets;40g ;26,25€/KG;1,05€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Thé vert classique;x30 ;44,75€/KG;1,80€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé vert - Aromatisé agrumes - 25 sachets;50g ;23€/KG;1,15€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé vert - Menthe - 25 sachets;40g ;24,75€/KG;0,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé vert - Saveur citron - 25 sachets;37,5g ;22,37€/KG;0,85€;non
+Épicerie sucrée;Cafés et boissons chaudes;LES 2 MARMOTTES Thé vert à la menthe - 30 sachets;45G ;106,44€/KG;4,78€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Thé vert citron intense - Sachets;x25 ;43€/KG;2,15€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Thé vert mangue litchi - 20 sachets;30g ;81€/KG;2,43€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Thé vert menthe;x30 ;31,88€/KG;1,53€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Thé vert menthe - 25 sachets;37g ;60,53€/KG;2,30€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Thé vert menthe intense;x20 ;43,44€/KG;1,40€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé vert -Menthe intense - 25 sachets;40g ;34,21€/KG;1,30€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Thé vert d'orient nature;200g ;23,55€/KG;4,72€;non
+Épicerie sucrée;Cafés et boissons chaudes;JARDIN BIO ETIC Fraicheur tonique - Infusion - Thum menthe - Biologique;x20 ;68,33€/KG;2,05€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO BIO Infusion - Thym - 20 sachets - Biologique;22g ;78,18€/KG;1,73€;non
+Épicerie sucrée;Cafés et boissons chaudes;JARDIN BIO Infusion bien être du foie - 20 sachets - Biologique;28g ;95,71€/KG;2,69€;non
+Épicerie sucrée;Cafés et boissons chaudes;JARDIN BIO Infusion brûleur de graisses - 20 sachets - Arômes vanille - Biologique;30g ;90,33€/KG;2,71€;non
+Épicerie sucrée;Cafés et boissons chaudes;JARDIN BIO Infusion détente sommeil - 20 sachets - Biologique;30g ;88,33€/KG;2,67€;non
+Épicerie sucrée;Cafés et boissons chaudes;JARDIN BIO Infusion détox - 20 sachets - Biologique;30g ;90,67€/KG;2,72€;non
+Épicerie sucrée;Cafés et boissons chaudes;JARDIN BIO Infusion digestion légère - 20 sachets - Biologique;30g ;90,67€/KG;2,71€;non
+Épicerie sucrée;Cafés et boissons chaudes;JARDIN BIO Infusion nuits paisibles - 20 sachets - Biologique;30g ;90,33€/KG;2,71€;non
+Épicerie sucrée;Cafés et boissons chaudes;JARDIN BIO ETIC Infusion thym - Sachets - Biologique;x20 ;88,21€/KG;2,48€;non
+Épicerie sucrée;Cafés et boissons chaudes;JARDIN BIO Infusion thym citronné - 20 sachets - Biologique;30g ;90€/KG;2,70€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO BIO Nuit paisible - Infusion - Biologique;30g ;65€/KG;1,95€;non
+Épicerie sucrée;Cafés et boissons chaudes;DIVIE La sauvage - Infusion CBD - Feuilles d'olivier et feuilles de verveine;50g ;233,80€/KG;11,69€;non
+Épicerie sucrée;Cafés et boissons chaudes;LA TISANIERE Après-repas  - Infusion en sachets - Citron;x25 ;63,51€/KG;2,36€;non
+Épicerie sucrée;Cafés et boissons chaudes; Après-repas - Infusion - Menthe, anis vert et verveine;x25 ;61,32€/KG;2,34€;non
+Épicerie sucrée;Cafés et boissons chaudes;LA TISANIERE Détox - Grain de fenouil - Bardane - Citron - 25 sachets;550g ;62,11€/KG;2,36€;non
+Épicerie sucrée;Cafés et boissons chaudes;LA TISANIERE Drainage & élimination - Infusion - Pamplemousse - 25 Sachets;37g ;56,05€/KG;2,14€;non
+Épicerie sucrée;Cafés et boissons chaudes;LES 2 MARMOTTES Infusion - Cocktail Digest - 30 sachets;55g ;88,73€/KG;4,87€;non
+Épicerie sucrée;Cafés et boissons chaudes;LA TISANIÈRE Infusion drainage élimin.;37,5g ;47,63€/KG;1,81€;non
+Épicerie sucrée;Cafés et boissons chaudes;ELEPHANT Infusion élimination et bien-être - Infusion en sachets;x25 ;37,50€/KG;1,50€;non
+Épicerie sucrée;Cafés et boissons chaudes;LA TISANIÈRE Infusion nuit calme;37,5g ;52,11€/KG;1,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;ELEPHANT Infusions nuit tranquille;x25 ;31,58€/KG;1,20€;non
+Épicerie sucrée;Cafés et boissons chaudes;LA TISANIÈRE Nuit calme - Infusion aromatisée - Miel -  25 sachets;37,5g ;56,32€/KG;2,14€;non
+Épicerie sucrée;Cafés et boissons chaudes;LA TISANIÈRE Nuit calme - Infusion aromatisée - Verveine - 25 sachets;37,5g ;60,79€/KG;2,30€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Infusion - Camomille - 25 sachets;20g ;52,17€/KG;1,20€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Infusion - Tilleul - 25 sachets;35g ;42,57€/KG;1,49€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO BIO Infusion - Verveine - 20 sachets - Biologique;30g ;50€/KG;1,50€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Infusion - Verveine - 25 sachets;32,5g ;35,94€/KG;1,15€;non
+Épicerie sucrée;Cafés et boissons chaudes;ELEPHANT Infusion - Verveine menthe - 25 sachets;33g ;37,88€/KG;1,25€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO BIO Infusion détox - 20 sachets - Biologique;32g ;66,33€/KG;1,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;ELEPHANT Infusion verveine x25;33g ;41,21€/KG;1,36€;non
+Épicerie sucrée;Cafés et boissons chaudes;LES 2 MARMOTTES Infusion - Ver Veine - 30 sachets;46g ;99,79€/KG;4,76€;non
+Épicerie sucrée;Cafés et boissons chaudes;TWININGS Cold'in'fuse - Infusion dans l'eau froide - Saveur pêche passion - 10 sachets;25g ;114€/KG;2,86€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Infuse à froid - Fleur sureau et Rose;35g ;75,53€/KG;2,89€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Infuse à froid - Grenade, Hibiscus;35g ;75€/KG;2,85€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Infuse à froid - Mangue, Rooibos;35g ;86,67€/KG;2,86€;non
+Épicerie sucrée;Cafés et boissons chaudes;ELEPHANT Infusion - Fruits rouges - 20 sachets;x20 ;48,89€/KG;1,76€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Infusion - Pomme cannelle - 25 sachets;40g ;41,25€/KG;1,65€;non
+Épicerie sucrée;Cafés et boissons chaudes;LA TISANIÈRE Infusion - Thé oolong macha - plantes aromatisées - saveur ananas;30g ;88,67€/KG;2,72€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Infusion - Verveine menthe - 25 sachets;35g ;27,75€/KG;1,11€;non
+Épicerie sucrée;Cafés et boissons chaudes;LES 2 MARMOTTES Infusion Menthe réglisse;45g ;117,86€/KG;4,96€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Infusions menthe épices maroc;40g ;35,75€/KG;1,43€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Saveurs du Soir - Infusion - Réglisse menthe - 20 sachets;32g ;43,13€/KG;1,37€;non
+Épicerie sucrée;Cafés et boissons chaudes;LA TISANIÈRE Tisane Nuit - Fleur d'oranger - 20 sachets - Biologique;30g ;87€/KG;2,62€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Infusion - Fruits rouges - 25 sachets;37,5g ;31,58€/KG;1,20€;non
+Épicerie sucrée;Cafés et boissons chaudes;RICOLA Infuselle - Aux 5 plantes - Préparation pour boisson instantanée;200g ;16,30€/KG;3,26€;non
+Épicerie sucrée;Cafés et boissons chaudes;RICOLA Infuselle - Bonne nuit - Préparation pour boisson instantanée;200g ;15,90€/KG;3,19€;non
+Épicerie sucrée;Cafés et boissons chaudes;ELEPHANT Infusion - Détox - Biologique;34g ;58,53€/KG;1,97€;non
+Épicerie sucrée;Cafés et boissons chaudes;ELEPHANT Infusion - Gingembre citron - Biologique;34g ;57,35€/KG;1,96€;non
+Épicerie sucrée;Cafés et boissons chaudes;ELEPHANT Infusion - Relax - Biologique;26g ;76,54€/KG;1,97€;non
+Épicerie sucrée;Cafés et boissons chaudes;ELEPHANT Infusion - Verveine menthe - Biologique;26g ;76,54€/KG;1,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Marrakech - Thé vert - Menthe - Biologique;x20 ;72,65€/KG;2,48€;non
+Épicerie sucrée;Cafés et boissons chaudes;ELEPHANT Mon infusio bio - Rêves - Camomille melisse lavande - 20 sachets - Biologique;32g ;70,94€/KG;2,28€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Russian Earl Grey - Thé noir - Bergamote, Agrumes;x20 ;74,41€/KG;2,53€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Russian Earl Grey - Thé noir - Boite - Biologique;150g ;34,27€/KG;5,19€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Thé - Noir - Biologique;50g ;32,80€/KG;1,64€;non
+Épicerie sucrée;Cafés et boissons chaudes;LES 2 MARMOTTES Infusion - Détox - 30 sachets;;99,80€/KG;4,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;LES 2 MARMOTTES Infusion - Thym - 30 sachets;35g ;135,43€/KG;4,75€;non
+Épicerie sucrée;Cafés et boissons chaudes;LES 2 MARMOTTES Infusion des Marmottes - 7 plantes - 30 sachets;46g ;99,79€/KG;4,80€;non
+Épicerie sucrée;Cafés et boissons chaudes;LES 2 MARMOTTES Infusion Fée Nuit;50g ;99,80€/KG;4,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;WHAT THE HEMP! Infusion au chanvre CBD - Sweet Dreams - Biologique;36g ;194,17€/KG;6,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;WHAT THE HEMP! Infusion au chanvre CBD - Take it easy ! - Saveurs florales - Biologique;36g ;194,17€/KG;6,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;WHAT THE HEMP! Infusion au chanvre et à la menthe - Chill Out ! - Biologique;36g ;194,17€/KG;6,99€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Ice tea - Boisson aux extraits de thé - Saveur pêche;6x25cl ;1,88€/L;2,82€;non
+Épicerie sucrée;Cafés et boissons chaudes;JANE Thé vert infusé au CBD Bio - Violette et Citron - Biologique;33cl ;9,52€/L;3,14€;non
+Épicerie sucrée;Cafés et boissons chaudes;FUZETEA Boisson au Thé vert - Saveur mangue et camomille - x1 Bouteille;400 ml ;3,40€/L;1,36€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Green ice tea - Boisson au thé glacé - Saveur citron et menthe;1l ;1,40€/L;1,40€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Ice Tea - Boisson au thé glacé - Saveur framboise;1l ;1,31€/L;1,31€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé glacé - Saveur framboise;2l ;0,90€/L;1,79€;non
+Épicerie sucrée;Cafés et boissons chaudes; Thé vert - Saveur Citron vert menthe;50cl ;2,74€/L;1,37€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé vert infusé - Saveur menthe;1l ;1,29€/L;1,29€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé blanc infusé - Saveur cassis;1l ;1,49€/L;1,49€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé vert infusé - Saveur menthe citron;1l ;1,40€/L;1,40€;non
+Épicerie sucrée;Cafés et boissons chaudes;FUZETEA Boisson au Thé - Pêche - Saveur Hibiscus - x1 Bouteille;1,25l ;1,18€/L;1,48€;non
+Épicerie sucrée;Cafés et boissons chaudes;FUZETEA Boisson au Thé - Saveur pêche intense - x1 Bouteille;400 ml ;2,78€/L;1,11€;non
+Épicerie sucrée;Cafés et boissons chaudes;FUZETEA Boisson au Thé - Saveur pêche intense - x1 Bouteille;1,25l ;1,14€/L;1,42€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Ice Tea - Boisson au thé - Saveur pêche - Frais;50cl ;1,90€/L;0,95€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Ice tea - Boisson aux extraits de thé - Saveur pêche;1l ;1,06€/L;1,06€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Ice tea - Boisson aux extraits de thé - Saveur pêche;1,5l ;0,91€/L;1,37€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Ice tea - Boisson aux extraits de thé - Saveur pêche;2 L ;0,83€/L;1,65€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Ice tea - Boisson aux extraits de thé - Saveur pêche;8x33cl ;1,30€/L;3,44€;non
+Épicerie sucrée;Cafés et boissons chaudes;LEADER PRICE Thé glacé - Pêche;2l ;0,64€/L;1,27€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé glacé - Saveur pêche;1l ;0,87€/L;0,87€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé glacé - Saveur pêche;1,5l ;0,79€/L;1,19€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé glacé - Saveur pêche;2l ;0,73€/L;1,46€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé glacé - Saveur pêche;6x33cl ;1,27€/L;2,52€;non
+Épicerie sucrée;Cafés et boissons chaudes;CASINO Thé glacé - Saveur pêche;4x50cl ;1,32€/L;2,64€;non
+Épicerie sucrée;Cafés et boissons chaudes;LIPTON Ice tea - Pêche;12x15cl ;2,20€/L;3,96€;non
+Épicerie sucrée;Petit déjeuner;NESTLE Lion - Céréales caramel et chocolat - Biologique;400g ;6,80€/KG;2,72€;non
+Épicerie sucrée;Petit déjeuner;GRANY Barres aux 5 céréales - Pomme;5x25g ;12,56€/KG;1,57€;non
+Épicerie sucrée;Petit déjeuner;GRANY Biscuits muesli - Fruits des bois;192g ;8,39€/KG;1,61€;non
+Épicerie sucrée;Petit déjeuner;GRANY Barres aux 5 céréales - Chocolat - x6;125g ;12,40€/KG;1,55€;non
+Épicerie sucrée;Petit déjeuner;GRANY Barres aux 5 céréales - Noisettes;125g ;12,48€/KG;1,56€;non
+Épicerie sucrée;Petit déjeuner;SCHAR Maestro cereale - Pain céréales - Sans gluten;300g ;9,83€/KG;2,95€;non
+Épicerie sucrée;Petit déjeuner;HARRYS 100% mie - Nature;500g ;2,78€/KG;1,39€;non
+Épicerie sucrée;Petit déjeuner;HARRYS 100% mie - Nature;650g ;2,58€/KG;1,68€;non
+Épicerie sucrée;Petit déjeuner;HARRYS 100% mie - Nature - Grandes tranches;500g ;3,24€/KG;1,62€;non
+Épicerie sucrée;Petit déjeuner;CASINO Extra mie - Pain de mie - Sans croûte;500g ;2,46€/KG;1,23€;non
+Épicerie sucrée;Petit déjeuner;HARRYS Pain 100% mie complet;500g ;2,94€/KG;1,47€;non
+Épicerie sucrée;Petit déjeuner;HARRYS American sandwich - Nature;550g ;1,67€/KG;0,92€;non
+Épicerie sucrée;Petit déjeuner;CASINO Pain de mie - Spécial sandwich;825g ;1,54€/KG;1,27€;non
+Épicerie sucrée;Petit déjeuner;CASINO Pain de mie - Complet - Spécial sandwich;825g ;1,56€/KG;1,29€;non
+Épicerie sucrée;Petit déjeuner;CASINO Pain de mie - Spécial sandwich - Complet;550g ;1,45€/KG;0,80€;non
+Épicerie sucrée;Petit déjeuner;JACQUET Pain de mie complet  - Sans sucres ajoutés;550g ;2,47€/KG;1,36€;non
+Épicerie sucrée;Petit déjeuner;HARRYS Pain de mie céréales Américan sandwich;550g ;2,16€/KG;1,19€;non
+Épicerie sucrée;Petit déjeuner;CASINO Pain de mie céréales géant;550g ;1,91€/KG;1,05€;non
+Épicerie sucrée;Petit déjeuner;CASINO Pain de mie - Aux céréales et graines;500g ;4,37€/KG;2,23€;non
+Épicerie sucrée;Petit déjeuner;HARRYS Pain de mie - Complet - Sans sucres ajoutés;280h ;4,57€/KG;1,28€;non
+Épicerie sucrée;Petit déjeuner;HARRYS Beau & Bon - Pain de mie - Farine de blé - Céréales et Graines - Sans huile de palme;320g ;4,84€/KG;1,55€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Céréales fourrées - Chocolat noisettes - Sans huile de palme - Biologique;325g ;10,74€/KG;3,49€;non
+Épicerie sucrée;Petit déjeuner;BJORG Crousti' Avoine -Chocolat - Biologique;500gr ;7,98€/KG;3,99€;non
+Épicerie sucrée;Petit déjeuner;BJORG Croustillant chocolat - Céréales - Biologique;500g ;5,30€/KG;2,65€;non
+Épicerie sucrée;Petit déjeuner;BJORG Flocons d'avoine  - 4 graines et raisins - Biologique;375g ;6,40€/KG;2,40€;non
+Épicerie sucrée;Petit déjeuner;BJORG Flocons d'avoine - Biologique;500g ;3,62€/KG;1,81€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Flocons d'avoine - Complets - Biologique;500g ;3,22€/KG;1,61€;non
+Épicerie sucrée;Petit déjeuner;TERRES ET CEREALES BIO Flocons d'avoine - Complets - Biologique;500g ;3,42€/KG;1,71€;non
+Épicerie sucrée;Petit déjeuner;BJORG Muesli - Aux fruits - Biologique;750g ;4,80€/KG;3,60€;non
+Épicerie sucrée;Petit déjeuner;BJORG Muesli - Sans sucre ajouté - Biologique;375g ;4,83€/KG;1,81€;non
+Épicerie sucrée;Petit déjeuner;BJORG Muesli - Superfruits - Cassis cranberry myrtille raisin - Biologique;375g ;6,96€/KG;2,61€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Muesli croustillant - Au chocolat - Biologique;500g ;4,70€/KG;2,35€;non
+Épicerie sucrée;Petit déjeuner;GAYELORD HAUSER Son d'avoine;500g ;4,54€/KG;2,27€;non
+Épicerie sucrée;Petit déjeuner;BJORG Muesli fruits sans gluten;375g ;10,64€/KG;3,99€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S All Bran - Céréales au son de blé;500g ;5,30€/KG;2,73€;non
+Épicerie sucrée;Petit déjeuner;CASINO Céréales - Pétales riz, blé, orges et chocolat;550g ;6,80€/KG;3,74€;non
+Épicerie sucrée;Petit déjeuner;SPECIAL K Céréales fruits rouges;300g ;8,40€/KG;2,53€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Céréales Spécial K;440g ;5,05€/KG;2,25€;non
+Épicerie sucrée;Petit déjeuner;QUAKER Oats - Flocons d'avoine;800g ;2,45€/KG;1,97€;non
+Épicerie sucrée;Petit déjeuner;CASINO Riz et blé complet fruits rouges;300g ;5,80€/KG;1,74€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Spécial K - Céréales fruits rouges;550g ;6,85€/KG;3,77€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Spécial K - Céréales natures;750g ;4,77€/KG;3,58€;non
+Épicerie sucrée;Petit déjeuner;WEETABIX Weetos - Céréales;375g ;6,83€/KG;2,56€;non
+Épicerie sucrée;Petit déjeuner;WHAT THE HEMP! Bouchées au chanvre et à la pomme - Biologique;40g ;60,75€/KG;2,43€;non
+Épicerie sucrée;Petit déjeuner;QUAKER Cruesli - Céréales au chocolat noir;450g ;4,87€/KG;2,20€;non
+Épicerie sucrée;Petit déjeuner;QUAKER Cruesli - Céréales chocolat au lait;450g ;4,91€/KG;2,22€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Extra - Pépites crunchy muesli - Céréales - Chocolat au lait;500 g ;5,36€/KG;2,68€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Extra - Pépites crunchy muesli - Céréales - Chocolat noir & noisettes grillées;500g ;5,54€/KG;2,77€;non
+Épicerie sucrée;Petit déjeuner;WHAT THE HEMP! Granolas au chanvre - Banane et chocolat - Sans gluten - Biologique;300g ;20,70€/KG;6,21€;non
+Épicerie sucrée;Petit déjeuner;WHAT THE HEMP! Granolas au chanvre et aux fruits - Sans gluten - Biologique;300g ;20,70€/KG;6,21€;non
+Épicerie sucrée;Petit déjeuner;WHAT THE HEMP! Granolas au chanvre et aux noix - Sans gluten - Biologique;300g ;20,70€/KG;6,21€;non
+Épicerie sucrée;Petit déjeuner;LEADER PRICE Muesli croustillant - Aux 3 chocolats;500g ;3,98€/KG;1,99€;non
+Épicerie sucrée;Petit déjeuner;CASINO Muesli croustillant - Céréales et fruits;500g ;5,72€/KG;2,86€;non
+Épicerie sucrée;Petit déjeuner;CASINO Muesli croustillant - Chocolat au lait;500g ;4,76€/KG;2,38€;non
+Épicerie sucrée;Petit déjeuner;LEADER PRICE Muesli croustillant - Fruits secs;500g ;4,58€/KG;2,29€;non
+Épicerie sucrée;Petit déjeuner;CASINO Muesli croustillant aux 3 chocolats;500g ;4,74€/KG;2,42€;non
+Épicerie sucrée;Petit déjeuner;CASINO Muesli croustillant noix noisettes;500g ;4,48€/KG;2,25€;non
+Épicerie sucrée;Petit déjeuner;TOUS LES JOURS Muesli - Aux fruits;750g ;2,24€/KG;1,68€;non
+Épicerie sucrée;Petit déjeuner;QUAKER Oats - Flocons d'avoine;550g ;2,47€/KG;1,37€;non
+Épicerie sucrée;Petit déjeuner;WEETABIX Original - Céréales;430g ;6,26€/KG;2,69€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Céréales Smacks Kellogg's;600g ;5,98€/KG;3,59€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Smacks;400 g ;5,33€/KG;2,13€;non
+Épicerie sucrée;Petit déjeuner;LES DOODINGUES Cereales fourrés cho'c cœur choco;500g ;4,82€/KG;2,41€;non
+Épicerie sucrée;Petit déjeuner;NESTLE Chocapic - Céréales - Chocolat;430g ;5,21€/KG;2,24€;non
+Épicerie sucrée;Petit déjeuner;NESTLE Chocapic - Céréales - Chocolat;750g ;4,72€/KG;3,54€;non
+Épicerie sucrée;Petit déjeuner;NESTLE Chokella - Céréales - Chocolat noisette;350g ;5,69€/KG;1,99€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Coco Pops - Céréales;350g ;6,74€/KG;2,39€;non
+Épicerie sucrée;Petit déjeuner;NESTLE Cookie crisp - Céréales biscuit au pépites chocolat;375g ;5,31€/KG;1,99€;non
+Épicerie sucrée;Petit déjeuner;NESTLE Crunch - Céréales au chocolat;450g ;5,02€/KG;2,26€;non
+Épicerie sucrée;Petit déjeuner;NESTLE Lion - Céréales au blé complet - Parfum caramel et chocolat;400g ;5,35€/KG;2,14€;non
+Épicerie sucrée;Petit déjeuner;NESTLE Lion - Céréales caramel et chocolat;750g ;4,72€/KG;3,54€;non
+Épicerie sucrée;Petit déjeuner;NESTLE Nesquik - Céréales chocolat;450g ;4,98€/KG;2,24€;non
+Épicerie sucrée;Petit déjeuner;LES DOODINGUES BIO Pétales choco - Céréales - Biologique;375g ;6,88€/KG;2,42€;non
+Épicerie sucrée;Petit déjeuner;LES DOODINGUES Pétales choco craquants;375g ;5,44€/KG;2,04€;non
+Épicerie sucrée;Petit déjeuner;LEADER PRICE Pétales de blé - Céréales - Goût chocolat;750g ;2,52€/KG;1,89€;non
+Épicerie sucrée;Petit déjeuner;TOUS LES JOURS Pétales de blé - Goût chocolat;750g ;2,72€/KG;2,04€;non
+Épicerie sucrée;Petit déjeuner;LES DOODINGUES BIO P'tites billes - Gout chocolat - Céréales - Biologique;375g ;6,99€/KG;2,63€;non
+Épicerie sucrée;Petit déjeuner;TOUS LES JOURS Riz soufflé - Céréales - Goût chocolat;750g ;2,84€/KG;2,13€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Trésor - Céréales chocolat noisettes;620g ;5,95€/KG;3,81€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Trésor chocolat noisettes;1kg ;5,42€/KG;5,42€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Frosties - Céréales;450g ;5,62€/KG;2,58€;non
+Épicerie sucrée;Petit déjeuner;LES DOODINGUES BIO Pétales sucrés - Biologique;375g ;7,25€/KG;2,72€;non
+Épicerie sucrée;Petit déjeuner;LES DOODINGUES BIO Boules de céréales au miel - Biologique;375g ;6,53€/KG;2,45€;non
+Épicerie sucrée;Petit déjeuner;LES DOODINGUES Cereales p'tites billes miel;375g ;4,69€/KG;1,77€;non
+Épicerie sucrée;Petit déjeuner;NESTLE Golden Minis - Céréales pour petit déjeuner;375g ;5,31€/KG;1,99€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Miel Pops;400 g ;5,30€/KG;2,13€;non
+Épicerie sucrée;Petit déjeuner;LES DOODINGUES BIO P'tits grains - Au miel - Céréales - Biologique;375g ;8,19€/KG;3,07€;non
+Épicerie sucrée;Petit déjeuner;LES DOODINGUES P'tits grains caramel;375g ;4,72€/KG;1,77€;non
+Épicerie sucrée;Petit déjeuner;TOUS LES JOURS Corn flakes - Céréales - Goût chocolat;750g ;2,36€/KG;1,77€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Corn flakes nature;500g ;4,30€/KG;2,15€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Rice Krispies - Céréales;375g ;6,08€/KG;2,33€;non
+Épicerie sucrée;Petit déjeuner;CASINO Barres de céréales - Au chocolat noir;210g ;9,71€/KG;2,04€;non
+Épicerie sucrée;Petit déjeuner;CASINO Barres de céréales gourmandes - Cacahuètes chocolat noir amandes noisettes;140g ;14,86€/KG;2,09€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Extra Bio - Céréales Chocolat Noir - Biologique;375g ;8,56€/KG;3,23€;non
+Épicerie sucrée;Petit déjeuner;RIGONI Nocciolata - Pâte à tartiner cacao noisettes - Biologique;350g ;10,86€/KG;3,84€;non
+Épicerie sucrée;Petit déjeuner;JARDIN BIO ETIC Pate à tartiner à la noisette - Biologique;350g ;8,23€/KG;2,90€;non
+Épicerie sucrée;Petit déjeuner;WHAT THE HEMP! La Crunchy - Pâte à tartine bio au chanvre - Riz soufflé - Biologique;300g ;20,67€/KG;6,20€;non
+Épicerie sucrée;Petit déjeuner;WHAT THE HEMP! La Protéinée - Pâte à tartine au chanvre - Biologique;325g ;19,08€/KG;6,20€;non
+Épicerie sucrée;Petit déjeuner;CASINO CA VIENT D'ICI Crème de châtaignes - Avec morceaux;325g ;11,14€/KG;3,62€;non
+Épicerie sucrée;Petit déjeuner;CLEMENT FAUGIER Crème de marrons;1kg ;4,49€/KG;4,49€;non
+Épicerie sucrée;Petit déjeuner;CLEMENT FAUGIER Crème de marrons de l'Ardèche - Tube;78g ;12,69€/KG;0,98€;non
+Épicerie sucrée;Petit déjeuner;OVO MALTINE Crunchy - Pâte à tartiner;360g ;7,33€/KG;2,65€;non
+Épicerie sucrée;Petit déjeuner;VICO Curly cacahuète - Pâte à tartiner;340g ;9,88€/KG;3,35€;non
+Épicerie sucrée;Petit déjeuner;MILKA Pâte à tartiner - Noisettes - Maxi format;740g ;5,89€/KG;4,36€;non
+Épicerie sucrée;Petit déjeuner;LOTUS Pâte à Tartiner Spéculoos;400g ;4,98€/KG;1,99€;non
+Épicerie sucrée;Petit déjeuner;NUTELLA Pâte à tartiner - Chocolat noisette;630g ;6,08€/KG;3,83€;non
+Épicerie sucrée;Petit déjeuner;TOUS LES JOURS Pâte à tartiner aux noisettes;750g ;2,80€/KG;2,10€;non
+Épicerie sucrée;Petit déjeuner;MILKA Pâte à tartiner;340g ;7,35€/KG;2,50€;non
+Épicerie sucrée;Petit déjeuner;NUTELLA Pâte à tartiner - Chocolat noisette;200g ;8,85€/KG;1,78€;non
+Épicerie sucrée;Petit déjeuner;NUTELLA Pâte à tartiner - Chocolat noisette;350g ;7,60€/KG;2,71€;non
+Épicerie sucrée;Petit déjeuner;LINDT Pate à tartiner - Noisette;200g ;19,55€/KG;3,91€;non
+Épicerie sucrée;Petit déjeuner;LEADER PRICE Pâte à tartiner - Noisettes - Sans huile de palme;400g ;4,43€/KG;1,77€;non
+Épicerie sucrée;Petit déjeuner;CASINO Pâte à tartiner noisette;200g ;6,05€/KG;1,19€;non
+Épicerie sucrée;Petit déjeuner;CASINO Pâte à tartiner noisette - Sans huile de palme;300g ;7,80€/KG;2,34€;non
+Épicerie sucrée;Petit déjeuner;CASINO Pâte à tartiner noisette - Sans huile de palme;400g ;6€/KG;2,36€;non
+Épicerie sucrée;Petit déjeuner;CASINO Pâte à tartiner noisette - Sans huile de palme;750g ;4,79€/KG;3,59€;non
+Épicerie sucrée;Petit déjeuner;CASINO DELICES Pâte tartiner noisettes;225g ;13€/KG;2,60€;non
+Épicerie sucrée;Petit déjeuner;JARDIN BIO ETIC Beurre de cacahuète - Biologique;350g ;9,80€/KG;3,43€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Confiture extra - Abricots - Au sucre de canne - Biologique;360g ;5,14€/KG;1,85€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Confiture extra - Fraises - Au sucre de canne - Biologique;360g ;5,14€/KG;1,85€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Confiture extra - Framboises - Au sucre de canne - Biologique;360g ;5,97€/KG;2,15€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Confiture extra - Myrtilles - Au sucre de canne - Biologique;360g ;5,53€/KG;1,99€;non
+Épicerie sucrée;Petit déjeuner;MATERNE Confipote - Cerise;350g ;5,49€/KG;1,93€;non
+Épicerie sucrée;Petit déjeuner; Confipote - Confiture - -Framboise;350g ;5,23€/KG;1,91€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Abricot - Allégée;340g ;3,18€/KG;1,09€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Fraise - Allégée;340g ;3,47€/KG;1,18€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Framboise - Allégée;340g ;3,59€/KG;1,22€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Confiture - Orange - Biologique;255g ;6€/KG;1,53€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Prune - Allégée;340g ;3,44€/KG;1,17€;non
+Épicerie sucrée;Petit déjeuner;ANDROS Confiture allégée - Myrtilles;350g ;5,69€/KG;2,19€;non
+Épicerie sucrée;Petit déjeuner;ANDROS Confiture allégée abricots;350g ;3,60€/KG;1,27€;non
+Épicerie sucrée;Petit déjeuner;ANDROS Confiture allégée fraises;350g ;3,91€/KG;1,37€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture d'abricots;240g ;4,21€/KG;1,01€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture de fraises;240g ;4,21€/KG;1,01€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Confiture extra - Abricot - Biologique;255g ;6,59€/KG;1,68€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Confiture extra - Fraise - Biologique;255g ;6,63€/KG;1,69€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Confiture extra - Myrtille - Biologique;255g ;7,45€/KG;1,93€;non
+Épicerie sucrée;Petit déjeuner;CASINO Marmelade - Orange - Allégée;340g ;2,41€/KG;0,82€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Assortiment de confitures;5x50g ;10€/KG;2,54€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - 4 fruits rouges;370g ;4,27€/KG;1,58€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Abricot;370g ;3,32€/KG;1,23€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Abricot;750g ;2,97€/KG;2,23€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Cerise;370g ;4€/KG;1,48€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Fraise;370g ;3,43€/KG;1,27€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Fraise;750g ;3,33€/KG;2,50€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Framboise;370g ;4,86€/KG;1,83€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Fruits d'été;370g ;5,38€/KG;1,99€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Mirabelle;370g ;3,49€/KG;1,32€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Mûre;370g ;4,57€/KG;1,77€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Myrtille;370g ;4,54€/KG;1,68€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Myrtille;750g ;4,43€/KG;3,32€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Pêche;370g ;3,84€/KG;1,42€;non
+Épicerie sucrée;Petit déjeuner;CHARLES ANTONA Confiture - Pêche abricot - Miel de Corse;350g ;10,09€/KG;3,53€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture - Rhubarbe;370g ;3,19€/KG;1,18€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Confiture abricots;750g ;3,73€/KG;2,80€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Confiture cerises griottes;450g ;6,64€/KG;2,99€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Confiture d'Abricot;450g ;3,78€/KG;1,70€;non
+Épicerie sucrée;Petit déjeuner;LEONCE BLANC Confiture d'Abricots - 70% de fruits;320g ;7,81€/KG;2,66€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Confiture de châtaignes;370g ;3,97€/KG;1,56€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture de figue;370g ;3,84€/KG;1,42€;non
+Épicerie sucrée;Petit déjeuner;CASINO CA VIENT D'ICI Confiture de Figues de Provence;315g ;9,05€/KG;2,85€;non
+Épicerie sucrée;Petit déjeuner;CASINO Confiture de fraise - Squeezer;330g ;7,58€/KG;2,50€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Confiture de Fraises;450g ;3,87€/KG;1,75€;non
+Épicerie sucrée;Petit déjeuner;LEONCE BLANC Confiture de Fraises;320g ;7,88€/KG;2,53€;non
+Épicerie sucrée;Petit déjeuner;CASINO CA VIENT D'ICI Confiture de fraises de Dordogne;315g ;8,92€/KG;2,81€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Confiture de Framboise;450g ;5,51€/KG;2,51€;non
+Épicerie sucrée;Petit déjeuner;LEONCE BLANC Confiture de Framboises;320g ;8,72€/KG;2,89€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Confiture de myrtilles;370g ;5,97€/KG;2,23€;non
+Épicerie sucrée;Petit déjeuner;LEONCE BLANC Confiture de myrtilles;320g ;9,88€/KG;3,20€;non
+Épicerie sucrée;Petit déjeuner;CASINO CA VIENT D'ICI Confiture d'orange et clémentine;315g ;9,24€/KG;2,91€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Confiture fraise;750g ;3,83€/KG;2,89€;non
+Épicerie sucrée;Petit déjeuner;CASINO DELICES Confiture lait;350g ;5,80€/KG;2,03€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Confiture mirabelle;370g ;3,95€/KG;1,49€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Confiture Pêches;370g ;3,62€/KG;1,34€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Intense - Confiture Abricot;335g ;4,99€/KG;1,67€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Intense - Framboise - Confiture;335g ;7,01€/KG;2,36€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Intenses - Confiture - Nectarine et abricot;335g ;6,90€/KG;2,31€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Intenses - Confiture de fraises et framboises;335g ;6,96€/KG;2,34€;non
+Épicerie sucrée;Petit déjeuner;CASINO Marmelade - Orange;370g ;2,89€/KG;1,07€;non
+Épicerie sucrée;Petit déjeuner;CASINO Marmelade - Orange;750g ;2,84€/KG;2,13€;non
+Épicerie sucrée;Petit déjeuner;CASINO CA VIENT D'ICI Préparation de fruit - Abricot de provence au sucre de canne;315g ;9,05€/KG;2,85€;non
+Épicerie sucrée;Petit déjeuner;CASINO CA VIENT D'ICI Préparation mirabelles de lorraine au sucre de canne;315g ;9,05€/KG;2,85€;non
+Épicerie sucrée;Petit déjeuner;CASINO Gelée - Groseille;370g ;3,84€/KG;1,42€;non
+Épicerie sucrée;Petit déjeuner;CASINO Gelée de coing;370g ;3,73€/KG;1,38€;non
+Épicerie sucrée;Petit déjeuner;CASINO Gelée de framboise;370g ;3,46€/KG;1,28€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Gelée framboise;370g ;6,27€/KG;2,42€;non
+Épicerie sucrée;Petit déjeuner;BONNE MAMAN Marmelade d'Oranges amères;450g ;3,31€/KG;1,52€;non
+Épicerie sucrée;Petit déjeuner;BESACIER Miel bio - Acacia - Pot - Biologique;350g ;13,83€/KG;4,84€;non
+Épicerie sucrée;Petit déjeuner;FAMILLE VACHER Préparation de miel et gelée royale - Biologique;375g ;14,88€/KG;5,68€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Sirop d'agave - Biologique;500g ;6,92€/KG;3,44€;non
+Épicerie sucrée;Petit déjeuner;SUNNY BIO Sirop d'agave - Biologique;500g ;7,78€/KG;3,87€;non
+Épicerie sucrée;Petit déjeuner;SUNNY VIA Sirop d'agave;350g ;7,37€/KG;2,58€;non
+Épicerie sucrée;Petit déjeuner;LEADER PRICE Sirop d'agave - Biologique;250ml ;8,40€/L;2,10€;non
+Épicerie sucrée;Petit déjeuner;CASINO CA VIENT D'ICI Miel crémeux aux Fleurs des Pyrénées;375g ;19,01€/KG;7,13€;non
+Épicerie sucrée;Petit déjeuner;MIEL L'APICULTEUR Miel de montagne;250g ;21,44€/KG;5,39€;non
+Épicerie sucrée;Petit déjeuner;CASINO CA VIENT D'ICI Miel liquide de chataignier;375g ;22,99€/KG;8,62€;non
+Épicerie sucrée;Petit déjeuner;CASINO Miel liquide de fleurs de montagne;500g ;11,94€/KG;5,97€;non
+Épicerie sucrée;Petit déjeuner;CASINO Miel liquide d'acacia;375g ;10,77€/KG;4,04€;non
+Épicerie sucrée;Petit déjeuner;CASINO Caramel beurre salé - Flacon souple;330g ;9,24€/KG;3,05€;non
+Épicerie sucrée;Petit déjeuner;MIEL L'APICULTEUR Gelée royale;250g ;25,56€/KG;6,40€;non
+Épicerie sucrée;Petit déjeuner;CASINO Miel liquide fleurs d'oranger;500g ;12,14€/KG;6,07€;non
+Épicerie sucrée;Petit déjeuner;MIEL L'APICULTEUR Crémeux de France - Miel 100% France - Récolte artisanale;500g ;13,42€/KG;6,99€;non
+Épicerie sucrée;Petit déjeuner;MIEL L'APICULTEUR De montagne - Crémeux;500g ;10,56€/KG;5,32€;non
+Épicerie sucrée;Petit déjeuner;CASINO Miel crémeux de fleurs de France;375g ;17,65€/KG;6,62€;non
+Épicerie sucrée;Petit déjeuner;LES APICULTEURS GASCONS Miel crémeux d'été;5500g ;16,66€/KG;8,45€;non
+Épicerie sucrée;Petit déjeuner; Miel de fleurs;500g ;5,90€/KG;2,95€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Miel de fleurs;350g ;8,46€/KG;2,96€;non
+Épicerie sucrée;Petit déjeuner;LUNE DE MIEL Miel de fleurs;1kg ;6,99€/KG;6,99€;non
+Épicerie sucrée;Petit déjeuner;LUNE DE MIEL Miel de fleurs - Format familial;450g ;11,78€/KG;5,36€;non
+Épicerie sucrée;Petit déjeuner;CASINO Miel de fleurs crémeux;500g ;7,66€/KG;3,83€;non
+Épicerie sucrée;Petit déjeuner;CASINO Miel de fleurs liquide;250g ;8,52€/KG;2,13€;non
+Épicerie sucrée;Petit déjeuner;CASINO Miel de fleurs liquide;500g ;6,52€/KG;3,20€;non
+Épicerie sucrée;Petit déjeuner;CASINO Miel de fleurs liquide - Squeezer;500g ;6,46€/KG;3,23€;non
+Épicerie sucrée;Petit déjeuner;MIEL L'APICULTEUR Miel de France;250g ;17,96€/KG;4,49€;non
+Épicerie sucrée;Petit déjeuner;MIEL L'APICULTEUR Miel de France - Crémeux;500g ;15,98€/KG;8,36€;non
+Épicerie sucrée;Petit déjeuner;MICHAUD APICULTEUR Miel de France liquide - Des Pyréenées;375g ;12,21€/KG;4,62€;non
+Épicerie sucrée;Petit déjeuner;LUNE DE MIEL Tartimiel;250g ;7,76€/KG;1,94€;non
+Épicerie sucrée;Petit déjeuner;LUNE DE MIEL Bio - Miel et gelée royale - Doseur - Biologique;250g ;24,60€/KG;5,99€;non
+Épicerie sucrée;Petit déjeuner;LUNE DE MIEL Miel de fleurs - Biologique;500g ;9,52€/KG;4,76€;non
+Épicerie sucrée;Petit déjeuner;LUNE DE MIEL Miel et gelée royale;250g ;21,28€/KG;5,36€;non
+Épicerie sucrée;Petit déjeuner;MAPLE JOE Pur sirop d'érable;250g ;12,32€/KG;3,08€;non
+Épicerie sucrée;Petit déjeuner;CASINO SAVEURS D'AILLEURS Sirop d'érable;250g ;10,96€/KG;2,74€;non
+Épicerie sucrée;Petit déjeuner;CASINO Biscuits petit déjeuner - Pépites de chocolat - Sans sucre;150g ;11,93€/KG;1,79€;non
+Épicerie sucrée;Petit déjeuner;BELVITA Biscuit Chocolat - 5 céréales - Petit Déjeuner;400g ;5,20€/KG;2,09€;non
+Épicerie sucrée;Petit déjeuner;BELVITA Brut de céréales - Biscuit - Petit Déjeuner;400g ;4,98€/KG;1,99€;non
+Épicerie sucrée;Petit déjeuner;BELVITA Biscuit aux pépites de chocolat et miel;435g ;5,15€/KG;2,25€;non
+Épicerie sucrée;Petit déjeuner;CASINO Biscuits matin - Céréales - Pépites de chocolat;600g ;4,48€/KG;2,69€;non
+Épicerie sucrée;Petit déjeuner;CASINO Biscuits matin - Miel - Pépites de chocolat;600g ;4,35€/KG;2,63€;non
+Épicerie sucrée;Petit déjeuner;BELVITA Le moelleux - Biscuit - Pépites de chocolat et aux 5 céréales complètes;250g ;7,28€/KG;1,83€;non
+Épicerie sucrée;Petit déjeuner;CASINO Biscuits matin - Abricot- Amande - Pépites de chocolat;400g ;5,48€/KG;2,19€;non
+Épicerie sucrée;Petit déjeuner;TERRES ET CEREALES BIO Tartines craquantes - Sarrasin - Biologique;150g ;11,93€/KG;1,81€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Biscottes - Au germe de blé - Biologique;300g ;6,30€/KG;1,89€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Crackers - 3 graines - Biologique;200g ;12,45€/KG;2,49€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Crackers - Cranberries coco - Biologique;200g ;12,45€/KG;2,49€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Crackers - Emmental et graines de courges - Biologique;200g ;12,45€/KG;2,49€;non
+Épicerie sucrée;Petit déjeuner;BJORG Pain complet - 3 céréales - Biologique;500g ;3,74€/KG;1,87€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Pain grillé - Au blé complet - Biologique;250g ;6,16€/KG;1,55€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Petits pains grillés - Au froment - Biologique;225g ;6,22€/KG;1,40€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Petits pains grillés - Céréales et graines - Biologique;225g ;6,18€/KG;1,40€;non
+Épicerie sucrée;Petit déjeuner;CEREAL BIO Tartines craquantes - Multi céréales - Biologique;145g ;10,55€/KG;1,53€;non
+Épicerie sucrée;Petit déjeuner;CEREAL BIO Tartines craquantes - Sarrasin - Biologique;145g ;10,62€/KG;1,54€;non
+Épicerie sucrée;Petit déjeuner;CASINO Biscottes - Sans gluten;165g ;14,30€/KG;2,36€;non
+Épicerie sucrée;Petit déjeuner;WASA Léger - Pain croustillant au seigle;270g ;4,67€/KG;1,26€;non
+Épicerie sucrée;Petit déjeuner;WASA Tartine croustillante au seigle;230g ;5,30€/KG;1,23€;non
+Épicerie sucrée;Petit déjeuner;WASA Tartine croustillante au seigle;275g ;4,84€/KG;1,33€;non
+Épicerie sucrée;Petit déjeuner;BISCUITERIE D'AGEN Pains azymes - x12;600g ;3,92€/KG;2,34€;non
+Épicerie sucrée;Petit déjeuner;HEUDEBERT Crackers - Au blé complet;20g ;5,84€/KG;1,49€;non
+Épicerie sucrée;Petit déjeuner;CASINO Crackers - Graines;175g ;15,71€/KG;2,75€;non
+Épicerie sucrée;Petit déjeuner;HEUDEBERT Les crackers - Crackers - Nature;250g ;4,52€/KG;1,14€;non
+Épicerie sucrée;Petit déjeuner;ROGER Mini toasts grillés aux céréales;150g ;13,93€/KG;2,15€;non
+Épicerie sucrée;Petit déjeuner;PELLETIER Toast brioché;150g ;7,60€/KG;1,16€;non
+Épicerie sucrée;Petit déjeuner;CASINO Toasts briochés;125g ;6,72€/KG;0,86€;non
+Épicerie sucrée;Petit déjeuner;CASINO Toasts briochés - Aux raisins;140g ;9,07€/KG;1,27€;non
+Épicerie sucrée;Petit déjeuner;CASINO Biscottes - Goût brioché - x36;300g ;4,53€/KG;1,37€;non
+Épicerie sucrée;Petit déjeuner;HEUDEBERT Goût brioché - Biscottes;290g ;5,10€/KG;1,49€;non
+Épicerie sucrée;Petit déjeuner;HEUDEBERT Biscottes - 6 céréales - x34;300g ;4,87€/KG;1,46€;non
+Épicerie sucrée;Petit déjeuner;CASINO Biscottes - Au blé complet - x36;300g ;5,53€/KG;1,68€;non
+Épicerie sucrée;Petit déjeuner;LEADER PRICE Biscottes - Aux 6 céréales - x36;300g ;3,30€/KG;0,99€;non
+Épicerie sucrée;Petit déjeuner;CASINO Biscottes - Aux 6 céréales - x36;300g ;4,30€/KG;1,29€;non
+Épicerie sucrée;Petit déjeuner;LEADER PRICE Biscottes - Biologique;300g;1,66€;1,66€;non
+Épicerie sucrée;Petit déjeuner;LEADER PRICE Biscottes au froment - x36;300g ;2,57€/KG;0,77€;non
+Épicerie sucrée;Petit déjeuner;TOUS LES JOURS Biscotte - Nature - x90;750g ;2,36€/KG;1,77€;non
+Épicerie sucrée;Petit déjeuner;CASINO Biscottes - Au froment - x108;900g ;2,61€/KG;2,35€;non
+Épicerie sucrée;Petit déjeuner;CASINO Biscottes - Au froment - x36;300g ;3,03€/KG;0,91€;non
+Épicerie sucrée;Petit déjeuner;ROGER Biscottes - Sans huile de palme;280g ;8,04€/KG;2,21€;non
+Épicerie sucrée;Petit déjeuner;HEUDEBERT La Biscotte -  Biscottes - Nature - x102;830g ;3,30€/KG;2,74€;non
+Épicerie sucrée;Petit déjeuner;HEUDEBERT La Biscotte -  Biscottes - Nature - x34;300g ;3,67€/KG;1,10€;non
+Épicerie sucrée;Petit déjeuner;PELLETIER La gourmande - Biscottes - Tradition - x22;285g ;5,26€/KG;1,50€;non
+Épicerie sucrée;Petit déjeuner;HEUDEBERT Biscottes - Nature - Sans sel ajouté - x34;300g ;4,47€/KG;1,35€;non
+Épicerie sucrée;Petit déjeuner;ROGER Biscottes - Sel réduit - Sans huile de palme;280g ;8,32€/KG;2,28€;non
+Épicerie sucrée;Petit déjeuner;CASINO Biscottes - Taux de sel réduit - x36;300g ;3,97€/KG;1,20€;non
+Épicerie sucrée;Petit déjeuner;BRIOCHE PASQUIER Equilibre - Sans sel ajouté et sans sucres ajoutés;x36 ;4,17€/KG;1,25€;non
+Épicerie sucrée;Petit déjeuner;HEUDEBERT Fibre + - Biscottes - Céréales complètes - x34;280g ;6,21€/KG;1,76€;non
+Épicerie sucrée;Petit déjeuner;CRACOTTE Tartine craquante - Céréales complètes;250g ;6,16€/KG;1,56€;non
+Épicerie sucrée;Petit déjeuner;CRACOTTE Tartine craquante - Chocolat;200g ;7,05€/KG;1,43€;non
+Épicerie sucrée;Petit déjeuner;CRACOTTE Tartine craquante - Gourmande;250g ;6,20€/KG;1,56€;non
+Épicerie sucrée;Petit déjeuner;CRACOTTE Tartine craquante - Original Froment;250g ;5,24€/KG;1,31€;non
+Épicerie sucrée;Petit déjeuner;HEUDEBERT Le braisor - Pain grillé;500g ;5,70€/KG;2,88€;non
+Épicerie sucrée;Petit déjeuner;CASINO Pain braisé - Au froment - x30;270g ;5,07€/KG;1,38€;non
+Épicerie sucrée;Petit déjeuner;PELLETIER Le pain grillé - Goût brioché -x24;500g ;4,78€/KG;2,41€;non
+Épicerie sucrée;Petit déjeuner;CASINO Pain grillé brioché - Source de Fibres - x26;300g ;5,80€/KG;1,74€;non
+Épicerie sucrée;Petit déjeuner;BRIOCHE PASQUIER Les grilletines - Tartines grillées - Brioché - x18;255g ;6,16€/KG;1,58€;non
+Épicerie sucrée;Petit déjeuner;BRIOCHE PASQUIER Les Grillettines - Tartines grillées - Sans sucres ajoutées;x18 ;7,41€/KG;1,90€;non
+Épicerie sucrée;Petit déjeuner;PELLETIER Pain grillé;300g ;6,53€/KG;1,99€;non
+Épicerie sucrée;Petit déjeuner;PELLETIER Pain grillé - Blé complet - x24;500g ;3,46€/KG;1,73€;non
+Épicerie sucrée;Petit déjeuner;PELLETIER Pain grillé - Froment - x24;500g ;3,84€/KG;1,92€;non
+Épicerie sucrée;Petit déjeuner;PELLETIER Pain grillé - Gourmand -  Brioché;300g ;6,40€/KG;1,92€;non
+Épicerie sucrée;Petit déjeuner;PELLETIER La gourmande - Biscottes - Brioché - x20;260g ;7,65€/KG;2,06€;non
+Épicerie sucrée;Petit déjeuner;HEUDEBERT La tartine - Tartines grillées - Nature - x36;325g ;6,86€/KG;2,24€;non
+Épicerie sucrée;Petit déjeuner;BRIOCHE PASQUIER Les grilletines - Tartines grillées - Blé complet - x18;242g ;5,62€/KG;1,36€;non
+Épicerie sucrée;Petit déjeuner;BRIOCHE PASQUIER Les grilletines - Tartines grillées - Froment - x18;242g ;5,66€/KG;1,38€;non
+Épicerie sucrée;Petit déjeuner;HEUDEBERT Tartine - Briochée - x36;320g ;7,75€/KG;2,57€;non
+Épicerie sucrée;Petit déjeuner;BRIOCHE PASQUIER Tartines de pain - 24 tranches - Multi-céréales;240g ;5,75€/KG;1,38€;non
+Épicerie sucrée;Petit déjeuner;BRIOCHE PASQUIER Tartines de pain au blé complet;240g ;5,50€/KG;1,34€;non
+Épicerie sucrée;Petit déjeuner;CASINO Kroast - Petits pains suédois - Brioché;225g ;6,22€/KG;1,39€;non
+Épicerie sucrée;Petit déjeuner;CASINO Kroast - Petits pains suédois - Blé complet;225g ;5,29€/KG;1,19€;non
+Épicerie sucrée;Petit déjeuner;CASINO Kroast - Petits pains suédois - Blé complet;400g ;4,73€/KG;1,89€;non
+Épicerie sucrée;Petit déjeuner;KRISPROLLS Petit pain suédois - Complet;425g ;6,12€/KG;2,60€;non
+Épicerie sucrée;Petit déjeuner;KRISPROLLS Petits pains suédois - Complet;240g ;6,83€/KG;1,64€;non
+Épicerie sucrée;Petit déjeuner;KRISPROLLS Petits pains suédois - Dorés;240g ;7,83€/KG;1,79€;non
+Épicerie sucrée;Petit déjeuner;CASINO Kroast - Petits pains suédois - Froment;225g ;5,29€/KG;1,19€;non
+Épicerie sucrée;Petit déjeuner;CASINO Kroast - Petits pains suédois - Froment;400g ;4,73€/KG;1,89€;non
+Épicerie sucrée;Petit déjeuner;CASINO Kroast - Petits pains suédois - Blé complet - Sans sucres ajoutés;225g ;5,51€/KG;1,25€;non
+Épicerie sucrée;Petit déjeuner;KRISPROLLS Petits pains suédois - Sans sucre;425g ;6,21€/KG;2,66€;non
+Épicerie sucrée;Petit déjeuner;BRIOCHE PASQUIER Tartines de pain - Blé complet - Biologique;240g ;8€/KG;1,95€;non
+Épicerie sucrée;Petit déjeuner;CASINO BIO Barres de céréales - Chocolat noisette - Biologique;120g ;19,58€/KG;2,35€;non
+Épicerie sucrée;Petit déjeuner;GERLINEA Barres hyperprotéinés chocolat/orange;372g ;18,33€/KG;6,97€;non
+Épicerie sucrée;Petit déjeuner;SPECIAL K Barres céréales chocolat;6x21,5g ;14,50€/KG;1,90€;non
+Épicerie sucrée;Petit déjeuner;SPECIAL K Barres céréales riz-blé-choc au lait;6x20g ;15,58€/KG;1,88€;non
+Épicerie sucrée;Petit déjeuner;CASINO Barres de céréales - Au son d'avoines et chocolat - x6;150g ;11,33€/KG;2,04€;non
+Épicerie sucrée;Petit déjeuner;CASINO Barres de céréales - Pépites de chocolat - Sans gluten - 6 étuis;138g ;27,54€/KG;3,80€;non
+Épicerie sucrée;Petit déjeuner;BE-KIND Barre énergétique - Aux noix de chocolat noir et sel de mer;3x30g ;36,11€/KG;3,51€;non
+Épicerie sucrée;Petit déjeuner;CASINO Barres aux céréales - Au son d'avoines et amandes - x6;150g ;12,28€/KG;2,21€;non
+Épicerie sucrée;Petit déjeuner;CASINO Barres de céréales - Fruits secs - Miel - Sans gluten - 6 étuis;180g ;25,50€/KG;4,59€;non
+Épicerie sucrée;Petit déjeuner;OVOMALTINE Barres diét. malt choc.;5x20g ;20,80€/KG;2,09€;non
+Épicerie sucrée;Petit déjeuner;TOUS LES JOURS Barres céréales chocolat banane x6;126g ;6,67€/KG;0,84€;non
+Épicerie sucrée;Petit déjeuner;NESTLE Lion - Barre de céréales;6x25gr ;11,53€/KG;1,73€;non
+Épicerie sucrée;Petit déjeuner;CASINO Barres de céréales - Figue - Sans huile de palme;125g ;13,04€/KG;1,63€;non
+Épicerie sucrée;Petit déjeuner;CASINO Barres de céréales - Fruits rouges;108g;1,64€;1,64€;non
+Épicerie sucrée;Petit déjeuner;CASINO Barres de céréales - Pomme verte;125g ;10,96€/KG;1,39€;non
+Épicerie sucrée;Petit déjeuner;CASINO Barres de céréales - Chocolat au lait - Noix de coco;125g ;10,88€/KG;1,37€;non
+Épicerie sucrée;Petit déjeuner;CASINO Barres de céréales - Chocolat noir;125g ;10,88€/KG;1,37€;non
+Épicerie sucrée;Petit déjeuner;CASINO Choco Choc' - Barres de céréales - Chocolat riz soufflé;6x25g ;12,13€/KG;1,84€;non
+Épicerie sucrée;Petit déjeuner;CASINO Croq' - Barres de céréales - Chocolat caramel;6x21g ;15,87€/KG;2€;non
+Épicerie sucrée;Petit déjeuner;CASINO Barres de céréales - Amandes - Noisettes;125g ;10,96€/KG;1,38€;non
+Épicerie sucrée;Petit déjeuner;NESTLE Nesquik - Barres céréalières - Chocolat - Gouter enfant;6x25g ;11,53€/KG;1,73€;non
+Épicerie sucrée;Petit déjeuner;KELLOGG'S Barres de céréales Frosties x6;150g ;10,60€/KG;1,59€;non
+Épicerie sucrée;Petit déjeuner;BALISTO Barres céréales miel;x10 ;10,76€/KG;2,05€;non
+Épicerie sucrée;Petit déjeuner;KINDER Country  - Barre chocolatée aux céréales - x9 - Gouter enfant;211g ;12,55€/KG;2,71€;non
