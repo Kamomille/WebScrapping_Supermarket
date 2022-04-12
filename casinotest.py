@@ -31,7 +31,7 @@ def scrolltoBottom(li):
             y += 1000
             time.sleep(1)
     if (li==11 or li==10) :
-        for timer in range(0, 100):
+        for timer in range(0, 140):
             driver.execute_script("window.scrollTo(0, " + str(y) + ")")
             y += 1000
             time.sleep(1)
@@ -91,40 +91,36 @@ def GetLinkShop():
     LineAction = driver.find_elements(by="xpath", value="//div[@class='store-line__actions']")
     liens_adresses = [i.find_element(by='css selector', value="a") for i in LineAction]
     print(len(liens_adresses))
-    for lien in liens_adresses[150:]:
+    for lien in liens_adresses[9:]:
+
         OpenLinkInTab(lien)
         mag=driver.find_element_by_xpath("/html/body/div[1]/div[1]/div[1]/div[1]/div/ol/li[4]/span").text
-        driver.find_element_by_xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/a").click()
-        n=getNbrProduitsFruits(4,1)
-        writer=createCSV(mag)
-        getCSV(n, mag,writer)
-        n=getNbrProduitsFruits(4,2)
-        getCSV(n, mag,writer)
-        n = getNbrProduitsFruits(11, 1)
-        getCSV(n, mag, writer)
-        n = getNbrProduitsFruits(11, 2)
-        getCSV(n, mag, writer)
-        n = getNbrProduitsFruits(11, 3)
-        getCSV(n, mag, writer)
-        n = getNbrProduitsFruits(11, 4)
-        getCSV(n, mag, writer)
-        n = getNbrProduitsFruits(11, 5)
-        getCSV(n, mag, writer)
-        n = getNbrProduitsFruits(11, 6)
-        getCSV(n, mag, writer)
-        CloseTab()
-'''
-def getNomMag():
-/html/body/div[1]/div[1]/div[4]/div/div[65]/div/div/button
-/html/body/div[1]/div[1]/div[4]/div/div[65]/div/div/div/div[1]/div[2]/a[1]
-     time.sleep(3)
-     y = 0
-     driver.execute_script("window.scrollTo(0, " + str(y) + ")")
-     driver.find_element_by_xpath("/html/body/div[2]/header/div[1]/div/a[1]/span").click()
-     nom_mag = driver.find_element_by_xpath("/html/body/div[2]/header/div[1]/div/div/ul/li[2]/a/span[2]/em").text
-     print(nom_mag)
-     return nom_mag
-'''
+        #driver.find_element_by_xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/a").click()
+        rayon = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
+            (By.XPATH, "/html/body/div[1]/div[1]/div[1]/div[2]/div/div/a"))).click()
+        try:
+            n=getNbrProduitsFruits(4,1)
+            print(mag)
+            writer=createCSV(mag)
+            getCSV(n, mag,writer)
+            n=getNbrProduitsFruits(4,2)
+            getCSV(n, mag,writer)
+            n = getNbrProduitsFruits(11, 1)
+            getCSV(n, mag, writer)
+            n = getNbrProduitsFruits(11, 2)
+            getCSV(n, mag, writer)
+            n = getNbrProduitsFruits(11, 3)
+            getCSV(n, mag, writer)
+            n = getNbrProduitsFruits(11, 4)
+            getCSV(n, mag, writer)
+            n = getNbrProduitsFruits(11, 5)
+            getCSV(n, mag, writer)
+            n = getNbrProduitsFruits(11, 6)
+            getCSV(n, mag, writer)
+            CloseTab()
+        except WebDriverException:
+            CloseTab()
+
 def getCSV(nbr_produits, nom_mag,csvWriter):
     #csvFile = open("casino_csv/casino_" + nom_mag + ".csv", "a", newline='', encoding="utf-8")
     #csvWriter = csv.writer(csvFile, delimiter=';', quotechar='"')
