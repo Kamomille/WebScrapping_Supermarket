@@ -6,24 +6,31 @@ import time
 from selenium.webdriver.common.keys import Keys
 
 def choix_loc():
-    searchresults_text = driver.find_element_by_xpath(
-        "/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div").find_elements_by_class_name(
-        "place-pos__main-infos")
+    d = driver.find_element_by_xpath("/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div")
+    searchresults_text = d.find_elements_by_class_name('place-pos__main-infos') # place-pos__main-infos
     time.sleep(3)
     list_type = []
     for element in searchresults_text:
         element = element.text.split("\n")
         list_type.append(element)
+    print(list_type)
     for k in range(len(list_type)):
         print(list_type[k])
         if (list_type[k][0] == type_pickup):  # and list_type[k][1] == localisation
             print("OK")
-            time.sleep(1)
-            driver.find_element_by_xpath("/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div/div[" + str(2 + k) + "]/div/div/div[2]/form/button").click()
+            driver.find_element_by_xpath("/html/body/div[11]/div[1]/main/div[1]/div[2]/div[2]/section/div/div[" + str(3 + k) + "]/div/div/div[2]/form/button").click()
             break
         else:
             print("nope")
     time.sleep(3)
+
+def cherche_selectionne_ville(localisation):
+    element = driver.find_element_by_xpath('/html/body/div[11]/div[1]/main/div[1]/div[1]/div/div[1]/input')
+    element.send_keys(localisation)
+    time.sleep(2)
+    element.send_keys(Keys.DOWN + Keys.ENTER)
+    time.sleep(2)
+    return element
 
 #driver = webdriver.Firefox()
 #driver = webdriver.Chrome('C:\Program Files\chromedriver_win32\chromedriver.exe')
@@ -95,39 +102,34 @@ for index_row in df_adresse.index:
                     driver.find_element_by_xpath('/html/body/div[2]/header/div[1]/div[1]/div/button').click()
                 time.sleep(2)
                 # -- Cherche ville + selectionne la 1ère proposition --
-                element = driver.find_element_by_xpath('/html/body/div[11]/div[1]/main/div[1]/div[1]/div/div[1]/input')
-                element.send_keys(localisation)
-                time.sleep(2)
-                element.send_keys(Keys.DOWN + Keys.ENTER)
-                time.sleep(2)
+                element = cherche_selectionne_ville(localisation)
 
                 # -- Choisit la localisation parmi les choix de la liste --
                 try:
                     choix_loc()
                 except:
-                    for k in range (len(localisation)): element.send_keys(Keys.BACKSPACE)
-                    localisation = localisation[5:] + ' ' +localisation[:5]
-                    element = driver.find_element_by_xpath('/html/body/div[11]/div[1]/main/div[1]/div[1]/div/div[1]/input')
-                    element.send_keys(localisation)
-                    time.sleep(2)
-                    element.send_keys(Keys.DOWN + Keys.ENTER)
-                    time.sleep(2)
-
-                    choix_loc()
+                    try:
+                        for k in range (len(localisation)): element.send_keys(Keys.BACKSPACE) # efface bar de recherche
+                        cherche_selectionne_ville(localisation[5:] + ' ' +localisation[:5])
+                        choix_loc()
+                    except:
+                        for k in range (len(localisation)): element.send_keys(Keys.BACKSPACE) # efface bar de recherche
+                        cherche_selectionne_ville(localisation[5:])
+                        choix_loc()
 
             # ========================= Scroll pour charger tous les éléments ======================================================
             # -- Scroll down --
-            div = driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/nav/div')
-            searchresults_text = div.find_elements_by_tag_name("a")
-
-            for element in searchresults_text:
-                txt = element.text.split("\n")
-                a = int(txt[0])
+            try:
+                searchresults_text = driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/nav/div').find_elements_by_tag_name("a")
+                for element in searchresults_text:
+                    txt = element.text.split("\n")
+                    a = int(txt[0])
                 print(a)
-            print('---------------')
-            print(driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/nav/div').find_element_by_class_name('pagination-item').text)
+            except:
+                print('FAIL')
+
             y = 1000
-            for timer in range(0, a*11):
+            for timer in range(0, a*10):
                 print(driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/nav/div').find_element_by_class_name('pagination-item').text)
                 driver.execute_script("window.scrollTo(0, " + str(y) + ")")
                 y += 1000
