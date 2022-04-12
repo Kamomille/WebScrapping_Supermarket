@@ -4,12 +4,56 @@ https://www.google.com/search?q=filter+folium+dash+python&rlz=1C1PRFI_enFR838FR8
 https://medium.com/generating-folium-maps-based-on-user-input-for-a/generating-folium-maps-based-on-user-input-for-a-dash-layout-16363da6ecd3
 https://dash.plotly.com/dash-core-components/dropdown
 """
+import sys
 
-from dash import Dash, html, dcc, Input, Output, State
+from dash import Dash, html, dcc, Input, Output, State, dash_table
 import dash_bootstrap_components as dbc
 import plotly.express as px
 import pandas as pd
 import auchan_search
+
+
+# ======================================================================================================================
+#                               Table
+# ======================================================================================================================
+import auchan_fonction_graph as auchan
+
+def table_type(df_column):
+    # Note - this only works with Pandas >= 1.0.0
+    if sys.version_info < (3, 0):  # Pandas 1.0.0 does not support Python 2
+        return 'any'
+    if isinstance(df_column.dtype, pd.DatetimeTZDtype):
+        return 'datetime',
+    elif (isinstance(df_column.dtype, pd.StringDtype) or
+            isinstance(df_column.dtype, pd.BooleanDtype) or
+            isinstance(df_column.dtype, pd.CategoricalDtype) or
+            isinstance(df_column.dtype, pd.PeriodDtype)):
+        return 'text'
+    elif (isinstance(df_column.dtype, pd.SparseDtype) or
+            isinstance(df_column.dtype, pd.IntervalDtype) or
+            isinstance(df_column.dtype, pd.Int8Dtype) or
+            isinstance(df_column.dtype, pd.Int16Dtype) or
+            isinstance(df_column.dtype, pd.Int32Dtype) or
+            isinstance(df_column.dtype, pd.Int64Dtype)):
+        return 'numeric'
+    else:
+        return 'any'
+
+df_merge = auchan.create_csv_merge(True)
+df, list_name_csv_clean = auchan.cleaning_data(df_merge)
+df = df.reset_index()
+df_col = df[['nom','poids','02300 Viry Noureuil','05000 Gap']]
+
+
+a = df.columns
+a = a[4:]
+def fn(a): return a[:2]
+list_dep = sorted(list(set(map(fn, a))))
+
+
+# ======================================================================================================================
+#
+# ======================================================================================================================
 
 Adresse_Auchan = pd.read_csv('Adresses_auchan.csv')
 Auchan = Adresse_Auchan['Adresse']
@@ -81,6 +125,10 @@ navbar = dbc.NavbarSimple(children=[
     fluid=True
 )
 
+# ======================================================================================================================
+#                               Partie contentFilter
+# ======================================================================================================================
+
 contentFilter = html.Div([
                     html.Div(children=[
                         html.H1('Where can I find the cheaper products ?'),
@@ -125,8 +173,61 @@ contentFilter = html.Div([
                                  "margin-left": "6rem",
                                  "margin-top": "0rem",
                                  "margin-down": "50rem"
-                             })
+                             }),
+    # ------------------------------------------------------------------------------------------------------------------
+
+    html.Div(children=[html.H1('Table'),
+                       dcc.Input(id='text_nom', type='text'),
+                       html.Button('Validate', id='button_validate'),
+                       # Filter ---
+                       dcc.Dropdown(list_dep, id="dropdown_departement", placeholder="Localisation", value='02',
+                                                      style={"width": "15rem",}),
+                       # Table ---
+                       dash_table.DataTable(id='table_data', data=df_col.to_dict('records'),
+                                            columns=[{'name': i, 'id': i, 'type': table_type(df_col[i])} for i in df_col.columns],
+                                            sort_action="native",
+                                            sort_mode="multi",
+                                            css=[{'selector': 'table', 'rule': 'table-layout: fixed'}],
+                                            style_table={'height': 300},
+                                            style_data={
+                                                'width': '{}%'.format(100. / 5),
+                                                'textOverflow': 'hidden',
+                                                'backgroundColor': '#606165',
+                                                'color': 'white'
+                                            },
+                                            style_data_conditional=[ {'if': {'row_index': 'odd'}, 'backgroundColor': '#9EA0A7', } ],
+                                            style_header={'backgroundColor': '#1E1E1E', 'color': 'white'},
+                                            style_cell={'textAlign': 'center'})
+                       ],
+             style={"margin-left": "6rem"})
 ])
+
+@app.callback(Output('table_data', 'columns'),
+              Output('table_data', 'data'),
+              Input('dropdown_departement', 'value'),
+              State('text_nom', 'value'),
+              Input('button_validate','value')
+)
+def update_pie_chart (value_dropdown, value_txt,value_button):
+    a = df.columns
+    a = a[4:]
+
+    DF = auchan_search.filter_result(df, value_txt)
+
+    list_dep=[]
+    for i in range (len(a)):
+        if (value_dropdown == a[i][:2]): list_dep.append(a[i])
+    df_col = DF[['nom', 'poids'] + list_dep]
+
+    #df_col = df_col[df_col['nom'] == value_txt]
+
+    print(df_col)
+
+    return [{'name': i, 'id': i, 'type': table_type(df_col[i])} for i in df_col.columns], df_col.to_dict('records')
+
+# auchan cookies tout chocolat
+#
+# ---------------------------------------------------
 
 @app.callback(
     Output('container-button-basic', 'children'),
@@ -152,17 +253,12 @@ contentCard = html.Div([
 # ======================================================================================================================
 #                               Partie Statistics
 # ======================================================================================================================
-import auchan_fonction_graph as auchan
-
-df_merge = auchan.create_csv_merge(True)
-df, list_name_csv_clean = auchan.cleaning_data(df_merge)
-df = df.reset_index()
 
 contentStatistics = html.Div([
     # ---- Texte en blanc ----
     html.Div(children=[html.H1('Statistics - Analyse Auchan\'s products'),
                        html.P('Number of scrapped Auchan stores :' + str(len(auchan.get_list_csv_file()))),
-                       html.P('Number of Auchan stores after data cleaning :' + str(len(list_name_csv_clean)), )
+                       html.P('Number of Auchan stores after data cleaning :' + str(len(list_name_csv_clean)))
                        ],
                style={'color': 'white','width': '100%','height': '100px','text-align': "center"}),
 
@@ -182,7 +278,7 @@ contentStatistics = html.Div([
                        dcc.Graph(figure = auchan.variance_chart(df), style={"margin-top": "50px"}),
                        ],
              style={"margin-left": "8rem", "margin-right": "2rem","margin-top": "5rem"}
-)
+             ),
 ])
 
 @app.callback(Output('pie_chart_1', 'figure'),
@@ -218,10 +314,10 @@ def update_pie_chart (radio_button):
     if (radio_button == 'choix_4'): pie_chart_2.update_traces(marker=dict(colors=DF_1['color']))
 
     return pie_chart_1, pie_chart_2
+
 # ======================================================================================================================
 #                               Layout slidebar
 # ======================================================================================================================
-
 
 app.layout = html.Div([
         dcc.Location(id="url"),
@@ -246,4 +342,4 @@ def Content(pathname):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
