@@ -143,7 +143,7 @@ contentFilter = html.Div([
                         }
                     ),
                     html.Div([
-                        dcc.Dropdown(Produit, id='dropdown', placeholder="Produit",
+                        dcc.Input(id='text_nom', type='text', placeholder="Produit",
                              style={"width": "30rem",
                                     })],
                         style={"margin-top": "5rem",
@@ -151,7 +151,7 @@ contentFilter = html.Div([
                                'display': 'flex', 'align-items': 'center', 'justify-content': 'center'}),
 
                     html.Div([
-                        dcc.Dropdown(Auchan, id="dropdown2", placeholder="Localisation",
+                        dcc.Dropdown(list_dep, id="dropdown_departement", placeholder="Localisation", value='02',
                               style={"width": "15rem",
                                      })],
                         style={"margin-left": "5rem",
@@ -159,7 +159,7 @@ contentFilter = html.Div([
                                'display': 'flex', 'align-items': 'center', 'justify-content': 'center'}),
 
                     html.Div([
-                        html.Button('Submit', id='submit-val', n_clicks=0,
+                        html.Button('Validate', id='button_validate', n_clicks=0,
                                 style={
                                     "width": "5rem",
                                 })],
@@ -167,48 +167,35 @@ contentFilter = html.Div([
                                "margin-top": "5rem",
                                'display': 'flex', 'align-items': 'center', 'justify-content': 'center'}),
 
-                    html.Div(id='container-button-basic',
-                             children='Enter a value and press submit',
-                             style={
-                                 "margin-left": "6rem",
-                                 "margin-top": "0rem",
-                                 "margin-down": "50rem"
-                             }),
-    # ------------------------------------------------------------------------------------------------------------------
-
-    html.Div(children=[html.H1('Table'),
-                       dcc.Input(id='text_nom', type='text'),
-                       html.Button('Validate', id='button_validate'),
-                       # Filter ---
-                       dcc.Dropdown(list_dep, id="dropdown_departement", placeholder="Localisation", value='02',
-                                                      style={"width": "15rem",}),
-                       # Table ---
-                       dash_table.DataTable(id='table_data', data=df_col.to_dict('records'),
-                                            columns=[{'name': i, 'id': i, 'type': table_type(df_col[i])} for i in df_col.columns],
-                                            sort_action="native",
-                                            sort_mode="multi",
-                                            css=[{'selector': 'table', 'rule': 'table-layout: fixed'}],
-                                            style_table={'height': 300},
-                                            style_data={
-                                                'width': '{}%'.format(100. / 5),
-                                                'textOverflow': 'hidden',
-                                                'backgroundColor': '#606165',
-                                                'color': 'white'
-                                            },
-                                            style_data_conditional=[ {'if': {'row_index': 'odd'}, 'backgroundColor': '#9EA0A7', } ],
-                                            style_header={'backgroundColor': '#1E1E1E', 'color': 'white'},
-                                            style_cell={'textAlign': 'center'})
-                       ],
-             style={"margin-left": "6rem"})
+# Table ---
+                    html.Div([
+                           dash_table.DataTable(id='table_data', data=df_col.to_dict('records'),
+                                                columns=[{'name': i, 'id': i, 'type': table_type(df_col[i])} for i in df_col.columns],
+                                                sort_action="native",
+                                                sort_mode="multi",
+                                                css=[{'selector': 'table', 'rule': 'table-layout: fixed'}],
+                                                style_table={'height': 300},
+                                                style_data={
+                                                    'width': '{}%'.format(100. / 5),
+                                                    'textOverflow': 'hidden',
+                                                    'backgroundColor': '#606165',
+                                                    'color': 'white'
+                                                },
+                                                style_data_conditional=[ {'if': {'row_index': 'odd'}, 'backgroundColor': '#9EA0A7', } ],
+                                                style_header={'backgroundColor': '#1E1E1E', 'color': 'white'},
+                                                style_cell={'textAlign': 'center'})
+                           ],
+                         style={"margin-top":"5rem",
+                             "margin-left":"5rem"})
 ])
 
 @app.callback(Output('table_data', 'columns'),
               Output('table_data', 'data'),
-              Input('dropdown_departement', 'value'),
+              State('dropdown_departement', 'value'),
               State('text_nom', 'value'),
-              Input('button_validate','value')
+              Input('button_validate','n_clicks')
 )
-def update_pie_chart (value_dropdown, value_txt,value_button):
+def update_pie_chart (value_dropdown, value_txt,n_clicks):
     a = df.columns
     a = a[4:]
 
