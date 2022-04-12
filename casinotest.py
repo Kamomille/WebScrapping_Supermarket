@@ -31,11 +31,13 @@ def scrolltoBottom(li):
             y += 1000
             time.sleep(1)
     if (li==11 or li==10) :
-        for timer in range(0, 140):
+        for timer in range(0, 120):
             driver.execute_script("window.scrollTo(0, " + str(y) + ")")
             y += 1000
             time.sleep(1)
+            print(timer)
 def getNbrProduitsFruits(li,sr):
+    print("rayon et sous rayons",li,sr)
     try:
         popup_close = WebDriverWait(driver, 5).until(
             EC.element_to_be_clickable((By.XPATH, '/html/body/div[3]/div/div[2]/div/div/div[1]/a'))).click()
