@@ -17,7 +17,10 @@ def tokenization_one_product(x):
     new_word =""
     # -- on enlève la ponctuation --
     punct = string.punctuation
-    for c in punct: x = x.replace(c, " ")
+    try :
+        for c in punct: x = x.replace(c, "")
+    except:
+        None
     # -- token --
     words = word_tokenize(x)
     for word in words:

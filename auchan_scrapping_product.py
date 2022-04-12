@@ -120,6 +120,7 @@ for index_row in df_adresse.index:
             # ========================= Scroll pour charger tous les éléments ======================================================
             # -- Scroll down --
             try:
+                a = 5
                 searchresults_text = driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/nav/div').find_elements_by_tag_name("a")
                 for element in searchresults_text:
                     txt = element.text.split("\n")

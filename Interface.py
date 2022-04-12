@@ -17,6 +17,7 @@ import auchan_search
 #                               Table
 # ======================================================================================================================
 import auchan_fonction_graph as auchan
+import casino_fonction_graph as casi
 
 def table_type(df_column):
     # Note - this only works with Pandas >= 1.0.0
@@ -42,13 +43,17 @@ def table_type(df_column):
 df_merge = auchan.create_csv_merge(True)
 df, list_name_csv_clean = auchan.cleaning_data(df_merge)
 df = df.reset_index()
-df_col = df[['nom','poids','02300 Viry Noureuil','05000 Gap']]
+df_col = df[['nom','poids','02300 Viry Noureuil','02500 Hirson']]
 
 
 a = df.columns
 a = a[4:]
 def fn(a): return a[:2]
 list_dep = sorted(list(set(map(fn, a))))
+
+df_merge_c = casi.create_csv_merge(True)
+df_c, list_name_csv_clean_c = casi.cleaning_data(df_merge_c)
+df_c = df_c.reset_index()
 
 
 # ======================================================================================================================
@@ -64,6 +69,7 @@ Produit = list(df_Produit_Auchan.index.get_level_values('nom'))
 
 # Load data
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])  # initialisation du dash app
+server = app.server
 
 SIDEBAR_STYLE = {
     "position": "fixed", #ne bouge pas même quand on bouge la page
@@ -195,39 +201,21 @@ contentFilter = html.Div([
               State('text_nom', 'value'),
               Input('button_validate','n_clicks')
 )
-def update_pie_chart (value_dropdown, value_txt,n_clicks):
+def update_table(value_dropdown, value_txt,n_clicks):
     a = df.columns
     a = a[4:]
-
-    DF = auchan_search.filter_result(df, value_txt)
-
+    if (type(value_txt) != 'NoneType'): DF = auchan_search.filter_result(df, value_txt)
+    else: DF = df.copy()
     list_dep=[]
     for i in range (len(a)):
         if (value_dropdown == a[i][:2]): list_dep.append(a[i])
     df_col = DF[['nom', 'poids'] + list_dep]
-
-    #df_col = df_col[df_col['nom'] == value_txt]
-
-    print(df_col)
-
     return [{'name': i, 'id': i, 'type': table_type(df_col[i])} for i in df_col.columns], df_col.to_dict('records')
 
-# auchan cookies tout chocolat
-#
-# ---------------------------------------------------
 
-@app.callback(
-    Output('container-button-basic', 'children'),
-    Input('submit-val', 'n_clicks'),
-    State('dropdown', 'value'),
-    State('dropdown2', 'value')
-)
-def Button_Submit(n_clicks, valueProd, valueLoc):
-
-    return html.Div(['You choose "{}" and "{} '.format(
-        valueProd,
-        valueLoc
-    )], style={'color': 'white'})
+# ======================================================================================================================
+#                               Partie carte
+# ======================================================================================================================
 
 contentCard = html.Div([
                     html.Iframe(id='map', srcDoc=open('carte.html', 'r').read(), width='80%', height='600vh',
@@ -249,10 +237,10 @@ contentStatistics = html.Div([
                        ],
                style={'color': 'white','width': '100%','height': '100px','text-align': "center"}),
 
-    # ---- Graphiques ----
+    # ---- Graphiques Auchan ----
     html.Div(children=[dcc.RadioItems(id='radio_button',
                                       options=[{'label': 'Ile-de-France VS the rest of France', 'value': 'choix_1'},
-                                               {'label': 'The whole of France   .', 'value': 'choix_2'},
+                                               {'label': 'The whole of France', 'value': 'choix_2'},
                                                {'label': 'By department', 'value': 'choix_3'},
                                                {'label': 'By region', 'value': 'choix_4'}],
                                       style={"margin-top": "3%",'color': 'black','text-align':'center', 'background-color': 'white'},
@@ -266,7 +254,33 @@ contentStatistics = html.Div([
                        ],
              style={"margin-left": "8rem", "margin-right": "2rem","margin-top": "5rem"}
              ),
+
+    # ---- Texte en blanc ----
+    html.Div(children=[html.Br(),
+                       html.H1('Statistics - Analyse Casino\'s products'),
+                       html.P('Number of scrapped Auchan stores :' + str(len(casi.get_list_csv_file()))),
+                       html.P('Number of Auchan stores after data cleaning :' + str(len(list_name_csv_clean_c)))
+                       ],
+             style={'color': 'white', 'width': '100%', 'height': '100px', 'text-align': "center"}),
+    # ---- Graphiques Casino ----
+    html.Div(children=[dcc.RadioItems(id='radio_button_casino',
+                                      options=[{'label': 'Ile-de-France VS the rest of France', 'value': 'choix_1'},
+                                               {'label': 'The whole of France', 'value': 'choix_2'},
+                                               {'label': 'By department', 'value': 'choix_3'},
+                                               {'label': 'By region', 'value': 'choix_4'}],
+                                      style={"margin-top": "3%",'color': 'black','text-align':'center', 'background-color': 'white'},
+                                      value='choix_1'),
+                       dcc.Graph(id='pie_chart_1_casino',
+                                 style={'textAlign': 'center', 'width': '48%', 'display': 'inline-block','margin-right':'4%',"margin-top": "50px"}),
+                       dcc.Graph(id='pie_chart_2_casino',
+                                 style={'textAlign': 'center', 'width': '48%', 'display': 'inline-block'}),
+                       dcc.Graph(figure=casi.variance_chart(df_c), style={"margin-top": "50px"}),
+                       ],
+             style={"margin-left": "8rem", "margin-right": "2rem", "margin-top": "5rem"}
+             ),
 ])
+
+# --- Auchan --
 
 @app.callback(Output('pie_chart_1', 'figure'),
               Output('pie_chart_2', 'figure'),
@@ -301,6 +315,41 @@ def update_pie_chart (radio_button):
     if (radio_button == 'choix_4'): pie_chart_2.update_traces(marker=dict(colors=DF_1['color']))
 
     return pie_chart_1, pie_chart_2
+
+# --- Casino --
+@app.callback(Output('pie_chart_1_casino', 'figure'),
+              Output('pie_chart_2_casino', 'figure'),
+              Input('radio_button_casino', 'value')
+)
+def update_pie_chart (radio_button_casino):
+    if (radio_button_casino == 'choix_1'):
+        DF_1 = auchan.ile_de_france_VS_reste(df_c, 'minimum',list_name_csv_clean_c)
+        DF_2 = auchan.ile_de_france_VS_reste(df_c, 'maximum',list_name_csv_clean_c)
+    if (radio_button_casino == 'choix_2'):
+        DF_1 = auchan.nombre_de_produit_pas_cher_par_ville(df_c, 'minimum',list_name_csv_clean_c)
+        DF_2 = auchan.nombre_de_produit_pas_cher_par_ville(df_c, 'maximum',list_name_csv_clean_c)
+    if (radio_button_casino == 'choix_3'):
+        DF_1 = auchan.nombre_de_produit_pas_cher_par_dep(df_c, 'minimum',list_name_csv_clean_c)
+        DF_2 = auchan.nombre_de_produit_pas_cher_par_dep(df_c, 'maximum',list_name_csv_clean_c)
+    if (radio_button_casino == 'choix_4'):
+        DF_1 = auchan.nombre_de_produit_pas_cher_par_region(df_c, 'minimum',list_name_csv_clean_c)
+        DF_2 = auchan.nombre_de_produit_pas_cher_par_region(df_c, 'maximum',list_name_csv_clean_c)
+
+    pie_chart_1_casino = px.pie(DF_1,
+                            values='nb_prix',
+                            names='localisation',
+                            title='Percentage of number of CHEAPEST products')
+    if (radio_button_casino == 'choix_1'): pie_chart_1_casino.update_traces(marker=dict(colors=['pink', 'orange']))
+    if (radio_button_casino == 'choix_4'): pie_chart_1_casino.update_traces(marker=dict(colors=DF_1['color']))
+
+    pie_chart_2_casino = px.pie(DF_2,
+                    values='nb_prix',
+                    names='localisation',
+                    title='Percentage of the number of MOST EXPENSIVE products')
+    if (radio_button_casino == 'choix_1'): pie_chart_2_casino.update_traces(marker=dict(colors=['pink', 'orange']))
+    if (radio_button_casino == 'choix_4'): pie_chart_2_casino.update_traces(marker=dict(colors=DF_1['color']))
+
+    return pie_chart_1_casino, pie_chart_2_casino
 
 # ======================================================================================================================
 #                               Layout slidebar

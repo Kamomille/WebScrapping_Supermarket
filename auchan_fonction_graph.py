@@ -26,6 +26,7 @@ def create_list_df():
         df['poids'] = df['poids'].astype(str)
         df['poids'] = df.apply(lambda row: row["poids"][:-1] if row["poids"][-1] == 'g' else row["poids"], axis=1)
         df['poids'] = df['poids'].str.replace('X','x')
+        df['poids'] = df.apply(lambda row: '-' if row["poids"] == 'nan' else row["poids"], axis=1)
         df['nom'] = df['nom'].str.lower()
         list_df.append(df)
     return list_df, list_name_csv
@@ -62,7 +63,6 @@ def cleaning_data (df):
 
 #def read_df_merge():
 #    return pd.read_csv("auchan_csv/produits_merge.csv", sep=';', index_col=[0], header=[0,1])
-
 
 
 def population_VS_nbProduit ():
@@ -120,6 +120,8 @@ def mettre_en_poucentage_en_fonction_prix_max (df, list_name_csv_clean):
 def nombre_de_produit_pas_cher_par_ville (df, choix, list_name_csv_clean):
     DF = df.copy()
     list_nb = []
+    print(DF)
+    print(list_name_csv_clean)
     if(choix == 'minimum'): DF["m"] = DF.min(axis=1, skipna=True)
     if (choix == 'maximum'): DF["m"] = DF.max(axis=1, skipna=True)
     for i in range (len(list_name_csv_clean)):
@@ -171,7 +173,7 @@ def nombre_de_produit_pas_cher_par_region(df, choix, list_name_csv_clean):
     list_r, prix = [], []
 
     DF['dep'] = DF.apply(lambda row: row["localisation"][:2], axis=1)
-    color = ['#636EFA','#EF553B','#00CC96','#AB63FA','#FFA15A','#19D3F3','#FF6692','#B6E880','#FF97FF','#FECB52','#FECB52','#FECB52','#FECB52']
+    color = ['#B6E880','#e5ff5d','#00CC96','#AB63FA','#FFA15A','#19D3F3','#FF6692','#636EFA','#FF97FF','#FECB52','#5cffef','#EF553B','#FECB52']
 
     for i in range (len(list_region)):
         DFF = DF[DF['dep'].isin(list_region[i])]
