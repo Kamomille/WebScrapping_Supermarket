@@ -167,17 +167,17 @@ contentStatistics = html.Div([
                style={'color': 'white','width': '100%','height': '100px','text-align': "center"}),
 
     # ---- Graphiques ----
-    html.Div(children=[dcc.Graph(id='pie_chart_1',
-                                 style={'textAlign': 'center', 'width': '40%', 'display': 'inline-block','margin-right':'1%'}),
-                       dcc.Graph(id='pie_chart_2',
-                                 style={'textAlign': 'center', 'width': '40%', 'display': 'inline-block','margin-right':'1%'}),
-                       dcc.RadioItems(id='radio_button',
+    html.Div(children=[dcc.RadioItems(id='radio_button',
                                       options=[{'label': 'Ile-de-France VS the rest of France', 'value': 'choix_1'},
-                                               {'label': 'The whole of France', 'value': 'choix_2'},
+                                               {'label': 'The whole of France   .', 'value': 'choix_2'},
                                                {'label': 'By department', 'value': 'choix_3'},
                                                {'label': 'By region', 'value': 'choix_4'}],
-                                      style={"margin-top": "3%",'color': 'black','width': '18%', 'display': 'inline-block','background-color': 'white'},
+                                      style={"margin-top": "3%",'color': 'black','text-align':'center', 'background-color': 'white'},
                                       value='choix_1'),
+                       dcc.Graph(id='pie_chart_1',
+                                 style={'textAlign': 'center', 'width': '48%', 'display': 'inline-block','margin-right':'4%',"margin-top": "50px"}),
+                       dcc.Graph(id='pie_chart_2',
+                                 style={'textAlign': 'center', 'width': '48%', 'display': 'inline-block'}),
                        dcc.Graph(figure = auchan.population_VS_nbProduit_chart(), style={"margin-top": "50px"}),
                        dcc.Graph(figure = auchan.variance_chart(df), style={"margin-top": "50px"}),
                        ],
@@ -208,12 +208,14 @@ def update_pie_chart (radio_button):
                             names='localisation',
                             title='Percentage of number of CHEAPEST products')
     if (radio_button == 'choix_1'): pie_chart_1.update_traces(marker=dict(colors=['pink', 'orange']))
+    if (radio_button == 'choix_4'): pie_chart_1.update_traces(marker=dict(colors=DF_1['color']))
 
     pie_chart_2 = px.pie(DF_2,
                     values='nb_prix',
                     names='localisation',
                     title='Percentage of the number of MOST EXPENSIVE products')
     if (radio_button == 'choix_1'): pie_chart_2.update_traces(marker=dict(colors=['pink', 'orange']))
+    if (radio_button == 'choix_4'): pie_chart_2.update_traces(marker=dict(colors=DF_1['color']))
 
     return pie_chart_1, pie_chart_2
 # ======================================================================================================================

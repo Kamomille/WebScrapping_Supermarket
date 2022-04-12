@@ -26,6 +26,7 @@ def create_list_df():
         df['poids'] = df['poids'].astype(str)
         df['poids'] = df.apply(lambda row: row["poids"][:-1] if row["poids"][-1] == 'g' else row["poids"], axis=1)
         df['poids'] = df['poids'].str.replace('X','x')
+        df['nom'] = df['nom'].str.lower()
         list_df.append(df)
     return list_df, list_name_csv
 
@@ -91,13 +92,14 @@ def population_VS_nbProduit_chart ():
 def variance_calcul (df):
     DF = df.copy()
     DF["variance"] = df.var(axis=1)
+    DF["nom_poids"] = DF.apply(lambda row: row["nom"] if row["nom"] == 'nan' else row["nom"] + ' | ' + row["poids"], axis=1)
     DF = DF.sort_values(by=['variance'], ascending=False)
     return DF
 
 def variance_chart(df):
     variance_bar_chart = px.bar(variance_calcul(df),
                                 y='variance',
-                                x='nom',
+                                x='nom_poids',
                                 color='type',
                                 title='Variances of different products')
 
@@ -169,11 +171,12 @@ def nombre_de_produit_pas_cher_par_region(df, choix, list_name_csv_clean):
     list_r, prix = [], []
 
     DF['dep'] = DF.apply(lambda row: row["localisation"][:2], axis=1)
+    color = ['#636EFA','#EF553B','#00CC96','#AB63FA','#FFA15A','#19D3F3','#FF6692','#B6E880','#FF97FF','#FECB52','#FECB52','#FECB52','#FECB52']
 
     for i in range (len(list_region)):
         DFF = DF[DF['dep'].isin(list_region[i])]
         list_r.append(list_region[i][0])
         prix.append(DFF['nb_prix'].sum())
 
-    DF = pd.DataFrame(list(zip(list_r,prix)), columns = ['localisation','nb_prix'])
+    DF = pd.DataFrame(list(zip(list_r,prix, color)), columns = ['localisation','nb_prix','color'])
     return DF
