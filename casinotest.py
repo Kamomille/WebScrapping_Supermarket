@@ -7,7 +7,8 @@ from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.keys import Keys
+
+import Fonctions
 
 #
 #                                       SITE + COOKIES ACCEPTE
@@ -72,22 +73,7 @@ def getNbrProduitsFruits(li,sr):
     list_nbr_produits = driver.find_elements_by_class_name("product-item__bottom")
     return len(list_nbr_produits)
 
-def Openheader():
-    button = driver.find_elements("xpath", "//button[@class='accordion__header accordion__header--no-shadow']")
-    for j in button:
-        j.click()
 
-def OpenLinkInTab(link):
-    link.send_keys(Keys.CONTROL + Keys.RETURN)
-    driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.TAB)
-    New_window = driver.window_handles[1]
-    driver.switch_to.window(New_window)
-    time.sleep(2)
-
-def CloseTab():
-    driver.close()
-    main_window = driver.window_handles[0]
-    driver.switch_to.window(main_window)
 
 def GetLinkShop():
     LineAction = driver.find_elements(by="xpath", value="//div[@class='store-line__actions']")
@@ -95,7 +81,7 @@ def GetLinkShop():
     print(len(liens_adresses))
     for lien in liens_adresses[9:]:
 
-        OpenLinkInTab(lien)
+        Fonctions.OpenLinkInTab(driver, lien)
         mag=driver.find_element_by_xpath("/html/body/div[1]/div[1]/div[1]/div[1]/div/ol/li[4]/span").text
         #driver.find_element_by_xpath("/html/body/div[1]/div[1]/div[1]/div[2]/div/div/a").click()
         rayon = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
@@ -119,9 +105,9 @@ def GetLinkShop():
             getCSV(n, mag, writer)
             n = getNbrProduitsFruits(11, 6)
             getCSV(n, mag, writer)
-            CloseTab()
+            Fonctions.CloseTab(driver)
         except WebDriverException:
-            CloseTab()
+            Fonctions.CloseTab(driver)
 
 def getCSV(nbr_produits, nom_mag,csvWriter):
     #csvFile = open("casino_csv/casino_" + nom_mag + ".csv", "a", newline='', encoding="utf-8")
@@ -177,5 +163,5 @@ def createCSV(nom_mag):
     csvWriter.writerow(['categorie', 'type', 'nom', 'poids', 'prix_par_kg', 'prix', 'promo'])
     return csvWriter
 #                                       SELECTIONS DRIVE
-Openheader()
+Fonctions.Openheader(driver)
 GetLinkShop()

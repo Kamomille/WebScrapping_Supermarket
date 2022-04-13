@@ -1,4 +1,8 @@
 import re
+import time
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
 
 #Convertir les elements scraper en liste
 def Mettre_en_liste(element):
@@ -42,3 +46,20 @@ def append(Location, Lat, Long):
     Lat.append(Location.latitude)
     Long.append(Location.longitude)
     return Lat, Long
+
+def Openheader(driver):
+    button = driver.find_elements("xpath", "//button[@class='accordion__header accordion__header--no-shadow']")
+    for j in button:
+        j.click()
+
+def OpenLinkInTab(driver, link):
+    link.send_keys(Keys.CONTROL + Keys.RETURN)
+    driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.TAB)
+    New_window = driver.window_handles[1]
+    driver.switch_to.window(New_window)
+    time.sleep(2)
+
+def CloseTab(driver):
+    driver.close()
+    main_window = driver.window_handles[0]
+    driver.switch_to.window(main_window)
