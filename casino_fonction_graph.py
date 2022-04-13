@@ -54,7 +54,7 @@ def cleaning_data (df):
     # Retirer les magasins ayant plus de 60% des produits vides
     for i in range (len(list_name_csv)):
         name = list_name_csv[i]
-        if (df[name].prix.isna().sum()  * 100.0 / len(df) > 90 ):
+        if (df[name].prix.isna().sum()  * 100.0 / len(df) > 60 ):
             df.drop((name,'prix'), axis=1, inplace=True)
         else : list_name_csv_new.append(name)
 
@@ -87,3 +87,25 @@ def variance_chart(df):
 
     variance_bar_chart.update_xaxes(showticklabels=False)
     return variance_bar_chart
+
+
+def population_VS_nbProduit ():
+    df_pop = pd.read_csv("adresse_casino_population.csv", sep=',')
+    df_merge = create_csv_merge(True)
+    list_name_csv = get_list_csv_file()
+    list_nb_produit = []
+    list_population = []
+    for i in range (len(list_name_csv)):
+        name = list_name_csv[i]
+        list_nb_produit.append(len(df_merge) - df_merge[name].prix.isna().sum())
+        df_pop_intermediaire =df_pop[df_pop['ville'] == name]
+        list_population.append(df_pop_intermediaire['population'].values[0])
+    DF = pd.DataFrame(list(zip(list_name_csv,list_nb_produit,list_population)), columns = ['localisation','nb_produit','population'])
+    DF.sort_values(by=['population'], ascending=False)
+    return DF
+
+def population_VS_nbProduit_chart ():
+    return px.scatter(population_VS_nbProduit(), x='population', y='nb_produit',hover_name='localisation',
+                      labels={"y": "Number of products","x": "Number of inhabitants"},
+                      title='Number of products available in each store according to the size of the city')
+

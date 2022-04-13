@@ -120,8 +120,6 @@ def mettre_en_poucentage_en_fonction_prix_max (df, list_name_csv_clean):
 def nombre_de_produit_pas_cher_par_ville (df, choix, list_name_csv_clean):
     DF = df.copy()
     list_nb = []
-    print(DF)
-    print(list_name_csv_clean)
     if(choix == 'minimum'): DF["m"] = DF.min(axis=1, skipna=True)
     if (choix == 'maximum'): DF["m"] = DF.max(axis=1, skipna=True)
     for i in range (len(list_name_csv_clean)):

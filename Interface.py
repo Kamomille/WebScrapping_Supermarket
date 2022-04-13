@@ -44,6 +44,7 @@ df_merge = auchan.create_csv_merge(True)
 df, list_name_csv_clean = auchan.cleaning_data(df_merge)
 df = df.reset_index()
 df_col = df[['nom','poids','02300 Viry Noureuil','02500 Hirson']]
+df_col['id'] = df_col.index
 
 
 a = df.columns
@@ -136,7 +137,7 @@ navbar = dbc.NavbarSimple(children=[
 # ======================================================================================================================
 
 def highlight_max_row(df):
-    df_numeric_columns = df.select_dtypes('number')
+    df_numeric_columns = df.select_dtypes('number').drop(['id'], axis=1)
     return [
         {
             'if': {
@@ -291,6 +292,7 @@ contentStatistics = html.Div([
                                  style={'textAlign': 'center', 'width': '48%', 'display': 'inline-block','margin-right':'4%',"margin-top": "50px"}),
                        dcc.Graph(id='pie_chart_2_casino',
                                  style={'textAlign': 'center', 'width': '48%', 'display': 'inline-block'}),
+                       dcc.Graph(figure=casi.population_VS_nbProduit_chart(), style={"margin-top": "50px"}),
                        dcc.Graph(figure=casi.variance_chart(df_c), style={"margin-top": "50px"}),
                        ],
              style={"margin-left": "8rem", "margin-right": "2rem", "margin-top": "5rem"}
