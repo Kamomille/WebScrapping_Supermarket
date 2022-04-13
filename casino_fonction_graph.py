@@ -17,7 +17,7 @@ def create_list_df():
     list_name_csv = get_list_csv_file()
     list_df=[]
     for i in range (len(list_name_csv)):
-        df = pd.read_csv("casino_csv_final/casino__" + list_name_csv[i].lower() + ".csv", sep=';')
+        df = pd.read_csv("casino_csv_final/casino__" + list_name_csv[i] + ".csv", sep=';')
         df = df.drop(['promo', 'prix_par_kg'], axis=1)
         df['prix'] = df['prix'].str.replace('€','')
         df['prix'] = df['prix'].str.replace(',','.')
@@ -32,7 +32,7 @@ def create_list_df():
         df['nom'] = df['nom'].str.lower()
         df['nom_split'] = df.apply(lambda row: row["nom"].split(' - cat'), axis=1)
         df['nom'] = df.apply(lambda row: row["nom_split"][0], axis=1)
-        df.drop(columns=["nom_split"])
+        df = df.drop(columns=["nom_split"])
         list_df.append(df)
     return list_df, list_name_csv
 
@@ -54,7 +54,7 @@ def cleaning_data (df):
     # Retirer les magasins ayant plus de 60% des produits vides
     for i in range (len(list_name_csv)):
         name = list_name_csv[i]
-        if (df[name].prix.isna().sum()  * 100.0 / len(df) > 60 ):
+        if (df[name].prix.isna().sum()  * 100.0 / len(df) > 90 ):
             df.drop((name,'prix'), axis=1, inplace=True)
         else : list_name_csv_new.append(name)
 

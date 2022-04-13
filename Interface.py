@@ -135,6 +135,23 @@ navbar = dbc.NavbarSimple(children=[
 #                               Partie contentFilter
 # ======================================================================================================================
 
+def highlight_max_row(df):
+    df_numeric_columns = df.select_dtypes('number')
+    return [
+        {
+            'if': {
+                'filter_query': '{{id}} = {}'.format(i),
+                'column_id': col
+            },
+            'backgroundColor': '#3D9970',
+            'color': 'white'
+        }
+        # idxmax(axis=1) finds the max indices of each row
+        for (i, col) in enumerate(
+            df_numeric_columns.idxmax(axis=1)
+        )
+    ]
+
 contentFilter = html.Div([
                     html.Div(children=[
                         html.H1('Where can I find the cheaper products ?'),
@@ -187,7 +204,7 @@ contentFilter = html.Div([
                                                     'backgroundColor': '#606165',
                                                     'color': 'white'
                                                 },
-                                                style_data_conditional=[ {'if': {'row_index': 'odd'}, 'backgroundColor': '#9EA0A7', } ],
+                                                style_data_conditional= highlight_max_row(df_col),
                                                 style_header={'backgroundColor': '#1E1E1E', 'color': 'white'},
                                                 style_cell={'textAlign': 'center'})
                            ],
@@ -204,7 +221,7 @@ contentFilter = html.Div([
 def update_table(value_dropdown, value_txt,n_clicks):
     a = df.columns
     a = a[4:]
-    if (type(value_txt) != 'NoneType'): DF = auchan_search.filter_result(df, value_txt)
+    if (value_txt is not None): DF = auchan_search.filter_result(df, value_txt)
     else: DF = df.copy()
     list_dep=[]
     for i in range (len(a)):

@@ -173,7 +173,7 @@ def nombre_de_produit_pas_cher_par_region(df, choix, list_name_csv_clean):
     list_r, prix = [], []
 
     DF['dep'] = DF.apply(lambda row: row["localisation"][:2], axis=1)
-    color = ['#B6E880','#e5ff5d','#00CC96','#AB63FA','#FFA15A','#19D3F3','#FF6692','#636EFA','#FF97FF','#FECB52','#5cffef','#EF553B','#FECB52']
+    color = ['#B6E880','#e5ff5d','#00CC96','#AB63FA','#FFA15A','#19D3F3','#FF6692','#636EFA','#FF97FF','#FECB52','#5cffef','#EF553B','#d39efd']
 
     for i in range (len(list_region)):
         DFF = DF[DF['dep'].isin(list_region[i])]
